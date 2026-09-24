@@ -65,7 +65,7 @@ export default function SelectExample() {
   )
 }
 
-function SelectBasic() {
+export function SelectBasic() {
   const items = [
     { label: "Select a fruit", value: null },
     { label: "Apple", value: "apple" },
@@ -94,7 +94,7 @@ function SelectBasic() {
   )
 }
 
-function SelectSides() {
+export function SelectSides() {
   const items = [
     { label: "Select", value: null },
     { label: "Apple", value: "apple" },
@@ -134,7 +134,7 @@ function SelectSides() {
   )
 }
 
-function SelectWithIcons() {
+export function SelectWithIcons() {
   const items = [
     {
       label: (
@@ -233,7 +233,7 @@ function SelectWithIcons() {
   )
 }
 
-function SelectWithGroups() {
+export function SelectWithGroups() {
   const fruits = [
     { label: "Apple", value: "apple" },
     { label: "Banana", value: "banana" },
@@ -279,7 +279,7 @@ function SelectWithGroups() {
   )
 }
 
-function SelectLargeList() {
+export function SelectLargeList() {
   const items = [
     { label: "Select an item", value: null },
     ...Array.from({ length: 100 }).map((_, i) => ({
@@ -307,7 +307,7 @@ function SelectLargeList() {
   )
 }
 
-function SelectSizes() {
+export function SelectSizes() {
   const items = [
     { label: "Select a fruit", value: null },
     { label: "Apple", value: "apple" },
@@ -350,7 +350,7 @@ function SelectSizes() {
   )
 }
 
-function SelectWithButton() {
+export function SelectWithButton() {
   const items = [
     { label: "Select a fruit", value: null },
     { label: "Apple", value: "apple" },
@@ -401,7 +401,7 @@ function SelectWithButton() {
   )
 }
 
-function SelectItemAligned() {
+export function SelectItemAligned() {
   const items = [
     { label: "Select a fruit", value: null },
     { label: "Apple", value: "apple" },
@@ -434,7 +434,7 @@ function SelectItemAligned() {
   )
 }
 
-function SelectWithField() {
+export function SelectWithField() {
   const items = [
     { label: "Select a fruit", value: null },
     { label: "Apple", value: "apple" },
@@ -469,7 +469,7 @@ function SelectWithField() {
   )
 }
 
-function SelectInvalid() {
+export function SelectInvalid() {
   const items = [
     { label: "Select a fruit", value: null },
     { label: "Apple", value: "apple" },
@@ -518,7 +518,7 @@ function SelectInvalid() {
   )
 }
 
-function SelectInline() {
+export function SelectInline() {
   const items = [
     { label: "Filter", value: null },
     { label: "All", value: "all" },
@@ -554,7 +554,7 @@ function SelectInline() {
   )
 }
 
-function SelectDisabled() {
+export function SelectDisabled() {
   const items = [
     { label: "Select a fruit", value: null },
     { label: "Apple", value: "apple" },
@@ -602,7 +602,7 @@ const plans = [
   },
 ]
 
-function SelectPlan() {
+export function SelectPlan() {
   return (
     <Example title="Subscription Plan">
       <Select
@@ -641,7 +641,7 @@ function SelectPlanItem({ plan }: { plan: (typeof plans)[number] }) {
   )
 }
 
-function SelectMultiple() {
+export function SelectMultiple() {
   const items = [
     { label: "Apple", value: "apple" },
     { label: "Banana", value: "banana" },
@@ -681,7 +681,7 @@ function SelectMultiple() {
   )
 }
 
-function SelectInDialog() {
+export function SelectInDialog() {
   const items = [
     { label: "Select a fruit", value: null },
     { label: "Apple", value: "apple" },

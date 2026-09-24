@@ -72,7 +72,7 @@ export default function ChartExample() {
   )
 }
 
-function ChartAreaExample() {
+export function ChartAreaExample() {
   return (
     <Example title="Area Chart">
       <Card className="w-full">
@@ -159,7 +159,7 @@ const barChartConfig = {
   },
 } satisfies ChartConfig
 
-function ChartBarExample() {
+export function ChartBarExample() {
   return (
     <Example title="Bar Chart">
       <Card className="w-full">
@@ -228,7 +228,7 @@ const lineChartConfig = {
   },
 } satisfies ChartConfig
 
-function ChartLineExample() {
+export function ChartLineExample() {
   return (
     <Example title="Line Chart">
       <Card className="w-full">
@@ -331,7 +331,7 @@ const pieChartConfig = {
   },
 } satisfies ChartConfig
 
-function ChartPieExample() {
+export function ChartPieExample() {
   const totalVisitors = React.useMemo(() => {
     return pieChartData.reduce((acc, curr) => acc + curr.visitors, 0)
   }, [])
@@ -434,7 +434,7 @@ const radarChartConfig = {
   },
 } satisfies ChartConfig
 
-function ChartRadarExample() {
+export function ChartRadarExample() {
   return (
     <Example title="Radar Chart">
       <Card className="w-full">
@@ -500,7 +500,7 @@ const radialChartConfig = {
   },
 } satisfies ChartConfig
 
-function ChartRadialExample() {
+export function ChartRadialExample() {
   return (
     <Example title="Radial Chart">
       <Card className="w-full">

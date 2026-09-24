@@ -40,7 +40,7 @@ export default function TabsExample() {
   )
 }
 
-function TabsBasic() {
+export function TabsBasic() {
   return (
     <Example title="Basic">
       <Tabs defaultValue="home">
@@ -53,7 +53,7 @@ function TabsBasic() {
   )
 }
 
-function TabsLine() {
+export function TabsLine() {
   return (
     <Example title="Line">
       <Tabs defaultValue="overview">
@@ -67,7 +67,7 @@ function TabsLine() {
   )
 }
 
-function TabsVariantsComparison() {
+export function TabsVariantsComparison() {
   return (
     <Example title="Variants Alignment">
       <div className="flex gap-4">
@@ -88,7 +88,7 @@ function TabsVariantsComparison() {
   )
 }
 
-function TabsDisabled() {
+export function TabsDisabled() {
   return (
     <Example title="Disabled">
       <Tabs defaultValue="home">
@@ -103,7 +103,7 @@ function TabsDisabled() {
   )
 }
 
-function TabsWithIcons() {
+export function TabsWithIcons() {
   return (
     <Example title="With Icons">
       <Tabs defaultValue="preview">
@@ -134,7 +134,7 @@ function TabsWithIcons() {
   )
 }
 
-function TabsIconOnly() {
+export function TabsIconOnly() {
   return (
     <Example title="Icon Only">
       <Tabs defaultValue="home">
@@ -172,7 +172,7 @@ function TabsIconOnly() {
   )
 }
 
-function TabsMultiple() {
+export function TabsMultiple() {
   return (
     <Example title="Multiple">
       <Tabs defaultValue="overview">
@@ -187,7 +187,7 @@ function TabsMultiple() {
   )
 }
 
-function TabsWithContent() {
+export function TabsWithContent() {
   return (
     <Example title="With Content">
       <Tabs defaultValue="account">
@@ -212,7 +212,7 @@ function TabsWithContent() {
   )
 }
 
-function TabsLineWithContent() {
+export function TabsLineWithContent() {
   return (
     <Example title="Line With Content">
       <Tabs defaultValue="account">
@@ -237,7 +237,7 @@ function TabsLineWithContent() {
   )
 }
 
-function TabsLineDisabled() {
+export function TabsLineDisabled() {
   return (
     <Example title="Line Disabled">
       <Tabs defaultValue="overview">
@@ -253,7 +253,7 @@ function TabsLineDisabled() {
   )
 }
 
-function TabsWithDropdown() {
+export function TabsWithDropdown() {
   return (
     <Example title="With Dropdown">
       <Tabs defaultValue="overview">
@@ -301,7 +301,7 @@ function TabsWithDropdown() {
   )
 }
 
-function TabsVertical() {
+export function TabsVertical() {
   return (
     <Example title="Vertical">
       <Tabs defaultValue="account" orientation="vertical">
@@ -329,7 +329,7 @@ function TabsVertical() {
   )
 }
 
-function TabsWithInputAndButton() {
+export function TabsWithInputAndButton() {
   return (
     <Example title="With Input and Button" containerClassName="col-span-full">
       <Tabs defaultValue="overview" className="mx-auto w-full max-w-lg">

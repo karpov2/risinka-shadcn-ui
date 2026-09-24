@@ -42,6 +42,18 @@ export function ComponentTile({ stretch = false, children }: { readonly stretch?
 }
 
 /**
+ * Состояние страницы компонента — один блок вариантов своим артбордом; название блока — подпись артборда, описание
+ * компонента — карточка страницы. «muted» — серая подложка, как у сводных примеров shadcn/ui.
+ */
+export function StateFrame({ muted = false, children }: { readonly muted?: boolean; readonly children: ReactNode }) {
+  return (
+    <div data-risinka-height="" style={{ boxSizing: 'border-box', padding: muted ? 24 : 32, background: muted ? 'var(--color-muted, #f4f4f5)' : '#fff' }}>
+      <div style={{ contain: 'layout', display: 'flex', flexDirection: 'column', gap: 28 }}>{children}</div>
+    </div>
+  );
+}
+
+/**
  * Витрина библиотеки — первый лист страницы «Компоненты» и обложка её карточки на экране «Библиотеки»: по одному образцу
  * компонентов по центру; артборд — размером обложки карточки (240 × 90): снимок не ужимается и читается.
  */

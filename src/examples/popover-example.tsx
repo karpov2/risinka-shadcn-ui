@@ -35,7 +35,7 @@ export default function PopoverExample() {
   )
 }
 
-function PopoverBasic() {
+export function PopoverBasic() {
   return (
     <Example title="Basic">
       <Popover>
@@ -55,7 +55,7 @@ function PopoverBasic() {
   )
 }
 
-function PopoverSides() {
+export function PopoverSides() {
   return (
     <Example title="Sides">
       <div className="flex flex-col gap-2">
@@ -96,7 +96,7 @@ function PopoverSides() {
   )
 }
 
-function PopoverWithForm() {
+export function PopoverWithForm() {
   return (
     <Example title="With Form">
       <Popover>
@@ -130,7 +130,7 @@ function PopoverWithForm() {
   )
 }
 
-function PopoverAlignments() {
+export function PopoverAlignments() {
   return (
     <Example title="Alignments">
       <div className="flex gap-6">
@@ -163,7 +163,7 @@ function PopoverAlignments() {
   )
 }
 
-function PopoverInDialog() {
+export function PopoverInDialog() {
   return (
     <Example title="In Dialog">
       <Dialog>

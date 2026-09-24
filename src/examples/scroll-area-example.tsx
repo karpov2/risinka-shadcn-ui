@@ -37,7 +37,7 @@ export default function ScrollAreaExample() {
   )
 }
 
-function ScrollAreaVertical() {
+export function ScrollAreaVertical() {
   return (
     <Example title="Vertical">
       <ScrollArea className="mx-auto h-72 w-48 rounded-md border style-luma:rounded-2xl style-rhea:rounded-2xl">
@@ -55,7 +55,7 @@ function ScrollAreaVertical() {
   )
 }
 
-function ScrollAreaHorizontal() {
+export function ScrollAreaHorizontal() {
   return (
     <Example title="Horizontal">
       <ScrollArea className="mx-auto w-full max-w-96 rounded-md border p-4 style-luma:rounded-2xl style-rhea:rounded-2xl">

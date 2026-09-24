@@ -46,7 +46,7 @@ export default function InputOTPExample() {
   )
 }
 
-function InputOTPSimple() {
+export function InputOTPSimple() {
   return (
     <Example title="Simple">
       <Field>
@@ -69,7 +69,7 @@ function InputOTPSimple() {
   )
 }
 
-function InputOTPPattern() {
+export function InputOTPPattern() {
   return (
     <Example title="Digits Only">
       <Field>
@@ -89,7 +89,7 @@ function InputOTPPattern() {
   )
 }
 
-function InputOTPWithSeparator() {
+export function InputOTPWithSeparator() {
   const [value, setValue] = React.useState("123456")
 
   return (
@@ -122,7 +122,7 @@ function InputOTPWithSeparator() {
   )
 }
 
-function InputOTPAlphanumeric() {
+export function InputOTPAlphanumeric() {
   return (
     <Example title="Alphanumeric">
       <Field>
@@ -150,7 +150,7 @@ function InputOTPAlphanumeric() {
   )
 }
 
-function InputOTPDisabled() {
+export function InputOTPDisabled() {
   return (
     <Example title="Disabled">
       <Field>
@@ -173,7 +173,7 @@ function InputOTPDisabled() {
   )
 }
 
-function InputOTPFourDigits() {
+export function InputOTPFourDigits() {
   return (
     <Example title="4 Digits">
       <Field>
@@ -192,7 +192,7 @@ function InputOTPFourDigits() {
   )
 }
 
-function InputOTPInvalid() {
+export function InputOTPInvalid() {
   const [value, setValue] = React.useState("000000")
 
   return (
@@ -224,7 +224,7 @@ function InputOTPInvalid() {
   )
 }
 
-function InputOTPForm() {
+export function InputOTPForm() {
   return (
     <Example title="Form">
       <Card className="mx-auto max-w-md">

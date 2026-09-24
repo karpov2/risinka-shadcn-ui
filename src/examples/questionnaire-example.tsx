@@ -106,7 +106,7 @@ export default function QuestionnaireExample() {
   )
 }
 
-function QuestionnaireDisabled() {
+export function QuestionnaireDisabled() {
   return (
     <Example title="Disabled" containerClassName="md:col-span-2">
       <Questionnaire
@@ -148,7 +148,7 @@ function QuestionnaireDisabled() {
   )
 }
 
-function QuestionnaireNoDescription() {
+export function QuestionnaireNoDescription() {
   return (
     <Example title="No description" containerClassName="md:col-span-2">
       <Questionnaire
@@ -182,7 +182,7 @@ function QuestionnaireNoDescription() {
   )
 }
 
-function QuestionnaireStandalone() {
+export function QuestionnaireStandalone() {
   return (
     <Example title="Standalone" containerClassName="md:col-span-2">
       <Questionnaire
@@ -200,7 +200,7 @@ function QuestionnaireStandalone() {
   )
 }
 
-function QuestionnaireCard() {
+export function QuestionnaireCard() {
   return (
     <Example title="Card" containerClassName="md:col-span-2">
       <Questionnaire
@@ -215,7 +215,7 @@ function QuestionnaireCard() {
   )
 }
 
-function QuestionnaireDialog() {
+export function QuestionnaireDialog() {
   return (
     <Example
       title="Dialog"

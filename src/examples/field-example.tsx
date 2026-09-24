@@ -65,7 +65,7 @@ export default function FieldExample() {
   )
 }
 
-function InputFields() {
+export function InputFields() {
   return (
     <Example title="Input Fields">
       <FieldGroup>
@@ -139,7 +139,7 @@ function InputFields() {
   )
 }
 
-function TextareaFields() {
+export function TextareaFields() {
   return (
     <Example title="Textarea Fields">
       <FieldGroup>
@@ -201,7 +201,7 @@ function TextareaFields() {
   )
 }
 
-function SelectFields() {
+export function SelectFields() {
   const basicItems = [
     { label: "Choose an option", value: null },
     { label: "Option 1", value: "option1" },
@@ -338,7 +338,7 @@ function SelectFields() {
   )
 }
 
-function NativeSelectFields() {
+export function NativeSelectFields() {
   return (
     <Example title="Native Select Fields">
       <FieldGroup>
@@ -433,7 +433,7 @@ function NativeSelectFields() {
   )
 }
 
-function CheckboxFields() {
+export function CheckboxFields() {
   return (
     <Example title="Checkbox Fields">
       <FieldGroup>
@@ -508,7 +508,7 @@ function CheckboxFields() {
   )
 }
 
-function RadioFields() {
+export function RadioFields() {
   return (
     <Example title="Radio Fields">
       <FieldGroup>
@@ -628,7 +628,7 @@ function RadioFields() {
   )
 }
 
-function SwitchFields() {
+export function SwitchFields() {
   return (
     <Example title="Switch Fields">
       <FieldGroup>
@@ -695,7 +695,7 @@ function SwitchFields() {
   )
 }
 
-function SliderFields() {
+export function SliderFields() {
   const [volume, setVolume] = useState([50])
   const [brightness, setBrightness] = useState([75])
   const [temperature, setTemperature] = useState([0.3, 0.7])
@@ -815,7 +815,7 @@ function SliderFields() {
   )
 }
 
-function InputOTPFields() {
+export function InputOTPFields() {
   const [value, setValue] = useState("")
   const [pinValue, setPinValue] = useState("")
 
@@ -934,7 +934,7 @@ function InputOTPFields() {
   )
 }
 
-function HorizontalFields() {
+export function HorizontalFields() {
   const basicItems = [
     { label: "Select a fruit", value: null },
     { label: "Apple", value: "apple" },

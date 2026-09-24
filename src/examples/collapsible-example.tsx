@@ -36,7 +36,7 @@ export default function CollapsibleExample() {
 
 type FileTreeItem = { name: string } | { name: string; items: FileTreeItem[] }
 
-function CollapsibleFileTree() {
+export function CollapsibleFileTree() {
   const fileTree: FileTreeItem[] = [
     {
       name: "components",
@@ -167,7 +167,7 @@ function CollapsibleFileTree() {
   )
 }
 
-function CollapsibleSettings() {
+export function CollapsibleSettings() {
   const [isOpen, setIsOpen] = React.useState(false)
 
   return (

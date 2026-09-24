@@ -45,7 +45,7 @@ export default function AttachmentExample() {
   )
 }
 
-function AttachmentFiles() {
+export function AttachmentFiles() {
   return (
     <Example title="Files" className="gap-8">
       <div className="flex w-full flex-col gap-2">
@@ -274,7 +274,7 @@ function AttachmentFiles() {
   )
 }
 
-function AttachmentContentOnly() {
+export function AttachmentContentOnly() {
   return (
     <Example title="Content Only" className="gap-8">
       <div className="flex w-full flex-col gap-2">
@@ -394,7 +394,7 @@ function AttachmentContentOnly() {
   )
 }
 
-function AttachmentStates() {
+export function AttachmentStates() {
   return (
     <Example title="States" className="gap-8">
       <div className="flex w-full flex-col gap-3">
@@ -683,7 +683,7 @@ function AttachmentStates() {
   )
 }
 
-function AttachmentImages() {
+export function AttachmentImages() {
   return (
     <Example title="Images" className="gap-8">
       <div className="flex w-full flex-col gap-3">
@@ -968,7 +968,7 @@ function AttachmentImages() {
   )
 }
 
-function AttachmentImageStates() {
+export function AttachmentImageStates() {
   return (
     <Example title="Image States" className="gap-8">
       <div className="flex w-full flex-col gap-3">
@@ -1237,7 +1237,7 @@ function AttachmentImageStates() {
   )
 }
 
-function AttachmentSizes() {
+export function AttachmentSizes() {
   return (
     <Example title="Sizes" className="gap-3">
       <Attachment size="default" className="w-full">
@@ -1288,7 +1288,7 @@ function AttachmentSizes() {
   )
 }
 
-function AttachmentScrollableGroup() {
+export function AttachmentScrollableGroup() {
   return (
     <Example title="Scrollable Group" className="gap-4">
       <AttachmentGroup className="w-full">
@@ -1524,7 +1524,7 @@ function AttachmentScrollableGroup() {
   )
 }
 
-function AttachmentTriggers() {
+export function AttachmentTriggers() {
   const [isVisible, setIsVisible] = React.useState(true)
 
   return (

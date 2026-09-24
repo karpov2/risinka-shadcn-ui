@@ -65,7 +65,7 @@ export default function NavigationMenuExample() {
   )
 }
 
-function NavigationMenuBasic() {
+export function NavigationMenuBasic() {
   return (
     <Example title="Basic">
       <NavigationMenu>

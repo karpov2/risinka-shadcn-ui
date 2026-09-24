@@ -18,7 +18,7 @@ export default function SkeletonExample() {
   )
 }
 
-function SkeletonAvatar() {
+export function SkeletonAvatar() {
   return (
     <Example title="Avatar">
       <div className="flex w-full items-center gap-4">
@@ -32,7 +32,7 @@ function SkeletonAvatar() {
   )
 }
 
-function SkeletonCard() {
+export function SkeletonCard() {
   return (
     <Example title="Card">
       <Card className="w-full">
@@ -48,7 +48,7 @@ function SkeletonCard() {
   )
 }
 
-function SkeletonText() {
+export function SkeletonText() {
   return (
     <Example title="Text">
       <div className="flex w-full flex-col gap-2">
@@ -60,7 +60,7 @@ function SkeletonText() {
   )
 }
 
-function SkeletonForm() {
+export function SkeletonForm() {
   return (
     <Example title="Form">
       <div className="flex w-full flex-col gap-7">
@@ -78,7 +78,7 @@ function SkeletonForm() {
   )
 }
 
-function SkeletonTable() {
+export function SkeletonTable() {
   return (
     <Example title="Table">
       <div className="flex w-full flex-col gap-2">

@@ -22,7 +22,7 @@ export default function TextareaExample() {
   )
 }
 
-function TextareaBasic() {
+export function TextareaBasic() {
   return (
     <Example title="Basic">
       <Textarea placeholder="Type your message here." />
@@ -30,7 +30,7 @@ function TextareaBasic() {
   )
 }
 
-function TextareaInvalid() {
+export function TextareaInvalid() {
   return (
     <Example title="Invalid">
       <Textarea placeholder="Type your message here." aria-invalid="true" />
@@ -38,7 +38,7 @@ function TextareaInvalid() {
   )
 }
 
-function TextareaWithLabel() {
+export function TextareaWithLabel() {
   return (
     <Example title="With Label">
       <Field>
@@ -53,7 +53,7 @@ function TextareaWithLabel() {
   )
 }
 
-function TextareaWithDescription() {
+export function TextareaWithDescription() {
   return (
     <Example title="With Description">
       <Field>
@@ -71,7 +71,7 @@ function TextareaWithDescription() {
   )
 }
 
-function TextareaDisabled() {
+export function TextareaDisabled() {
   return (
     <Example title="Disabled">
       <Field>

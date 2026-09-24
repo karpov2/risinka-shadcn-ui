@@ -39,7 +39,7 @@ export default function CheckboxExample() {
   )
 }
 
-function CheckboxBasic() {
+export function CheckboxBasic() {
   return (
     <Example title="Basic">
       <Field orientation="horizontal">
@@ -50,7 +50,7 @@ function CheckboxBasic() {
   )
 }
 
-function CheckboxWithDescription() {
+export function CheckboxWithDescription() {
   return (
     <Example title="With Description">
       <Field orientation="horizontal">
@@ -66,7 +66,7 @@ function CheckboxWithDescription() {
   )
 }
 
-function CheckboxInvalid() {
+export function CheckboxInvalid() {
   return (
     <Example title="Invalid">
       <Field orientation="horizontal" data-invalid>
@@ -77,7 +77,7 @@ function CheckboxInvalid() {
   )
 }
 
-function CheckboxDisabled() {
+export function CheckboxDisabled() {
   return (
     <Example title="Disabled">
       <Field orientation="horizontal">
@@ -88,7 +88,7 @@ function CheckboxDisabled() {
   )
 }
 
-function CheckboxWithTitle() {
+export function CheckboxWithTitle() {
   return (
     <Example title="With Title">
       <FieldGroup>
@@ -146,7 +146,7 @@ const tableData = [
   },
 ]
 
-function CheckboxInTable() {
+export function CheckboxInTable() {
   const [selectedRows, setSelectedRows] = React.useState<Set<string>>(
     new Set(["1"])
   )
@@ -214,7 +214,7 @@ function CheckboxInTable() {
   )
 }
 
-function CheckboxGroup() {
+export function CheckboxGroup() {
   return (
     <Example title="Group">
       <Field>

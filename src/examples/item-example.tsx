@@ -51,7 +51,7 @@ export default function ItemExample() {
   )
 }
 
-function DefaultVariantItems() {
+export function DefaultVariantItems() {
   return (
     <Example title="Default">
       <Item>
@@ -173,7 +173,7 @@ function DefaultVariantItems() {
   )
 }
 
-function OutlineVariantItems() {
+export function OutlineVariantItems() {
   return (
     <Example title="Outline">
       <Item variant="outline">
@@ -295,7 +295,7 @@ function OutlineVariantItems() {
   )
 }
 
-function MutedVariantItems() {
+export function MutedVariantItems() {
   return (
     <Example title="Muted">
       <Item variant="muted">
@@ -417,7 +417,7 @@ function MutedVariantItems() {
   )
 }
 
-function DefaultVariantItemsSmall() {
+export function DefaultVariantItemsSmall() {
   return (
     <Example title="Small">
       <Item size="sm">
@@ -543,7 +543,7 @@ function DefaultVariantItemsSmall() {
   )
 }
 
-function OutlineVariantItemsSmall() {
+export function OutlineVariantItemsSmall() {
   return (
     <Example title="Outline - Small">
       <Item variant="outline" size="sm">
@@ -669,7 +669,7 @@ function OutlineVariantItemsSmall() {
   )
 }
 
-function MutedVariantItemsSmall() {
+export function MutedVariantItemsSmall() {
   return (
     <Example title="Muted - Small">
       <Item variant="muted" size="sm">
@@ -795,7 +795,7 @@ function MutedVariantItemsSmall() {
   )
 }
 
-function DefaultVariantItemsExtraSmall() {
+export function DefaultVariantItemsExtraSmall() {
   return (
     <Example title="Extra Small">
       <Item size="xs">
@@ -921,7 +921,7 @@ function DefaultVariantItemsExtraSmall() {
   )
 }
 
-function OutlineVariantItemsExtraSmall() {
+export function OutlineVariantItemsExtraSmall() {
   return (
     <Example title="Outline - Extra Small">
       <Item variant="outline" size="xs">
@@ -1047,7 +1047,7 @@ function OutlineVariantItemsExtraSmall() {
   )
 }
 
-function MutedVariantItemsExtraSmall() {
+export function MutedVariantItemsExtraSmall() {
   return (
     <Example title="Muted - Extra Small">
       <Item variant="muted" size="xs">
@@ -1173,7 +1173,7 @@ function MutedVariantItemsExtraSmall() {
   )
 }
 
-function DefaultLinkItems() {
+export function DefaultLinkItems() {
   return (
     <Example title="asChild">
       <ItemGroup>
@@ -1239,7 +1239,7 @@ function DefaultLinkItems() {
   )
 }
 
-function OutlineLinkItems() {
+export function OutlineLinkItems() {
   return (
     <Example title="Outline - asChild">
       <ItemGroup>
@@ -1305,7 +1305,7 @@ function OutlineLinkItems() {
   )
 }
 
-function MutedLinkItems() {
+export function MutedLinkItems() {
   return (
     <Example title="Muted - asChild">
       <ItemGroup>
@@ -1371,7 +1371,7 @@ function MutedLinkItems() {
   )
 }
 
-function DefaultItemGroup() {
+export function DefaultItemGroup() {
   return (
     <Example title="ItemGroup">
       <ItemGroup>
@@ -1398,7 +1398,7 @@ function DefaultItemGroup() {
   )
 }
 
-function OutlineItemGroup() {
+export function OutlineItemGroup() {
   return (
     <Example title="Outline - ItemGroup">
       <ItemGroup>
@@ -1452,7 +1452,7 @@ function OutlineItemGroup() {
   )
 }
 
-function MutedItemGroup() {
+export function MutedItemGroup() {
   return (
     <Example title="Muted - ItemGroup">
       <ItemGroup>
@@ -1494,7 +1494,7 @@ function MutedItemGroup() {
   )
 }
 
-function ItemSeparatorExample() {
+export function ItemSeparatorExample() {
   return (
     <Example title="ItemSeparator">
       <ItemGroup>
@@ -1566,7 +1566,7 @@ function ItemSeparatorExample() {
   )
 }
 
-function ItemHeaderExamples() {
+export function ItemHeaderExamples() {
   return (
     <Example title="ItemHeader">
       <Item>
@@ -1609,7 +1609,7 @@ function ItemHeaderExamples() {
   )
 }
 
-function ItemFooterExamples() {
+export function ItemFooterExamples() {
   return (
     <Example title="ItemFooter">
       <Item>
@@ -1656,7 +1656,7 @@ function ItemFooterExamples() {
   )
 }
 
-function ItemHeaderAndFooterExamples() {
+export function ItemHeaderAndFooterExamples() {
   return (
     <Example title="ItemHeader + ItemFooter">
       <Item>
@@ -1714,7 +1714,7 @@ function ItemHeaderAndFooterExamples() {
   )
 }
 
-function DefaultVariantItemsWithImage() {
+export function DefaultVariantItemsWithImage() {
   return (
     <Example title="Default - ItemMedia image">
       <Item>
@@ -1778,7 +1778,7 @@ function DefaultVariantItemsWithImage() {
   )
 }
 
-function OutlineVariantItemsWithImage() {
+export function OutlineVariantItemsWithImage() {
   return (
     <Example title="Outline - ItemMedia image">
       <Item variant="outline">
@@ -1842,7 +1842,7 @@ function OutlineVariantItemsWithImage() {
   )
 }
 
-function OutlineVariantItemsWithImageSmall() {
+export function OutlineVariantItemsWithImageSmall() {
   return (
     <Example title="Outline - ItemMedia image - Small">
       <Item variant="outline" size="sm">
@@ -1906,7 +1906,7 @@ function OutlineVariantItemsWithImageSmall() {
   )
 }
 
-function OutlineVariantItemsWithImageExtraSmall() {
+export function OutlineVariantItemsWithImageExtraSmall() {
   return (
     <Example title="Outline - ItemMedia image - Extra Small">
       <Item variant="outline" size="xs">
@@ -1963,7 +1963,7 @@ function OutlineVariantItemsWithImageExtraSmall() {
   )
 }
 
-function MutedVariantItemsWithImage() {
+export function MutedVariantItemsWithImage() {
   return (
     <Example title="Muted - ItemMedia image">
       <Item variant="muted">

@@ -40,7 +40,7 @@ export default function AlertDialogExample() {
   )
 }
 
-function AlertDialogBasic() {
+export function AlertDialogBasic() {
   return (
     <Example title="Basic" className="items-center">
       <AlertDialog>
@@ -65,7 +65,7 @@ function AlertDialogBasic() {
   )
 }
 
-function AlertDialogSmall() {
+export function AlertDialogSmall() {
   return (
     <Example title="Small" className="items-center">
       <AlertDialog>
@@ -87,7 +87,7 @@ function AlertDialogSmall() {
   )
 }
 
-function AlertDialogWithMedia() {
+export function AlertDialogWithMedia() {
   return (
     <Example title="With Media" className="items-center">
       <AlertDialog>
@@ -121,7 +121,7 @@ function AlertDialogWithMedia() {
   )
 }
 
-function AlertDialogSmallWithMedia() {
+export function AlertDialogSmallWithMedia() {
   return (
     <Example title="Small With Media" className="items-center">
       <AlertDialog>
@@ -155,7 +155,7 @@ function AlertDialogSmallWithMedia() {
   )
 }
 
-function AlertDialogDestructive() {
+export function AlertDialogDestructive() {
   return (
     <Example title="Destructive" className="items-center">
       <AlertDialog>
@@ -190,7 +190,7 @@ function AlertDialogDestructive() {
   )
 }
 
-function AlertDialogInDialog() {
+export function AlertDialogInDialog() {
   return (
     <Example title="In Dialog" className="items-center">
       <Dialog>

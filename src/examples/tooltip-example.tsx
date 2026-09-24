@@ -29,7 +29,7 @@ export default function TooltipExample() {
   )
 }
 
-function TooltipBasic() {
+export function TooltipBasic() {
   return (
     <Example title="Basic">
       <Tooltip>
@@ -44,7 +44,7 @@ function TooltipBasic() {
   )
 }
 
-function TooltipSides() {
+export function TooltipSides() {
   return (
     <Example title="Sides">
       <div className="flex flex-wrap gap-2">
@@ -74,7 +74,7 @@ function TooltipSides() {
   )
 }
 
-function TooltipWithIcon() {
+export function TooltipWithIcon() {
   return (
     <Example title="With Icon">
       <Tooltip>
@@ -96,7 +96,7 @@ function TooltipWithIcon() {
   )
 }
 
-function TooltipLongContent() {
+export function TooltipLongContent() {
   return (
     <Example title="Long Content">
       <Tooltip>
@@ -112,7 +112,7 @@ function TooltipLongContent() {
   )
 }
 
-function TooltipDisabled() {
+export function TooltipDisabled() {
   return (
     <Example title="Disabled">
       <Tooltip>
@@ -129,7 +129,7 @@ function TooltipDisabled() {
   )
 }
 
-function TooltipWithKeyboard() {
+export function TooltipWithKeyboard() {
   return (
     <Example title="With Keyboard Shortcut">
       <Tooltip>
@@ -150,7 +150,7 @@ function TooltipWithKeyboard() {
   )
 }
 
-function TooltipOnLink() {
+export function TooltipOnLink() {
   return (
     <Example title="On Link">
       <Tooltip>
@@ -173,7 +173,7 @@ function TooltipOnLink() {
   )
 }
 
-function TooltipFormatted() {
+export function TooltipFormatted() {
   return (
     <Example title="Formatted Content">
       <Tooltip>

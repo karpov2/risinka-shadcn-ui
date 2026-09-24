@@ -31,7 +31,7 @@ export default function AccordionExample() {
   )
 }
 
-function AccordionBasic() {
+export function AccordionBasic() {
   const items = [
     {
       value: "item-1",
@@ -66,7 +66,7 @@ function AccordionBasic() {
   )
 }
 
-function AccordionMultiple() {
+export function AccordionMultiple() {
   const items = [
     {
       value: "item-1",
@@ -98,7 +98,7 @@ function AccordionMultiple() {
   )
 }
 
-function AccordionWithBorders() {
+export function AccordionWithBorders() {
   const items = [
     {
       value: "billing",
@@ -153,7 +153,7 @@ function AccordionWithBorders() {
   )
 }
 
-function AccordionInCard() {
+export function AccordionInCard() {
   const items = [
     {
       value: "plans",
@@ -288,7 +288,7 @@ function AccordionInCard() {
   )
 }
 
-function AccordionWithDisabled() {
+export function AccordionWithDisabled() {
   const items = [
     {
       value: "item-1",

@@ -27,7 +27,7 @@ export default function NativeSelectExample() {
   )
 }
 
-function NativeSelectBasic() {
+export function NativeSelectBasic() {
   return (
     <Example title="Basic">
       <NativeSelect>
@@ -44,7 +44,7 @@ function NativeSelectBasic() {
   )
 }
 
-function NativeSelectWithGroups() {
+export function NativeSelectWithGroups() {
   return (
     <Example title="With Groups">
       <NativeSelect>
@@ -64,7 +64,7 @@ function NativeSelectWithGroups() {
   )
 }
 
-function NativeSelectSizes() {
+export function NativeSelectSizes() {
   return (
     <Example title="Sizes">
       <div className="flex flex-col gap-4">
@@ -85,7 +85,7 @@ function NativeSelectSizes() {
   )
 }
 
-function NativeSelectWithField() {
+export function NativeSelectWithField() {
   return (
     <Example title="With Field">
       <Field>
@@ -103,7 +103,7 @@ function NativeSelectWithField() {
   )
 }
 
-function NativeSelectDisabled() {
+export function NativeSelectDisabled() {
   return (
     <Example title="Disabled">
       <NativeSelect disabled>
@@ -116,7 +116,7 @@ function NativeSelectDisabled() {
   )
 }
 
-function NativeSelectInvalid() {
+export function NativeSelectInvalid() {
   return (
     <Example title="Invalid">
       <NativeSelect aria-invalid="true">

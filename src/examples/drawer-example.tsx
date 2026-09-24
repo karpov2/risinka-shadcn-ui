@@ -47,7 +47,7 @@ export default function DrawerExample() {
   )
 }
 
-function DrawerDemo() {
+export function DrawerDemo() {
   return (
     <Example title="Demo">
       <div className="flex flex-wrap gap-2">
@@ -130,7 +130,7 @@ function DrawerDemo() {
   )
 }
 
-function DrawerSwipeHandleExample() {
+export function DrawerSwipeHandleExample() {
   return (
     <Example title="Swipe Handle">
       <div className="flex flex-wrap gap-2">
@@ -159,7 +159,7 @@ function DrawerSwipeHandleExample() {
   )
 }
 
-function DrawerCustomWidthAndHeight() {
+export function DrawerCustomWidthAndHeight() {
   return (
     <Example title="Custom Width and Height">
       <div className="flex flex-wrap gap-2">
@@ -278,7 +278,7 @@ function DrawerCustomWidthAndHeight() {
 
 const DRAWER_SIDES = ["up", "right", "down", "left"] as const
 
-function DrawerPosition() {
+export function DrawerPosition() {
   return (
     <Example title="Position">
       <div className="flex flex-wrap gap-2">
@@ -313,7 +313,7 @@ function DrawerPosition() {
   )
 }
 
-function DrawerScrollable() {
+export function DrawerScrollable() {
   return (
     <Example title="Scrollable Content">
       <div className="flex flex-wrap gap-2">
@@ -357,7 +357,7 @@ function DrawerScrollable() {
 
 const SNAP_POINTS = ["31rem", 1]
 
-function DrawerSnapPoints() {
+export function DrawerSnapPoints() {
   return (
     <Example title="Snap Points">
       <Drawer snapPoints={SNAP_POINTS} showSwipeHandle>
@@ -383,7 +383,7 @@ function DrawerSnapPoints() {
   )
 }
 
-function DrawerNested() {
+export function DrawerNested() {
   return (
     <Example title="Nested">
       <div className="flex flex-wrap gap-2">
@@ -459,7 +459,7 @@ function DrawerNested() {
   )
 }
 
-function DrawerNonModal() {
+export function DrawerNonModal() {
   return (
     <Example title="Non Modal">
       <Drawer modal={false} disablePointerDismissal swipeDirection="right">

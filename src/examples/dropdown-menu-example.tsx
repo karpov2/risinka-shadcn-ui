@@ -61,7 +61,7 @@ export default function DropdownMenuExample() {
   )
 }
 
-function DropdownMenuBasic() {
+export function DropdownMenuBasic() {
   return (
     <Example title="Basic">
       <DropdownMenu>
@@ -87,7 +87,7 @@ function DropdownMenuBasic() {
   )
 }
 
-function DropdownMenuSides() {
+export function DropdownMenuSides() {
   return (
     <Example title="Sides" containerClassName="col-span-2">
       <div className="flex flex-wrap justify-center gap-2">
@@ -121,7 +121,7 @@ function DropdownMenuSides() {
   )
 }
 
-function DropdownMenuWithIcons() {
+export function DropdownMenuWithIcons() {
   return (
     <Example title="With Icons">
       <DropdownMenu>
@@ -178,7 +178,7 @@ function DropdownMenuWithIcons() {
   )
 }
 
-function DropdownMenuWithShortcuts() {
+export function DropdownMenuWithShortcuts() {
   return (
     <Example title="With Shortcuts">
       <DropdownMenu>
@@ -218,7 +218,7 @@ function DropdownMenuWithShortcuts() {
   )
 }
 
-function DropdownMenuWithSubmenu() {
+export function DropdownMenuWithSubmenu() {
   return (
     <Example title="With Submenu">
       <DropdownMenu>
@@ -252,7 +252,7 @@ function DropdownMenuWithSubmenu() {
   )
 }
 
-function DropdownMenuWithCheckboxes() {
+export function DropdownMenuWithCheckboxes() {
   const [showStatusBar, setShowStatusBar] = React.useState(true)
   const [showActivityBar, setShowActivityBar] = React.useState(false)
   const [showPanel, setShowPanel] = React.useState(false)
@@ -315,7 +315,7 @@ function DropdownMenuWithCheckboxes() {
   )
 }
 
-function DropdownMenuWithRadio() {
+export function DropdownMenuWithRadio() {
   const [position, setPosition] = React.useState("bottom")
 
   return (
@@ -371,7 +371,7 @@ function DropdownMenuWithRadio() {
   )
 }
 
-function DropdownMenuWithCheckboxesIcons() {
+export function DropdownMenuWithCheckboxesIcons() {
   const [notifications, setNotifications] = React.useState({
     email: true,
     sms: false,
@@ -441,7 +441,7 @@ function DropdownMenuWithCheckboxesIcons() {
   )
 }
 
-function DropdownMenuWithRadioIcons() {
+export function DropdownMenuWithRadioIcons() {
   const [paymentMethod, setPaymentMethod] = React.useState("card")
 
   return (
@@ -497,7 +497,7 @@ function DropdownMenuWithRadioIcons() {
   )
 }
 
-function DropdownMenuWithDestructive() {
+export function DropdownMenuWithDestructive() {
   return (
     <Example title="With Destructive Items">
       <DropdownMenu>
@@ -554,7 +554,7 @@ function DropdownMenuWithDestructive() {
   )
 }
 
-function DropdownMenuWithAvatar() {
+export function DropdownMenuWithAvatar() {
   const menuContent = (
     <>
       <DropdownMenuGroup>
@@ -658,7 +658,7 @@ function DropdownMenuWithAvatar() {
   )
 }
 
-function DropdownMenuInDialog() {
+export function DropdownMenuInDialog() {
   return (
     <Example title="In Dialog">
       <Dialog>
@@ -741,7 +741,7 @@ function DropdownMenuInDialog() {
   )
 }
 
-function DropdownMenuWithInset() {
+export function DropdownMenuWithInset() {
   const [showBookmarks, setShowBookmarks] = React.useState(true)
   const [showUrls, setShowUrls] = React.useState(false)
   const [theme, setTheme] = React.useState("system")
@@ -830,7 +830,7 @@ function DropdownMenuWithInset() {
   )
 }
 
-function DropdownMenuComplex() {
+export function DropdownMenuComplex() {
   const [showSidebar, setShowSidebar] = React.useState(true)
   const [showStatusBar, setShowStatusBar] = React.useState(false)
 

@@ -26,7 +26,7 @@ export default function ResizableExample() {
   )
 }
 
-function ResizableHorizontal() {
+export function ResizableHorizontal() {
   return (
     <Example title="Horizontal">
       <ResizablePanelGroup
@@ -49,7 +49,7 @@ function ResizableHorizontal() {
   )
 }
 
-function ResizableVertical() {
+export function ResizableVertical() {
   return (
     <Example title="Vertical">
       <ResizablePanelGroup
@@ -72,7 +72,7 @@ function ResizableVertical() {
   )
 }
 
-function ResizableWithHandle() {
+export function ResizableWithHandle() {
   return (
     <Example title="With Handle">
       <ResizablePanelGroup
@@ -95,7 +95,7 @@ function ResizableWithHandle() {
   )
 }
 
-function ResizableNested() {
+export function ResizableNested() {
   return (
     <Example title="Nested">
       <ResizablePanelGroup
@@ -128,7 +128,7 @@ function ResizableNested() {
   )
 }
 
-function ResizableControlled() {
+export function ResizableControlled() {
   const [layout, setLayout] = React.useState<Layout>({})
 
   return (

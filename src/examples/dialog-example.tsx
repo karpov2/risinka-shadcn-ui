@@ -77,7 +77,7 @@ export default function DialogExample() {
   )
 }
 
-function DialogWithForm() {
+export function DialogWithForm() {
   return (
     <Example title="With Form" className="items-center justify-center">
       <Dialog>
@@ -120,7 +120,7 @@ function DialogWithForm() {
   )
 }
 
-function DialogScrollableContent() {
+export function DialogScrollableContent() {
   return (
     <Example title="Scrollable Content" className="items-center justify-center">
       <Dialog>
@@ -156,7 +156,7 @@ function DialogScrollableContent() {
   )
 }
 
-function DialogWithStickyFooter() {
+export function DialogWithStickyFooter() {
   return (
     <Example title="With Sticky Footer" className="items-center justify-center">
       <Dialog>
@@ -197,7 +197,7 @@ function DialogWithStickyFooter() {
   )
 }
 
-function DialogNoCloseButton() {
+export function DialogNoCloseButton() {
   return (
     <Example title="No Close Button" className="items-center justify-center">
       <Dialog>
@@ -270,7 +270,7 @@ const accents = [
   { label: "Pink", value: "pink" },
 ]
 
-function DialogChatSettings() {
+export function DialogChatSettings() {
   const [tab, setTab] = React.useState("general")
   const [theme, setTheme] = React.useState("system")
   const [accentColor, setAccentColor] = React.useState("default")

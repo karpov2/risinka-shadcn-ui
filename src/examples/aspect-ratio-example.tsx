@@ -18,7 +18,7 @@ export default function AspectRatioExample() {
   )
 }
 
-function AspectRatio16x9() {
+export function AspectRatio16x9() {
   return (
     <Example title="16:9" className="items-center justify-center">
       <AspectRatio
@@ -36,7 +36,7 @@ function AspectRatio16x9() {
   )
 }
 
-function AspectRatio1x1() {
+export function AspectRatio1x1() {
   return (
     <Example title="1:1" className="items-start">
       <AspectRatio
@@ -54,7 +54,7 @@ function AspectRatio1x1() {
   )
 }
 
-function AspectRatio9x16() {
+export function AspectRatio9x16() {
   return (
     <Example title="9:16" className="items-center justify-center">
       <AspectRatio
@@ -72,7 +72,7 @@ function AspectRatio9x16() {
   )
 }
 
-function AspectRatio21x9() {
+export function AspectRatio21x9() {
   return (
     <Example title="21:9" className="items-center justify-center">
       <AspectRatio

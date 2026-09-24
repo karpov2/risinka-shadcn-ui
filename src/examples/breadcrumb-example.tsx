@@ -32,7 +32,7 @@ export default function BreadcrumbExample() {
   )
 }
 
-function BreadcrumbBasic() {
+export function BreadcrumbBasic() {
   return (
     <Example title="Basic" className="items-center justify-center">
       <Breadcrumb>
@@ -54,7 +54,7 @@ function BreadcrumbBasic() {
   )
 }
 
-function BreadcrumbWithDropdown() {
+export function BreadcrumbWithDropdown() {
   return (
     <Example title="With Dropdown" className="items-center justify-center">
       <Breadcrumb>
@@ -92,7 +92,7 @@ function BreadcrumbWithDropdown() {
   )
 }
 
-function BreadcrumbWithLink() {
+export function BreadcrumbWithLink() {
   return (
     <Example title="With Link" className="items-center justify-center">
       <Breadcrumb>

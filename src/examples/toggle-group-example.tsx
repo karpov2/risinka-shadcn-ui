@@ -49,7 +49,7 @@ export default function ToggleGroupExample() {
   )
 }
 
-function ToggleGroupBasic() {
+export function ToggleGroupBasic() {
   return (
     <Example title="Basic">
       <ToggleGroup multiple spacing={1}>
@@ -85,7 +85,7 @@ function ToggleGroupBasic() {
   )
 }
 
-function ToggleGroupOutline() {
+export function ToggleGroupOutline() {
   return (
     <Example title="Outline">
       <ToggleGroup variant="outline" defaultValue={["all"]}>
@@ -100,7 +100,7 @@ function ToggleGroupOutline() {
   )
 }
 
-function ToggleGroupOutlineWithIcons() {
+export function ToggleGroupOutlineWithIcons() {
   return (
     <Example title="Outline With Icons">
       <ToggleGroup variant="outline" multiple size="sm">
@@ -136,7 +136,7 @@ function ToggleGroupOutlineWithIcons() {
   )
 }
 
-function ToggleGroupSizes() {
+export function ToggleGroupSizes() {
   return (
     <Example title="Sizes">
       <div className="flex flex-col gap-4">
@@ -173,7 +173,7 @@ function ToggleGroupSizes() {
   )
 }
 
-function ToggleGroupSpacing() {
+export function ToggleGroupSpacing() {
   return (
     <Example title="With Spacing">
       <ToggleGroup size="sm" defaultValue={["top"]} spacing={2}>
@@ -194,7 +194,7 @@ function ToggleGroupSpacing() {
   )
 }
 
-function ToggleGroupWithIcons() {
+export function ToggleGroupWithIcons() {
   return (
     <Example title="With Icons">
       <ToggleGroup multiple variant="outline" spacing={2} size="sm">
@@ -245,7 +245,7 @@ function ToggleGroupWithIcons() {
   )
 }
 
-function ToggleGroupFilter() {
+export function ToggleGroupFilter() {
   return (
     <Example title="Filter">
       <ToggleGroup defaultValue={["all"]} variant="outline" size="sm">
@@ -266,7 +266,7 @@ function ToggleGroupFilter() {
   )
 }
 
-function ToggleGroupDateRange() {
+export function ToggleGroupDateRange() {
   return (
     <Example title="Date Range">
       <ToggleGroup
@@ -292,7 +292,7 @@ function ToggleGroupDateRange() {
   )
 }
 
-function ToggleGroupSort() {
+export function ToggleGroupSort() {
   return (
     <Example title="Sort">
       <ToggleGroup defaultValue={["newest"]} variant="outline" size="sm">
@@ -331,7 +331,7 @@ function ToggleGroupSort() {
   )
 }
 
-function ToggleGroupWithInputAndSelect() {
+export function ToggleGroupWithInputAndSelect() {
   const items = [
     { label: "All", value: "all" },
     { label: "Active", value: "active" },
@@ -368,7 +368,7 @@ function ToggleGroupWithInputAndSelect() {
   )
 }
 
-function ToggleGroupVertical() {
+export function ToggleGroupVertical() {
   return (
     <Example title="Vertical">
       <ToggleGroup multiple orientation="vertical" spacing={1}>
@@ -404,7 +404,7 @@ function ToggleGroupVertical() {
   )
 }
 
-function ToggleGroupVerticalOutline() {
+export function ToggleGroupVerticalOutline() {
   return (
     <Example title="Vertical Outline">
       <ToggleGroup
@@ -430,7 +430,7 @@ function ToggleGroupVerticalOutline() {
   )
 }
 
-function ToggleGroupVerticalOutlineWithIcons() {
+export function ToggleGroupVerticalOutlineWithIcons() {
   return (
     <Example title="Vertical Outline With Icons">
       <ToggleGroup variant="outline" multiple orientation="vertical" size="sm">
@@ -466,7 +466,7 @@ function ToggleGroupVerticalOutlineWithIcons() {
   )
 }
 
-function ToggleGroupFontWeightSelector() {
+export function ToggleGroupFontWeightSelector() {
   const [fontWeight, setFontWeight] = React.useState("normal")
   return (
     <Example title="Font Weight Selector">
@@ -524,7 +524,7 @@ function ToggleGroupFontWeightSelector() {
   )
 }
 
-function ToggleGroupVerticalWithSpacing() {
+export function ToggleGroupVerticalWithSpacing() {
   return (
     <Example title="Vertical With Spacing">
       <ToggleGroup

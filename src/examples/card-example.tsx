@@ -74,7 +74,7 @@ export default function CardExample() {
   )
 }
 
-function CardContentEdgeToEdge() {
+export function CardContentEdgeToEdge() {
   return (
     <Example title="Content Edge to Edge">
       <Card className="mx-auto w-full max-w-sm">
@@ -114,7 +114,7 @@ function CardContentEdgeToEdge() {
   )
 }
 
-function CardCustomSpacing() {
+export function CardCustomSpacing() {
   const [spacing, setSpacing] = React.useState("4")
   const selectedSpacing = spacingOptions.find(
     (option) => option.value === spacing
@@ -165,7 +165,7 @@ function CardCustomSpacing() {
   )
 }
 
-function CardLogin() {
+export function CardLogin() {
   return (
     <Example title="Login">
       <Card className="mx-auto w-full max-w-sm">
@@ -221,7 +221,7 @@ function CardLogin() {
   )
 }
 
-function CardMeetingNotes() {
+export function CardMeetingNotes() {
   return (
     <Example title="Meeting Notes">
       <Card className="mx-auto w-full max-w-sm">
@@ -285,7 +285,7 @@ function CardMeetingNotes() {
   )
 }
 
-function CardWithImage() {
+export function CardWithImage() {
   return (
     <Example title="With Image">
       <Card size="default" className="relative mx-auto w-full max-w-sm pt-0">
@@ -320,7 +320,7 @@ function CardWithImage() {
   )
 }
 
-function CardWithImageSmall() {
+export function CardWithImageSmall() {
   return (
     <Example title="With Image (Small)">
       <Card size="sm" className="relative mx-auto w-full max-w-sm pt-0">
@@ -355,7 +355,7 @@ function CardWithImageSmall() {
   )
 }
 
-function CardHeaderWithBorder() {
+export function CardHeaderWithBorder() {
   return (
     <Example title="Header with Border">
       <Card className="mx-auto w-full max-w-sm">
@@ -376,7 +376,7 @@ function CardHeaderWithBorder() {
   )
 }
 
-function CardFooterWithBorder() {
+export function CardFooterWithBorder() {
   return (
     <Example title="Footer with Border">
       <Card className="mx-auto w-full max-w-sm">
@@ -396,7 +396,7 @@ function CardFooterWithBorder() {
   )
 }
 
-function CardDefault() {
+export function CardDefault() {
   return (
     <Example title="Default Size">
       <Card size="default" className="mx-auto w-full max-w-sm">
@@ -422,7 +422,7 @@ function CardDefault() {
   )
 }
 
-function CardSmall() {
+export function CardSmall() {
   return (
     <Example title="Small Size">
       <Card size="sm" className="mx-auto w-full max-w-sm">
@@ -448,7 +448,7 @@ function CardSmall() {
   )
 }
 
-function CardHeaderWithBorderSmall() {
+export function CardHeaderWithBorderSmall() {
   return (
     <Example title="Header with Border (Small)">
       <Card size="sm" className="mx-auto w-full max-w-sm">
@@ -469,7 +469,7 @@ function CardHeaderWithBorderSmall() {
   )
 }
 
-function CardFooterWithBorderSmall() {
+export function CardFooterWithBorderSmall() {
   return (
     <Example title="Footer with Border (Small)">
       <Card size="sm" className="mx-auto w-full max-w-sm">

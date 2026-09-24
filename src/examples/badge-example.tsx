@@ -21,7 +21,7 @@ export default function BadgeExample() {
   )
 }
 
-function BadgeVariants() {
+export function BadgeVariants() {
   return (
     <Example title="Variants">
       <div className="flex flex-wrap gap-2 style-sera:gap-6">
@@ -36,7 +36,7 @@ function BadgeVariants() {
   )
 }
 
-function BadgeWithIconLeft() {
+export function BadgeWithIconLeft() {
   return (
     <Example title="Icon Left" className="max-w-fit">
       <div className="flex flex-wrap gap-2 style-sera:gap-6">
@@ -111,7 +111,7 @@ function BadgeWithIconLeft() {
   )
 }
 
-function BadgeWithIconRight() {
+export function BadgeWithIconRight() {
   return (
     <Example title="Icon Right" className="max-w-fit">
       <div className="flex flex-wrap gap-2 style-sera:gap-6">
@@ -186,7 +186,7 @@ function BadgeWithIconRight() {
   )
 }
 
-function BadgeWithSpinner() {
+export function BadgeWithSpinner() {
   return (
     <Example title="With Spinner" className="max-w-fit">
       <div className="flex flex-wrap gap-2 style-sera:gap-6">
@@ -219,7 +219,7 @@ function BadgeWithSpinner() {
   )
 }
 
-function BadgeAsLink() {
+export function BadgeAsLink() {
   return (
     <Example title="asChild">
       <div className="flex flex-wrap gap-2 style-sera:gap-6">
@@ -291,7 +291,7 @@ function BadgeAsLink() {
   )
 }
 
-function BadgeLongText() {
+export function BadgeLongText() {
   return (
     <Example title="Long Text">
       <div className="flex flex-wrap gap-2 style-sera:gap-6">
@@ -303,7 +303,7 @@ function BadgeLongText() {
   )
 }
 
-function BadgeCustomColors() {
+export function BadgeCustomColors() {
   return (
     <Example title="Custom Colors" className="max-w-fit">
       <div className="flex flex-wrap gap-2 style-sera:gap-6">

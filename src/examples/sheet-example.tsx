@@ -27,7 +27,7 @@ export default function SheetExample() {
   )
 }
 
-function SheetWithForm() {
+export function SheetWithForm() {
   return (
     <Example title="With Form">
       <Sheet>
@@ -62,7 +62,7 @@ function SheetWithForm() {
   )
 }
 
-function SheetNoCloseButton() {
+export function SheetNoCloseButton() {
   return (
     <Example title="No Close Button">
       <Sheet>
@@ -85,7 +85,7 @@ function SheetNoCloseButton() {
 
 const SHEET_SIDES = ["top", "right", "bottom", "left"] as const
 
-function SheetWithSides() {
+export function SheetWithSides() {
   return (
     <Example title="Sides">
       <div className="flex flex-wrap gap-2">

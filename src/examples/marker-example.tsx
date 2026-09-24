@@ -44,7 +44,7 @@ export default function MarkerExamples() {
   )
 }
 
-function MarkerExample() {
+export function MarkerExample() {
   return (
     <Example title="Markers" className="gap-8">
       <Marker>
@@ -154,7 +154,7 @@ function MarkerExample() {
   )
 }
 
-function MarkerBorder() {
+export function MarkerBorder() {
   return (
     <Example title="Border" className="gap-3">
       <Marker variant="border">
@@ -197,7 +197,7 @@ function MarkerBorder() {
   )
 }
 
-function MarkerSeparator() {
+export function MarkerSeparator() {
   return (
     <Example title="Separator" className="gap-8">
       <Marker variant="separator">
@@ -247,7 +247,7 @@ function MarkerSeparator() {
   )
 }
 
-function MarkerAccordion() {
+export function MarkerAccordion() {
   return (
     <Example title="Accordion" containerClassName="min-h-72">
       <Accordion>
@@ -279,7 +279,7 @@ function MarkerAccordion() {
   )
 }
 
-function MarkerDrawer() {
+export function MarkerDrawer() {
   return (
     <Example title="Drawer">
       <Drawer swipeDirection="right">

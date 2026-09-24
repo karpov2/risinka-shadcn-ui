@@ -36,7 +36,7 @@ export default function AvatarExample() {
   )
 }
 
-function AvatarSizes() {
+export function AvatarSizes() {
   return (
     <Example title="Sizes">
       <div className="flex flex-wrap items-center gap-2">
@@ -68,7 +68,7 @@ function AvatarSizes() {
   )
 }
 
-function AvatarWithBadge() {
+export function AvatarWithBadge() {
   return (
     <Example title="Badge">
       <div className="flex flex-wrap items-center gap-2">
@@ -115,7 +115,7 @@ function AvatarWithBadge() {
   )
 }
 
-function AvatarWithBadgeIcon() {
+export function AvatarWithBadgeIcon() {
   return (
     <Example title="Badge with Icon">
       <div className="flex flex-wrap items-center gap-2">
@@ -210,7 +210,7 @@ function AvatarWithBadgeIcon() {
   )
 }
 
-function AvatarGroupExample() {
+export function AvatarGroupExample() {
   return (
     <Example title="Group">
       <AvatarGroup>
@@ -277,7 +277,7 @@ function AvatarGroupExample() {
   )
 }
 
-function AvatarGroupWithCount() {
+export function AvatarGroupWithCount() {
   return (
     <Example title="Group with Count">
       <AvatarGroup>
@@ -347,7 +347,7 @@ function AvatarGroupWithCount() {
   )
 }
 
-function AvatarGroupWithIconCount() {
+export function AvatarGroupWithIconCount() {
   return (
     <Example title="Group with Icon Count">
       <AvatarGroup>
@@ -447,7 +447,7 @@ function AvatarGroupWithIconCount() {
   )
 }
 
-function AvatarInEmpty() {
+export function AvatarInEmpty() {
   return (
     <Example title="In Empty">
       <Empty className="w-full flex-none border">

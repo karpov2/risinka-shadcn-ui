@@ -34,7 +34,7 @@ export default function SpinnerExample() {
   )
 }
 
-function SpinnerBasic() {
+export function SpinnerBasic() {
   return (
     <Example title="Basic">
       <div className="flex items-center gap-6">
@@ -45,7 +45,7 @@ function SpinnerBasic() {
   )
 }
 
-function SpinnerInButtons() {
+export function SpinnerInButtons() {
   return (
     <Example title="In Buttons">
       <div className="flex flex-wrap items-center gap-4">
@@ -67,7 +67,7 @@ function SpinnerInButtons() {
   )
 }
 
-function SpinnerInBadges() {
+export function SpinnerInBadges() {
   return (
     <Example title="In Badges" className="items-center justify-center">
       <div className="flex flex-wrap items-center justify-center gap-4">
@@ -92,7 +92,7 @@ function SpinnerInBadges() {
   )
 }
 
-function SpinnerInInputGroup() {
+export function SpinnerInInputGroup() {
   return (
     <Example title="In Input Group">
       <Field>
@@ -108,7 +108,7 @@ function SpinnerInInputGroup() {
   )
 }
 
-function SpinnerInEmpty() {
+export function SpinnerInEmpty() {
   return (
     <Example title="In Empty State" containerClassName="lg:col-span-full">
       <Empty className="min-h-[300px]">

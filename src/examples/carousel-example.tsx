@@ -22,7 +22,7 @@ export default function CarouselExample() {
   )
 }
 
-function CarouselBasic() {
+export function CarouselBasic() {
   return (
     <Example title="Basic">
       <Carousel className="mx-auto max-w-xs sm:max-w-sm">
@@ -46,7 +46,7 @@ function CarouselBasic() {
   )
 }
 
-function CarouselMultiple() {
+export function CarouselMultiple() {
   return (
     <Example title="Multiple">
       <Carousel
@@ -75,7 +75,7 @@ function CarouselMultiple() {
   )
 }
 
-function CarouselWithGap() {
+export function CarouselWithGap() {
   return (
     <Example title="With Gap">
       <Carousel className="mx-auto max-w-xs sm:max-w-sm">

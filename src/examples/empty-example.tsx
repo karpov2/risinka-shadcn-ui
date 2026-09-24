@@ -33,7 +33,7 @@ export default function EmptyExample() {
   )
 }
 
-function EmptyBasic() {
+export function EmptyBasic() {
   return (
     <Example title="Basic">
       <Empty>
@@ -72,7 +72,7 @@ function EmptyBasic() {
   )
 }
 
-function EmptyWithMutedBackground() {
+export function EmptyWithMutedBackground() {
   return (
     <Example title="With Muted Background">
       <Empty className="bg-muted">
@@ -105,7 +105,7 @@ function EmptyWithMutedBackground() {
   )
 }
 
-function EmptyWithBorder() {
+export function EmptyWithBorder() {
   return (
     <Example title="With Border">
       <Empty className="border">
@@ -141,7 +141,7 @@ function EmptyWithBorder() {
   )
 }
 
-function EmptyWithIcon() {
+export function EmptyWithIcon() {
   return (
     <Example title="With Icon">
       <Empty className="border">
@@ -179,7 +179,7 @@ function EmptyWithIcon() {
   )
 }
 
-function EmptyWithMutedBackgroundAlt() {
+export function EmptyWithMutedBackgroundAlt() {
   return (
     <Example title="With Muted Background Alt">
       <Empty className="bg-muted/50">
@@ -215,7 +215,7 @@ function EmptyWithMutedBackgroundAlt() {
   )
 }
 
-function EmptyInCard() {
+export function EmptyInCard() {
   return (
     <Example title="In Card">
       <Empty>

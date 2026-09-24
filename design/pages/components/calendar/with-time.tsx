@@ -1,0 +1,15 @@
+/**
+ * @section Calendar
+ * @title With Time
+ */
+import { CalendarWithTime } from '../../../../src/examples/calendar-example';
+import { StateFrame } from '../../../library/kit';
+
+/** Calendar · With Time — сводный пример shadcn/ui (MIT, apps/v4/registry/bases/base/examples/calendar-example.tsx, тег shadcn@4.21.0). */
+export default function CalendarWithTimeState() {
+  return (
+    <StateFrame muted>
+      <CalendarWithTime />
+    </StateFrame>
+  );
+}

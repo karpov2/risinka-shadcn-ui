@@ -25,7 +25,7 @@ export default function SwitchExample() {
   )
 }
 
-function SwitchBasic() {
+export function SwitchBasic() {
   return (
     <Example title="Basic">
       <Field orientation="horizontal">
@@ -36,7 +36,7 @@ function SwitchBasic() {
   )
 }
 
-function SwitchWithLabel() {
+export function SwitchWithLabel() {
   return (
     <Example title="With Label">
       <div className="flex items-center gap-2">
@@ -47,7 +47,7 @@ function SwitchWithLabel() {
   )
 }
 
-function SwitchWithDescription() {
+export function SwitchWithDescription() {
   return (
     <Example title="With Description">
       <FieldLabel htmlFor="switch-focus-mode">
@@ -66,7 +66,7 @@ function SwitchWithDescription() {
   )
 }
 
-function SwitchDisabled() {
+export function SwitchDisabled() {
   return (
     <Example title="Disabled">
       <div className="flex flex-col gap-12">
@@ -85,7 +85,7 @@ function SwitchDisabled() {
   )
 }
 
-function SwitchSizes() {
+export function SwitchSizes() {
   return (
     <Example title="Sizes">
       <div className="flex flex-col gap-12">

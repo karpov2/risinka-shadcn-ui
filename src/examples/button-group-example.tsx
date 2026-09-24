@@ -65,7 +65,7 @@ export default function ButtonGroupExample() {
   )
 }
 
-function ButtonGroupBasic() {
+export function ButtonGroupBasic() {
   return (
     <Example title="Basic">
       <div className="flex flex-col gap-4">
@@ -78,7 +78,7 @@ function ButtonGroupBasic() {
   )
 }
 
-function ButtonGroupWithInput() {
+export function ButtonGroupWithInput() {
   return (
     <Example title="With Input">
       <div className="flex flex-col gap-4">
@@ -95,7 +95,7 @@ function ButtonGroupWithInput() {
   )
 }
 
-function ButtonGroupWithText() {
+export function ButtonGroupWithText() {
   return (
     <Example title="With Text">
       <div className="flex flex-col gap-4">
@@ -118,7 +118,7 @@ function ButtonGroupWithText() {
   )
 }
 
-function ButtonGroupWithDropdown() {
+export function ButtonGroupWithDropdown() {
   return (
     <Example title="With Dropdown">
       <div className="flex flex-col gap-4">
@@ -248,7 +248,7 @@ const currencyItems = [
   { label: "£", value: "£" },
 ]
 
-function ButtonGroupWithSelect() {
+export function ButtonGroupWithSelect() {
   return (
     <Example title="With Select">
       <Field>
@@ -284,7 +284,7 @@ function ButtonGroupWithSelect() {
   )
 }
 
-function ButtonGroupWithIcons() {
+export function ButtonGroupWithIcons() {
   return (
     <Example title="With Icons">
       <div className="flex flex-col gap-4">
@@ -322,7 +322,7 @@ function ButtonGroupWithIcons() {
   )
 }
 
-function ButtonGroupWithInputGroup() {
+export function ButtonGroupWithInputGroup() {
   return (
     <Example title="With Input Group">
       <div className="flex flex-col gap-4">
@@ -346,7 +346,7 @@ function ButtonGroupWithInputGroup() {
   )
 }
 
-function ButtonGroupWithFields() {
+export function ButtonGroupWithFields() {
   return (
     <Example title="With Fields">
       <FieldGroup className="grid grid-cols-3 gap-4">
@@ -390,7 +390,7 @@ function ButtonGroupWithFields() {
   )
 }
 
-function ButtonGroupWithLike() {
+export function ButtonGroupWithLike() {
   return (
     <Example title="With Like">
       <ButtonGroup>
@@ -425,7 +425,7 @@ const durationItems = [
   { label: "Weeks", value: "weeks" },
 ]
 
-function ButtonGroupWithSelectAndInput() {
+export function ButtonGroupWithSelectAndInput() {
   return (
     <Example title="With Select and Input">
       <ButtonGroup>
@@ -449,7 +449,7 @@ function ButtonGroupWithSelectAndInput() {
   )
 }
 
-function ButtonGroupNested() {
+export function ButtonGroupNested() {
   return (
     <Example title="Nested">
       <ButtonGroup>
@@ -486,7 +486,7 @@ function ButtonGroupNested() {
   )
 }
 
-function ButtonGroupPagination() {
+export function ButtonGroupPagination() {
   return (
     <Example title="Pagination">
       <ButtonGroup>
@@ -532,7 +532,7 @@ function ButtonGroupPagination() {
   )
 }
 
-function ButtonGroupPaginationSplit() {
+export function ButtonGroupPaginationSplit() {
   return (
     <Example title="Pagination Split">
       <ButtonGroup>
@@ -578,7 +578,7 @@ function ButtonGroupPaginationSplit() {
   )
 }
 
-function ButtonGroupNavigation() {
+export function ButtonGroupNavigation() {
   return (
     <Example title="Navigation">
       <ButtonGroup>
@@ -618,7 +618,7 @@ function ButtonGroupNavigation() {
   )
 }
 
-function ButtonGroupTextAlignment() {
+export function ButtonGroupTextAlignment() {
   return (
     <Example title="Text Alignment">
       <Field>
@@ -642,7 +642,7 @@ function ButtonGroupTextAlignment() {
   )
 }
 
-function ButtonGroupVertical() {
+export function ButtonGroupVertical() {
   return (
     <Example title="Vertical">
       <div className="flex gap-6">
@@ -675,7 +675,7 @@ function ButtonGroupVertical() {
   )
 }
 
-function ButtonGroupVerticalNested() {
+export function ButtonGroupVerticalNested() {
   return (
     <Example title="Vertical Nested">
       <ButtonGroup orientation="vertical" aria-label="Design tools palette">

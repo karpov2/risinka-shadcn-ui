@@ -548,7 +548,7 @@ const timezones = [
   },
 ] as const
 
-function ComboboxBasic() {
+export function ComboboxBasic() {
   return (
     <Example title="Basic">
       <Combobox items={frameworks}>
@@ -568,7 +568,7 @@ function ComboboxBasic() {
   )
 }
 
-function ComboboxSides() {
+export function ComboboxSides() {
   return (
     <Example title="Sides" containerClassName="col-span-2">
       <div className="flex flex-wrap justify-center gap-2">
@@ -604,7 +604,7 @@ function ComboboxSides() {
   )
 }
 
-function ComboboxDisabled() {
+export function ComboboxDisabled() {
   return (
     <Example title="Disabled">
       <Combobox items={frameworks}>
@@ -626,7 +626,7 @@ function ComboboxDisabled() {
 
 const disabledFrameworks = ["Nuxt.js", "Remix"]
 
-function ComboboxDisabledItems() {
+export function ComboboxDisabledItems() {
   return (
     <Example title="Disabled Items">
       <Combobox items={frameworks}>
@@ -650,7 +650,7 @@ function ComboboxDisabledItems() {
   )
 }
 
-function ComboboxInvalid() {
+export function ComboboxInvalid() {
   return (
     <Example title="Invalid">
       <div className="flex flex-col gap-4">
@@ -696,7 +696,7 @@ function ComboboxInvalid() {
   )
 }
 
-function ComboboxWithClear() {
+export function ComboboxWithClear() {
   return (
     <Example title="With Clear Button">
       <Combobox items={frameworks} defaultValue={frameworks[0]}>
@@ -716,7 +716,7 @@ function ComboboxWithClear() {
   )
 }
 
-function ComboboxWithGroups() {
+export function ComboboxWithGroups() {
   return (
     <Example title="With Groups">
       <Combobox items={timezones}>
@@ -743,7 +743,7 @@ function ComboboxWithGroups() {
   )
 }
 
-function ComboboxWithGroupsAndSeparator() {
+export function ComboboxWithGroupsAndSeparator() {
   return (
     <Example title="With Groups and Separator">
       <Combobox items={timezones}>
@@ -771,7 +771,7 @@ function ComboboxWithGroupsAndSeparator() {
   )
 }
 
-function ComboboxWithForm() {
+export function ComboboxWithForm() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     const formData = new FormData(event.target as HTMLFormElement)
@@ -825,7 +825,7 @@ function ComboboxWithForm() {
 
 const largeListItems = Array.from({ length: 100 }, (_, i) => `Item ${i + 1}`)
 
-function ComboboxLargeList() {
+export function ComboboxLargeList() {
   return (
     <Example title="Large List (100 items)">
       <Combobox items={largeListItems}>
@@ -845,7 +845,7 @@ function ComboboxLargeList() {
   )
 }
 
-function ComboboxAutoHighlight() {
+export function ComboboxAutoHighlight() {
   return (
     <Example title="With Auto Highlight">
       <Combobox items={frameworks} autoHighlight>
@@ -865,7 +865,7 @@ function ComboboxAutoHighlight() {
   )
 }
 
-function ComboxboxInputAddon() {
+export function ComboxboxInputAddon() {
   return (
     <Example title="With Icon Addon">
       <Combobox items={timezones}>
@@ -902,7 +902,7 @@ function ComboxboxInputAddon() {
   )
 }
 
-function ComboboxInPopup() {
+export function ComboboxInPopup() {
   return (
     <Example title="Combobox in Popup">
       <Combobox items={countries} defaultValue={countries[0]}>
@@ -932,7 +932,7 @@ function ComboboxInPopup() {
   )
 }
 
-function ComboboxMultiple() {
+export function ComboboxMultiple() {
   const anchor = useComboboxAnchor()
 
   return (
@@ -970,7 +970,7 @@ function ComboboxMultiple() {
   )
 }
 
-function ComboboxMultipleDisabled() {
+export function ComboboxMultipleDisabled() {
   const anchor = useComboboxAnchor()
 
   return (
@@ -1009,7 +1009,7 @@ function ComboboxMultipleDisabled() {
   )
 }
 
-function ComboboxMultipleInvalid() {
+export function ComboboxMultipleInvalid() {
   const anchor1 = useComboboxAnchor()
   const anchor2 = useComboboxAnchor()
 
@@ -1091,7 +1091,7 @@ function ComboboxMultipleInvalid() {
   )
 }
 
-function ComboboxMultipleNoRemove() {
+export function ComboboxMultipleNoRemove() {
   const anchor = useComboboxAnchor()
 
   return (
@@ -1131,7 +1131,7 @@ function ComboboxMultipleNoRemove() {
   )
 }
 
-function ComboboxWithCustomItems() {
+export function ComboboxWithCustomItems() {
   return (
     <Example title="With Custom Item Rendering">
       <Combobox
@@ -1165,7 +1165,7 @@ function ComboboxWithCustomItems() {
   )
 }
 
-function ComboboxInDialog() {
+export function ComboboxInDialog() {
   const [open, setOpen] = React.useState(false)
 
   return (
@@ -1261,7 +1261,7 @@ const items = [
   },
 ]
 
-function ComboboxWithOtherInputs() {
+export function ComboboxWithOtherInputs() {
   return (
     <Example title="With Other Inputs">
       <Combobox items={frameworks}>

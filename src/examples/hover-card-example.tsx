@@ -36,7 +36,7 @@ const HOVER_CARD_SIDES = [
   "inline-end",
 ] as const
 
-function HoverCardSides() {
+export function HoverCardSides() {
   return (
     <Example title="Sides" containerClassName="col-span-2">
       <div className="flex flex-wrap items-center justify-center gap-2">
@@ -65,7 +65,7 @@ function HoverCardSides() {
   )
 }
 
-function HoverCardInDialog() {
+export function HoverCardInDialog() {
   return (
     <Example title="In Dialog">
       <Dialog>

@@ -76,7 +76,7 @@ export default function InputGroupExample() {
   )
 }
 
-function InputGroupBasic() {
+export function InputGroupBasic() {
   return (
     <Example title="Basic">
       <FieldGroup>
@@ -117,7 +117,7 @@ function InputGroupBasic() {
   )
 }
 
-function InputGroupWithAddons() {
+export function InputGroupWithAddons() {
   return (
     <Example title="With Addons">
       <FieldGroup>
@@ -293,7 +293,7 @@ function InputGroupWithAddons() {
   )
 }
 
-function InputGroupWithButtons() {
+export function InputGroupWithButtons() {
   return (
     <Example title="With Buttons">
       <FieldGroup>
@@ -511,7 +511,7 @@ function InputGroupWithTooltip({
   )
 }
 
-function InputGroupWithKbd() {
+export function InputGroupWithKbd() {
   return (
     <Example title="With Kbd">
       <FieldGroup>
@@ -670,7 +670,7 @@ function InputGroupWithKbd() {
   )
 }
 
-function InputGroupInCard() {
+export function InputGroupInCard() {
   return (
     <Example title="In Card">
       <Card className="w-full">
@@ -743,7 +743,7 @@ function InputGroupInCard() {
   )
 }
 
-function InputGroupTextareaExamples() {
+export function InputGroupTextareaExamples() {
   return (
     <Example title="Textarea">
       <FieldGroup>

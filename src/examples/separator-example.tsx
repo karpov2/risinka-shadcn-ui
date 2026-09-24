@@ -16,7 +16,7 @@ export default function SeparatorExample() {
   )
 }
 
-function SeparatorHorizontal() {
+export function SeparatorHorizontal() {
   return (
     <Example title="Horizontal">
       <div className="flex flex-col gap-4 text-sm style-lyra:text-xs/relaxed">
@@ -36,7 +36,7 @@ function SeparatorHorizontal() {
   )
 }
 
-function SeparatorVertical() {
+export function SeparatorVertical() {
   return (
     <Example title="Vertical">
       <div className="flex h-5 items-center gap-4 text-sm style-lyra:text-xs/relaxed">
@@ -50,7 +50,7 @@ function SeparatorVertical() {
   )
 }
 
-function SeparatorVerticalMenu() {
+export function SeparatorVerticalMenu() {
   return (
     <Example title="Vertical Menu">
       <div className="flex items-center gap-2 text-sm md:gap-4 style-lyra:text-xs/relaxed">
@@ -77,7 +77,7 @@ function SeparatorVerticalMenu() {
   )
 }
 
-function SeparatorInList() {
+export function SeparatorInList() {
   return (
     <Example title="In List">
       <div className="flex flex-col gap-2 text-sm style-lyra:text-xs/relaxed">

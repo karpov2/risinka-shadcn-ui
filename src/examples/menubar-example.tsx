@@ -54,7 +54,7 @@ export default function MenubarExample() {
   )
 }
 
-function MenubarBasic() {
+export function MenubarBasic() {
   return (
     <Example title="Basic">
       <Menubar>
@@ -94,7 +94,7 @@ function MenubarBasic() {
   )
 }
 
-function MenubarSides() {
+export function MenubarSides() {
   return (
     <Example title="Sides" containerClassName="col-span-2">
       <div className="flex flex-wrap justify-center gap-2">
@@ -128,7 +128,7 @@ function MenubarSides() {
   )
 }
 
-function MenubarWithSubmenu() {
+export function MenubarWithSubmenu() {
   return (
     <Example title="With Submenu">
       <Menubar>
@@ -178,7 +178,7 @@ function MenubarWithSubmenu() {
   )
 }
 
-function MenubarWithCheckboxes() {
+export function MenubarWithCheckboxes() {
   return (
     <Example title="With Checkboxes">
       <Menubar>
@@ -211,7 +211,7 @@ function MenubarWithCheckboxes() {
   )
 }
 
-function MenubarWithRadio() {
+export function MenubarWithRadio() {
   const [user, setUser] = React.useState("benoit")
   const [theme, setTheme] = React.useState("system")
 
@@ -246,7 +246,7 @@ function MenubarWithRadio() {
   )
 }
 
-function MenubarWithIcons() {
+export function MenubarWithIcons() {
   return (
     <Example title="With Icons">
       <Menubar>
@@ -329,7 +329,7 @@ function MenubarWithIcons() {
   )
 }
 
-function MenubarWithShortcuts() {
+export function MenubarWithShortcuts() {
   return (
     <Example title="With Shortcuts">
       <Menubar>
@@ -373,7 +373,7 @@ function MenubarWithShortcuts() {
   )
 }
 
-function MenubarFormat() {
+export function MenubarFormat() {
   return (
     <Example title="Format">
       <Menubar>
@@ -430,7 +430,7 @@ function MenubarFormat() {
   )
 }
 
-function MenubarInsert() {
+export function MenubarInsert() {
   return (
     <Example title="Insert">
       <Menubar>
@@ -507,7 +507,7 @@ function MenubarInsert() {
   )
 }
 
-function MenubarDestructive() {
+export function MenubarDestructive() {
   return (
     <Example title="Destructive">
       <Menubar>
@@ -599,7 +599,7 @@ function MenubarDestructive() {
   )
 }
 
-function MenubarInDialog() {
+export function MenubarInDialog() {
   return (
     <Example title="In Dialog">
       <Dialog>
@@ -689,7 +689,7 @@ function MenubarInDialog() {
   )
 }
 
-function MenubarWithInset() {
+export function MenubarWithInset() {
   const [showBookmarks, setShowBookmarks] = React.useState(true)
   const [showUrls, setShowUrls] = React.useState(false)
   const [theme, setTheme] = React.useState("system")

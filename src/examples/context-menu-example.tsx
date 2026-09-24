@@ -52,7 +52,7 @@ export default function ContextMenuExample() {
   )
 }
 
-function ContextMenuBasic() {
+export function ContextMenuBasic() {
   return (
     <Example title="Basic">
       <ContextMenu>
@@ -71,7 +71,7 @@ function ContextMenuBasic() {
   )
 }
 
-function ContextMenuWithIcons() {
+export function ContextMenuWithIcons() {
   return (
     <Example title="With Icons">
       <ContextMenu>
@@ -130,7 +130,7 @@ function ContextMenuWithIcons() {
   )
 }
 
-function ContextMenuWithShortcuts() {
+export function ContextMenuWithShortcuts() {
   return (
     <Example title="With Shortcuts">
       <ContextMenu>
@@ -169,7 +169,7 @@ function ContextMenuWithShortcuts() {
   )
 }
 
-function ContextMenuWithSubmenu() {
+export function ContextMenuWithSubmenu() {
   return (
     <Example title="With Submenu">
       <ContextMenu>
@@ -211,7 +211,7 @@ function ContextMenuWithSubmenu() {
   )
 }
 
-function ContextMenuWithGroups() {
+export function ContextMenuWithGroups() {
   return (
     <Example title="With Groups, Labels & Separators">
       <ContextMenu>
@@ -274,7 +274,7 @@ function ContextMenuWithGroups() {
   )
 }
 
-function ContextMenuWithCheckboxes() {
+export function ContextMenuWithCheckboxes() {
   return (
     <Example title="With Checkboxes">
       <ContextMenu>
@@ -297,7 +297,7 @@ function ContextMenuWithCheckboxes() {
   )
 }
 
-function ContextMenuWithRadio() {
+export function ContextMenuWithRadio() {
   const [user, setUser] = React.useState("pedro")
   const [theme, setTheme] = React.useState("light")
 
@@ -334,7 +334,7 @@ function ContextMenuWithRadio() {
   )
 }
 
-function ContextMenuWithDestructive() {
+export function ContextMenuWithDestructive() {
   return (
     <Example title="With Destructive Items">
       <ContextMenu>
@@ -393,7 +393,7 @@ function ContextMenuWithDestructive() {
   )
 }
 
-function ContextMenuWithSides() {
+export function ContextMenuWithSides() {
   return (
     <Example title="With Sides" containerClassName="col-span-2">
       <div className="flex flex-wrap justify-center gap-2">
@@ -425,7 +425,7 @@ function ContextMenuWithSides() {
   )
 }
 
-function ContextMenuInDialog() {
+export function ContextMenuInDialog() {
   return (
     <Example title="In Dialog">
       <Dialog>
@@ -512,7 +512,7 @@ function ContextMenuInDialog() {
   )
 }
 
-function ContextMenuWithInset() {
+export function ContextMenuWithInset() {
   const [showBookmarks, setShowBookmarks] = React.useState(true)
   const [showUrls, setShowUrls] = React.useState(false)
   const [theme, setTheme] = React.useState("system")

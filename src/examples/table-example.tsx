@@ -93,7 +93,7 @@ export default function TableExample() {
   )
 }
 
-function TableBasic() {
+export function TableBasic() {
   return (
     <Example title="Basic">
       <Table>
@@ -123,7 +123,7 @@ function TableBasic() {
   )
 }
 
-function TableWithFooter() {
+export function TableWithFooter() {
   return (
     <Example title="With Footer">
       <Table>
@@ -159,7 +159,7 @@ function TableWithFooter() {
   )
 }
 
-function TableSimple() {
+export function TableSimple() {
   return (
     <Example title="Simple">
       <Table>
@@ -192,7 +192,7 @@ function TableSimple() {
   )
 }
 
-function TableWithBadges() {
+export function TableWithBadges() {
   return (
     <Example title="With Badges">
       <Table>
@@ -249,7 +249,7 @@ function TableWithBadges() {
   )
 }
 
-function TableWithActions() {
+export function TableWithActions() {
   return (
     <Example title="With Actions">
       <Table>
@@ -382,7 +382,7 @@ const tasks = [
   },
 ]
 
-function TableWithSelect() {
+export function TableWithSelect() {
   return (
     <Example title="With Select">
       <Table>
@@ -430,7 +430,7 @@ function TableWithSelect() {
   )
 }
 
-function TableWithInput() {
+export function TableWithInput() {
   return (
     <Example title="With Input">
       <Table>

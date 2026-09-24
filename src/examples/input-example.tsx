@@ -41,7 +41,7 @@ export default function InputExample() {
   )
 }
 
-function InputBasic() {
+export function InputBasic() {
   return (
     <Example title="Basic">
       <Input type="email" placeholder="Email" />
@@ -49,7 +49,7 @@ function InputBasic() {
   )
 }
 
-function InputInvalid() {
+export function InputInvalid() {
   return (
     <Example title="Invalid">
       <Input type="text" placeholder="Error" aria-invalid="true" />
@@ -57,7 +57,7 @@ function InputInvalid() {
   )
 }
 
-function InputWithLabel() {
+export function InputWithLabel() {
   return (
     <Example title="With Label">
       <Field>
@@ -72,7 +72,7 @@ function InputWithLabel() {
   )
 }
 
-function InputWithDescription() {
+export function InputWithDescription() {
   return (
     <Example title="With Description">
       <Field>
@@ -90,7 +90,7 @@ function InputWithDescription() {
   )
 }
 
-function InputDisabled() {
+export function InputDisabled() {
   return (
     <Example title="Disabled">
       <Field>
@@ -106,7 +106,7 @@ function InputDisabled() {
   )
 }
 
-function InputTypes() {
+export function InputTypes() {
   return (
     <Example title="Input Types">
       <div className="flex w-full flex-col gap-6">
@@ -159,7 +159,7 @@ function InputTypes() {
   )
 }
 
-function InputWithSelect() {
+export function InputWithSelect() {
   return (
     <Example title="With Select">
       <div className="flex w-full gap-2">
@@ -181,7 +181,7 @@ function InputWithSelect() {
   )
 }
 
-function InputWithButton() {
+export function InputWithButton() {
   return (
     <Example title="With Button">
       <div className="flex w-full gap-2">
@@ -192,7 +192,7 @@ function InputWithButton() {
   )
 }
 
-function InputWithNativeSelect() {
+export function InputWithNativeSelect() {
   return (
     <Example title="With Native Select">
       <div className="flex w-full gap-2">
@@ -207,7 +207,7 @@ function InputWithNativeSelect() {
   )
 }
 
-function InputForm() {
+export function InputForm() {
   return (
     <Example title="Form">
       <form className="w-full">

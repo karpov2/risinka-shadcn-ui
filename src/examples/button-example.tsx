@@ -21,7 +21,7 @@ export default function ButtonExample() {
   )
 }
 
-function ButtonVariantsAndSizes() {
+export function ButtonVariantsAndSizes() {
   return (
     <Example title="Variants & Sizes">
       <div className="flex flex-wrap items-center gap-2">
@@ -90,7 +90,7 @@ function ButtonVariantsAndSizes() {
   )
 }
 
-function ButtonIconRight() {
+export function ButtonIconRight() {
   return (
     <Example title="Icon Right">
       <div className="flex flex-wrap items-center gap-2">
@@ -368,7 +368,7 @@ function ButtonIconRight() {
   )
 }
 
-function ButtonIconLeft() {
+export function ButtonIconLeft() {
   return (
     <Example title="Icon Left">
       <div className="flex flex-wrap items-center gap-2">
@@ -647,7 +647,7 @@ function ButtonIconLeft() {
   )
 }
 
-function ButtonIconOnly() {
+export function ButtonIconOnly() {
   return (
     <Example title="Icon Only">
       <div className="flex flex-wrap items-center gap-2">
@@ -878,7 +878,7 @@ function ButtonIconOnly() {
   )
 }
 
-function ButtonExamples() {
+export function ButtonExamples() {
   return (
     <Example title="Examples">
       <div className="flex flex-wrap items-center gap-4">
@@ -917,7 +917,7 @@ function ButtonExamples() {
   )
 }
 
-function ButtonInvalidStates() {
+export function ButtonInvalidStates() {
   return (
     <Example title="Invalid States">
       <div className="flex flex-wrap items-center gap-2">

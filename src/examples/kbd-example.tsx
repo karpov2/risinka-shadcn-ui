@@ -33,7 +33,7 @@ export default function KbdExample() {
   )
 }
 
-function KbdBasic() {
+export function KbdBasic() {
   return (
     <Example title="Basic">
       <div className="flex items-center gap-2">
@@ -45,7 +45,7 @@ function KbdBasic() {
   )
 }
 
-function KbdModifierKeys() {
+export function KbdModifierKeys() {
   return (
     <Example title="Modifier Keys">
       <div className="flex items-center gap-2">
@@ -56,7 +56,7 @@ function KbdModifierKeys() {
   )
 }
 
-function KbdGroupExample() {
+export function KbdGroupExample() {
   return (
     <Example title="KbdGroup">
       <KbdGroup>
@@ -68,7 +68,7 @@ function KbdGroupExample() {
   )
 }
 
-function KbdArrowKeys() {
+export function KbdArrowKeys() {
   return (
     <Example title="Arrow Keys">
       <div className="flex items-center gap-2">
@@ -81,7 +81,7 @@ function KbdArrowKeys() {
   )
 }
 
-function KbdWithIcons() {
+export function KbdWithIcons() {
   return (
     <Example title="With Icons">
       <KbdGroup>
@@ -117,7 +117,7 @@ function KbdWithIcons() {
   )
 }
 
-function KbdWithIconsAndText() {
+export function KbdWithIconsAndText() {
   return (
     <Example title="With Icons and Text">
       <KbdGroup>
@@ -146,7 +146,7 @@ function KbdWithIconsAndText() {
   )
 }
 
-function KbdInInputGroup() {
+export function KbdInInputGroup() {
   return (
     <Example title="InputGroup">
       <InputGroup>
@@ -159,7 +159,7 @@ function KbdInInputGroup() {
   )
 }
 
-function KbdInTooltip() {
+export function KbdInTooltip() {
   return (
     <Example title="Tooltip">
       <Tooltip>
@@ -182,7 +182,7 @@ function KbdInTooltip() {
   )
 }
 
-function KbdWithSamp() {
+export function KbdWithSamp() {
   return (
     <Example title="With samp">
       <Kbd>

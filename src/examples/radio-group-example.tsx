@@ -29,7 +29,7 @@ export default function RadioGroupExample() {
   )
 }
 
-function RadioGroupBasic() {
+export function RadioGroupBasic() {
   return (
     <Example title="Basic">
       <RadioGroup defaultValue="comfortable">
@@ -56,7 +56,7 @@ function RadioGroupBasic() {
   )
 }
 
-function RadioGroupWithDescriptions() {
+export function RadioGroupWithDescriptions() {
   return (
     <Example title="With Descriptions">
       <RadioGroup defaultValue="plus">
@@ -96,7 +96,7 @@ function RadioGroupWithDescriptions() {
   )
 }
 
-function RadioGroupWithFieldSet() {
+export function RadioGroupWithFieldSet() {
   return (
     <Example title="With FieldSet">
       <FieldSet>
@@ -129,7 +129,7 @@ function RadioGroupWithFieldSet() {
   )
 }
 
-function RadioGroupGrid() {
+export function RadioGroupGrid() {
   return (
     <Example title="Grid Layout">
       <RadioGroup defaultValue="medium" className="grid grid-cols-2 gap-2">
@@ -162,7 +162,7 @@ function RadioGroupGrid() {
   )
 }
 
-function RadioGroupDisabled() {
+export function RadioGroupDisabled() {
   return (
     <Example title="Disabled">
       <RadioGroup defaultValue="option2" disabled>
@@ -189,7 +189,7 @@ function RadioGroupDisabled() {
   )
 }
 
-function RadioGroupInvalid() {
+export function RadioGroupInvalid() {
   return (
     <Example title="Invalid">
       <FieldSet>

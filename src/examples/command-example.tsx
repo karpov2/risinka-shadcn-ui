@@ -34,7 +34,7 @@ export default function CommandExample() {
   )
 }
 
-function CommandInline() {
+export function CommandInline() {
   return (
     <Example title="Inline">
       <Card className="w-full p-0">
@@ -119,7 +119,7 @@ function CommandInline() {
   )
 }
 
-function CommandBasic() {
+export function CommandBasic() {
   const [open, setOpen] = React.useState(false)
 
   return (
@@ -150,7 +150,7 @@ function CommandBasic() {
   )
 }
 
-function CommandWithShortcuts() {
+export function CommandWithShortcuts() {
   const [open, setOpen] = React.useState(false)
 
   return (
@@ -211,7 +211,7 @@ function CommandWithShortcuts() {
   )
 }
 
-function CommandWithGroups() {
+export function CommandWithGroups() {
   const [open, setOpen] = React.useState(false)
 
   return (
@@ -305,7 +305,7 @@ function CommandWithGroups() {
   )
 }
 
-function CommandManyItems() {
+export function CommandManyItems() {
   const [open, setOpen] = React.useState(false)
 
   return (

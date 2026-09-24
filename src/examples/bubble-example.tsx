@@ -37,7 +37,7 @@ export default function BubbleExample() {
   )
 }
 
-function BubbleVariants() {
+export function BubbleVariants() {
   return (
     <Example title="Variants">
       <div className="flex w-full max-w-md flex-col gap-8">
@@ -93,7 +93,7 @@ Ghost bubbles are full width and can take the full width of the container.
   )
 }
 
-function BubbleSizes() {
+export function BubbleSizes() {
   return (
     <Example title="Sizes">
       <div className="flex w-full max-w-md flex-col gap-8">
@@ -121,7 +121,7 @@ function BubbleSizes() {
   )
 }
 
-function BubbleGrouped() {
+export function BubbleGrouped() {
   return (
     <Example title="Grouped">
       <div className="flex w-full max-w-md flex-col gap-8">
@@ -161,7 +161,7 @@ I also recommend keeping the change in the style file instead of the primitive s
 
 const previewLength = 180
 
-function BubbleCollapsible() {
+export function BubbleCollapsible() {
   const [open, setOpen] = React.useState(false)
   const isLong = text.length > previewLength
   const preview = `${text.slice(0, previewLength)}...`
@@ -213,7 +213,7 @@ Use this for content that needs the whole row.`}
   )
 }
 
-function BubbleWithReactions() {
+export function BubbleWithReactions() {
   return (
     <Example title="Reaction Placement">
       <div className="flex w-full max-w-md flex-col gap-12">
@@ -362,7 +362,7 @@ function BubbleWithReactions() {
   )
 }
 
-function BubbleReactionsButtons() {
+export function BubbleReactionsButtons() {
   return (
     <Example title="Reactions Buttons">
       <div className="flex w-full max-w-md flex-col gap-8">
@@ -432,7 +432,7 @@ function BubbleReactionsButtons() {
   )
 }
 
-function BubbleAlignment() {
+export function BubbleAlignment() {
   return (
     <Example title="Alignment">
       <div className="flex w-full max-w-md flex-col gap-8">
@@ -476,7 +476,7 @@ const quickReplies = [
   },
 ]
 
-function BubbleButtonLinks() {
+export function BubbleButtonLinks() {
   return (
     <Example title="Button & Links">
       <div className="flex w-full max-w-md flex-col gap-8">

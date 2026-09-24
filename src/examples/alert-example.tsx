@@ -24,7 +24,7 @@ export default function AlertExample() {
   )
 }
 
-function AlertExample1() {
+export function AlertExample1() {
   return (
     <Example title="Basic">
       <div className="mx-auto flex w-full max-w-lg flex-col gap-4">
@@ -47,7 +47,7 @@ function AlertExample1() {
   )
 }
 
-function AlertExample2() {
+export function AlertExample2() {
   return (
     <Example title="With Icons">
       <div className="mx-auto flex w-full max-w-lg flex-col gap-4">
@@ -145,7 +145,7 @@ function AlertExample2() {
   )
 }
 
-function AlertExample3() {
+export function AlertExample3() {
   return (
     <Example title="Destructive">
       <div className="mx-auto flex w-full max-w-lg flex-col gap-4">
@@ -188,7 +188,7 @@ function AlertExample3() {
   )
 }
 
-function AlertExample4() {
+export function AlertExample4() {
   return (
     <Example title="With Actions">
       <div className="mx-auto flex w-full max-w-lg flex-col gap-4">

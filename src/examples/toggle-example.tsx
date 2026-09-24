@@ -22,7 +22,7 @@ export default function ToggleExample() {
   )
 }
 
-function ToggleBasic() {
+export function ToggleBasic() {
   return (
     <Example title="Basic">
       <div className="flex flex-wrap items-center gap-2">
@@ -58,7 +58,7 @@ function ToggleBasic() {
   )
 }
 
-function ToggleOutline() {
+export function ToggleOutline() {
   return (
     <Example title="Outline">
       <div className="flex flex-wrap items-center gap-2">
@@ -87,7 +87,7 @@ function ToggleOutline() {
   )
 }
 
-function ToggleSizes() {
+export function ToggleSizes() {
   return (
     <Example title="Sizes">
       <div className="flex flex-wrap items-center gap-2">
@@ -105,7 +105,7 @@ function ToggleSizes() {
   )
 }
 
-function ToggleWithButtonText() {
+export function ToggleWithButtonText() {
   return (
     <Example title="With Button Text">
       <div className="flex flex-col gap-4">
@@ -138,7 +138,7 @@ function ToggleWithButtonText() {
   )
 }
 
-function ToggleWithButtonIcon() {
+export function ToggleWithButtonIcon() {
   return (
     <Example title="With Button Icon">
       <div className="flex flex-col gap-4">
@@ -211,7 +211,7 @@ function ToggleWithButtonIcon() {
   )
 }
 
-function ToggleWithButtonIconText() {
+export function ToggleWithButtonIconText() {
   return (
     <Example title="With Button Icon + Text">
       <div className="flex flex-col gap-4">
@@ -293,7 +293,7 @@ function ToggleWithButtonIconText() {
   )
 }
 
-function ToggleDisabled() {
+export function ToggleDisabled() {
   return (
     <Example title="Disabled">
       <div className="flex flex-wrap items-center gap-2">
@@ -308,7 +308,7 @@ function ToggleDisabled() {
   )
 }
 
-function ToggleWithIcon() {
+export function ToggleWithIcon() {
   return (
     <Example title="With Icon">
       <div className="flex flex-wrap items-center gap-2">

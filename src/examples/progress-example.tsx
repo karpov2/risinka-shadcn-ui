@@ -34,7 +34,7 @@ export default function ProgressExample() {
   )
 }
 
-function ProgressValues() {
+export function ProgressValues() {
   return (
     <Example title="Progress Bar">
       <div className="flex w-full flex-col gap-4">
@@ -48,7 +48,7 @@ function ProgressValues() {
   )
 }
 
-function ProgressWithLabel() {
+export function ProgressWithLabel() {
   return (
     <Example title="With Label">
       <Progress value={56}>
@@ -59,7 +59,7 @@ function ProgressWithLabel() {
   )
 }
 
-function ProgressControlled() {
+export function ProgressControlled() {
   const [value, setValue] = React.useState(50)
 
   return (
@@ -78,7 +78,7 @@ function ProgressControlled() {
   )
 }
 
-function FileUploadList() {
+export function FileUploadList() {
   const files = React.useMemo(
     () => [
       {

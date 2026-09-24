@@ -34,7 +34,7 @@ export default function PaginationExample() {
   )
 }
 
-function PaginationBasic() {
+export function PaginationBasic() {
   return (
     <Example title="Basic">
       <Pagination>
@@ -65,7 +65,7 @@ function PaginationBasic() {
   )
 }
 
-function PaginationSimple() {
+export function PaginationSimple() {
   return (
     <Example title="Simple">
       <Pagination>
@@ -93,7 +93,7 @@ function PaginationSimple() {
   )
 }
 
-function PaginationIconsOnly() {
+export function PaginationIconsOnly() {
   return (
     <Example title="With Select">
       <div className="flex items-center justify-between gap-4">

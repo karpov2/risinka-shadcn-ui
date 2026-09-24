@@ -18,7 +18,7 @@ export default function ToastExample() {
   )
 }
 
-function ToastBasic() {
+export function ToastBasic() {
   return (
     <Example title="Basic" className="items-center justify-center">
       <Button
@@ -37,7 +37,7 @@ function ToastBasic() {
   )
 }
 
-function ToastWithAction() {
+export function ToastWithAction() {
   function showToast() {
     const id = toast.add({
       title: "Event created",
@@ -63,7 +63,7 @@ function ToastWithAction() {
   )
 }
 
-function ToastPromise() {
+export function ToastPromise() {
   function showToast() {
     toast.promise(
       new Promise<{ name: string }>((resolve) => {

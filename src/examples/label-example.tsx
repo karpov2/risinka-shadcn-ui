@@ -20,7 +20,7 @@ export default function LabelExample() {
   )
 }
 
-function LabelWithCheckbox() {
+export function LabelWithCheckbox() {
   return (
     <Example title="With Checkbox">
       <Field orientation="horizontal">
@@ -31,7 +31,7 @@ function LabelWithCheckbox() {
   )
 }
 
-function LabelWithInput() {
+export function LabelWithInput() {
   return (
     <Example title="With Input">
       <Field>
@@ -42,7 +42,7 @@ function LabelWithInput() {
   )
 }
 
-function LabelDisabled() {
+export function LabelDisabled() {
   return (
     <Example title="Disabled">
       <Field data-disabled={true}>
@@ -53,7 +53,7 @@ function LabelDisabled() {
   )
 }
 
-function LabelWithTextarea() {
+export function LabelWithTextarea() {
   return (
     <Example title="With Textarea">
       <Field>
