@@ -1,0 +1,14 @@
+/**
+ * @section Основы
+ * @title Цвета
+ */
+import { ComponentSheet, Swatches } from '../../library/kit';
+
+/** Цвета — лист основ библиотеки проекта (заготовка ядра библиотек, решение 63): из переменных темы, значения читает страница. */
+export default function ColorsSheet() {
+  return (
+    <ComponentSheet name="Цвета">
+      <Swatches names={['--color-background', '--color-foreground', '--color-card', '--color-card-foreground', '--color-popover', '--color-popover-foreground', '--color-primary', '--color-primary-foreground', '--color-secondary', '--color-secondary-foreground', '--color-muted', '--color-muted-foreground', '--color-accent', '--color-accent-foreground', '--color-destructive', '--color-border', '--color-input', '--color-ring', '--color-chart-1', '--color-chart-2', '--color-chart-3', '--color-chart-4', '--color-chart-5', '--color-sidebar', '--color-sidebar-foreground', '--color-sidebar-primary', '--color-sidebar-primary-foreground', '--color-sidebar-accent', '--color-sidebar-accent-foreground', '--color-sidebar-border', '--color-sidebar-ring']} />
+    </ComponentSheet>
+  );
+}

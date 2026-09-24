@@ -1,0 +1,9 @@
+{
+  "name": "shadcn/ui",
+  "version": "4.21.0",
+  "default": true,
+  "upstream": "shadcn-ui/ui",
+  "tagPrefix": "shadcn@",
+  "base": "base",
+  "style": "nova"
+}

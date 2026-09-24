@@ -1,21 +1,5 @@
-# React + TypeScript + Vite + shadcn/ui
+# shadcn/ui 4.21.0 — общая библиотека Risinka по умолчанию
 
-This is a template for a new Vite project with React, TypeScript, and shadcn/ui.
+shadcn/ui на Base UI, стиль Nova: все компоненты (`src/components/ui`), официальные демо (`src/demos`) и сводные примеры (`src/examples`) из репозитория [shadcn-ui/ui](https://github.com/shadcn-ui/ui) по тегу `shadcn@4.21.0`. На холсте Risinka (`design/`): сводка «Компоненты» — по одному варианту каждого компонента, по группам; у каждого — своя страница со всеми вариантами; «Основы» — цвета, шрифты, радиусы.
 
-## Adding components
-
-To add components to your app, run the following command:
-
-```bash
-npx shadcn@latest add button
-```
-
-This will place the ui components in the `src/components` directory.
-
-## Using components
-
-To use the components in your app, import them as follows:
-
-```tsx
-import { Button } from "@/components/ui/button"
-```
+Собрано `make shadcn-library` в репозитории Risinka; «Обновить» на экране «Библиотеки» собирает новую версию так же. Лицензия shadcn/ui — MIT, `LICENSE.md`.

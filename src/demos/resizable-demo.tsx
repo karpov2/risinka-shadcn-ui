@@ -1,0 +1,37 @@
+/** Пример shadcn/ui (MIT): apps/v4/examples/base/resizable-demo.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. */
+import {
+  ResizableHandle,
+  ResizablePanel,
+  ResizablePanelGroup,
+} from "@/components/ui/resizable"
+
+export default function ResizableDemo() {
+  return (
+    <ResizablePanelGroup
+      orientation="horizontal"
+      className="max-w-sm rounded-lg border"
+    >
+      <ResizablePanel defaultSize="50%">
+        <div className="flex h-[200px] items-center justify-center p-6">
+          <span className="font-semibold">One</span>
+        </div>
+      </ResizablePanel>
+      <ResizableHandle withHandle />
+      <ResizablePanel defaultSize="50%">
+        <ResizablePanelGroup orientation="vertical">
+          <ResizablePanel defaultSize="25%">
+            <div className="flex h-full items-center justify-center p-6">
+              <span className="font-semibold">Two</span>
+            </div>
+          </ResizablePanel>
+          <ResizableHandle withHandle />
+          <ResizablePanel defaultSize="75%">
+            <div className="flex h-full items-center justify-center p-6">
+              <span className="font-semibold">Three</span>
+            </div>
+          </ResizablePanel>
+        </ResizablePanelGroup>
+      </ResizablePanel>
+    </ResizablePanelGroup>
+  )
+}

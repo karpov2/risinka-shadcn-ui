@@ -1,0 +1,2527 @@
+{
+  "version": 1,
+  "name": "shadcn/ui",
+  "docs": [],
+  "libraries": [],
+  "tokens": [
+    "../src/index.css"
+  ],
+  "pages": [
+    {
+      "id": "components",
+      "title": "Компоненты",
+      "layout": "free"
+    },
+    {
+      "id": "foundations",
+      "title": "Основы",
+      "layout": "free"
+    },
+    {
+      "id": "components/button",
+      "title": "Button",
+      "layout": "free",
+      "group": "Кнопки и действия"
+    },
+    {
+      "id": "components/button-group",
+      "title": "ButtonGroup",
+      "layout": "free",
+      "group": "Кнопки и действия"
+    },
+    {
+      "id": "components/toggle",
+      "title": "Toggle",
+      "layout": "free",
+      "group": "Кнопки и действия"
+    },
+    {
+      "id": "components/toggle-group",
+      "title": "ToggleGroup",
+      "layout": "free",
+      "group": "Кнопки и действия"
+    },
+    {
+      "id": "components/calendar",
+      "title": "Calendar",
+      "layout": "free",
+      "group": "Поля и формы"
+    },
+    {
+      "id": "components/checkbox",
+      "title": "Checkbox",
+      "layout": "free",
+      "group": "Поля и формы"
+    },
+    {
+      "id": "components/combobox",
+      "title": "Combobox",
+      "layout": "free",
+      "group": "Поля и формы"
+    },
+    {
+      "id": "components/field",
+      "title": "Field",
+      "layout": "free",
+      "group": "Поля и формы"
+    },
+    {
+      "id": "components/input",
+      "title": "Input",
+      "layout": "free",
+      "group": "Поля и формы"
+    },
+    {
+      "id": "components/input-group",
+      "title": "InputGroup",
+      "layout": "free",
+      "group": "Поля и формы"
+    },
+    {
+      "id": "components/input-otp",
+      "title": "InputOTP",
+      "layout": "free",
+      "group": "Поля и формы"
+    },
+    {
+      "id": "components/label",
+      "title": "Label",
+      "layout": "free",
+      "group": "Поля и формы"
+    },
+    {
+      "id": "components/native-select",
+      "title": "NativeSelect",
+      "layout": "free",
+      "group": "Поля и формы"
+    },
+    {
+      "id": "components/radio-group",
+      "title": "RadioGroup",
+      "layout": "free",
+      "group": "Поля и формы"
+    },
+    {
+      "id": "components/select",
+      "title": "Select",
+      "layout": "free",
+      "group": "Поля и формы"
+    },
+    {
+      "id": "components/slider",
+      "title": "Slider",
+      "layout": "free",
+      "group": "Поля и формы"
+    },
+    {
+      "id": "components/switch",
+      "title": "Switch",
+      "layout": "free",
+      "group": "Поля и формы"
+    },
+    {
+      "id": "components/textarea",
+      "title": "Textarea",
+      "layout": "free",
+      "group": "Поля и формы"
+    },
+    {
+      "id": "components/breadcrumb",
+      "title": "Breadcrumb",
+      "layout": "free",
+      "group": "Навигация"
+    },
+    {
+      "id": "components/menubar",
+      "title": "Menubar",
+      "layout": "free",
+      "group": "Навигация"
+    },
+    {
+      "id": "components/navigation-menu",
+      "title": "NavigationMenu",
+      "layout": "free",
+      "group": "Навигация"
+    },
+    {
+      "id": "components/pagination",
+      "title": "Pagination",
+      "layout": "free",
+      "group": "Навигация"
+    },
+    {
+      "id": "components/sidebar",
+      "title": "Sidebar",
+      "layout": "free",
+      "group": "Навигация"
+    },
+    {
+      "id": "components/tabs",
+      "title": "Tabs",
+      "layout": "free",
+      "group": "Навигация"
+    },
+    {
+      "id": "components/alert-dialog",
+      "title": "AlertDialog",
+      "layout": "free",
+      "group": "Меню и окна"
+    },
+    {
+      "id": "components/command",
+      "title": "Command",
+      "layout": "free",
+      "group": "Меню и окна"
+    },
+    {
+      "id": "components/context-menu",
+      "title": "ContextMenu",
+      "layout": "free",
+      "group": "Меню и окна"
+    },
+    {
+      "id": "components/dialog",
+      "title": "Dialog",
+      "layout": "free",
+      "group": "Меню и окна"
+    },
+    {
+      "id": "components/drawer",
+      "title": "Drawer",
+      "layout": "free",
+      "group": "Меню и окна"
+    },
+    {
+      "id": "components/dropdown-menu",
+      "title": "DropdownMenu",
+      "layout": "free",
+      "group": "Меню и окна"
+    },
+    {
+      "id": "components/hover-card",
+      "title": "HoverCard",
+      "layout": "free",
+      "group": "Меню и окна"
+    },
+    {
+      "id": "components/popover",
+      "title": "Popover",
+      "layout": "free",
+      "group": "Меню и окна"
+    },
+    {
+      "id": "components/sheet",
+      "title": "Sheet",
+      "layout": "free",
+      "group": "Меню и окна"
+    },
+    {
+      "id": "components/tooltip",
+      "title": "Tooltip",
+      "layout": "free",
+      "group": "Меню и окна"
+    },
+    {
+      "id": "components/avatar",
+      "title": "Avatar",
+      "layout": "free",
+      "group": "Данные"
+    },
+    {
+      "id": "components/badge",
+      "title": "Badge",
+      "layout": "free",
+      "group": "Данные"
+    },
+    {
+      "id": "components/card",
+      "title": "Card",
+      "layout": "free",
+      "group": "Данные"
+    },
+    {
+      "id": "components/carousel",
+      "title": "Carousel",
+      "layout": "free",
+      "group": "Данные"
+    },
+    {
+      "id": "components/chart",
+      "title": "ChartContainer",
+      "layout": "free",
+      "group": "Данные"
+    },
+    {
+      "id": "components/empty",
+      "title": "Empty",
+      "layout": "free",
+      "group": "Данные"
+    },
+    {
+      "id": "components/item",
+      "title": "Item",
+      "layout": "free",
+      "group": "Данные"
+    },
+    {
+      "id": "components/kbd",
+      "title": "Kbd",
+      "layout": "free",
+      "group": "Данные"
+    },
+    {
+      "id": "components/table",
+      "title": "Table",
+      "layout": "free",
+      "group": "Данные"
+    },
+    {
+      "id": "components/alert",
+      "title": "Alert",
+      "layout": "free",
+      "group": "Обратная связь"
+    },
+    {
+      "id": "components/progress",
+      "title": "Progress",
+      "layout": "free",
+      "group": "Обратная связь"
+    },
+    {
+      "id": "components/skeleton",
+      "title": "Skeleton",
+      "layout": "free",
+      "group": "Обратная связь"
+    },
+    {
+      "id": "components/spinner",
+      "title": "Spinner",
+      "layout": "free",
+      "group": "Обратная связь"
+    },
+    {
+      "id": "components/toast",
+      "title": "Toast",
+      "layout": "free",
+      "group": "Обратная связь"
+    },
+    {
+      "id": "components/accordion",
+      "title": "Accordion",
+      "layout": "free",
+      "group": "Раскладка"
+    },
+    {
+      "id": "components/aspect-ratio",
+      "title": "AspectRatio",
+      "layout": "free",
+      "group": "Раскладка"
+    },
+    {
+      "id": "components/collapsible",
+      "title": "Collapsible",
+      "layout": "free",
+      "group": "Раскладка"
+    },
+    {
+      "id": "components/resizable",
+      "title": "ResizablePanelGroup",
+      "layout": "free",
+      "group": "Раскладка"
+    },
+    {
+      "id": "components/scroll-area",
+      "title": "ScrollArea",
+      "layout": "free",
+      "group": "Раскладка"
+    },
+    {
+      "id": "components/separator",
+      "title": "Separator",
+      "layout": "free",
+      "group": "Раскладка"
+    },
+    {
+      "id": "components/attachment",
+      "title": "Attachment",
+      "layout": "free",
+      "group": "Чат и ИИ"
+    },
+    {
+      "id": "components/bubble",
+      "title": "Bubble",
+      "layout": "free",
+      "group": "Чат и ИИ"
+    },
+    {
+      "id": "components/marker",
+      "title": "Marker",
+      "layout": "free",
+      "group": "Чат и ИИ"
+    },
+    {
+      "id": "components/message",
+      "title": "Message",
+      "layout": "free",
+      "group": "Чат и ИИ"
+    },
+    {
+      "id": "components/message-scroller",
+      "title": "MessageScroller",
+      "layout": "free",
+      "group": "Чат и ИИ"
+    },
+    {
+      "id": "components/questionnaire",
+      "title": "Questionnaire",
+      "layout": "free",
+      "group": "Чат и ИИ"
+    }
+  ],
+  "artboards": [
+    {
+      "id": "components.showcase",
+      "page": "components",
+      "title": "Витрина",
+      "file": "pages/components/showcase.tsx",
+      "kind": "code",
+      "state": "showcase",
+      "status": "draft",
+      "viewport": {
+        "width": 240,
+        "height": 104
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.button",
+      "page": "components",
+      "title": "Button",
+      "file": "pages/components/button.tsx",
+      "kind": "code",
+      "state": "button",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 240
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/button"
+    },
+    {
+      "id": "components.button.sheet",
+      "page": "components/button",
+      "title": "Все варианты",
+      "file": "pages/components/button/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 1687
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.button-group",
+      "page": "components",
+      "title": "ButtonGroup",
+      "file": "pages/components/button-group.tsx",
+      "kind": "code",
+      "state": "button-group",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 240
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/button-group"
+    },
+    {
+      "id": "components.button-group.sheet",
+      "page": "components/button-group",
+      "title": "Все варианты",
+      "file": "pages/components/button-group/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 2307
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.toggle",
+      "page": "components",
+      "title": "Toggle",
+      "file": "pages/components/toggle.tsx",
+      "kind": "code",
+      "state": "toggle",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 240
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/toggle"
+    },
+    {
+      "id": "components.toggle.sheet",
+      "page": "components/toggle",
+      "title": "Все варианты",
+      "file": "pages/components/toggle/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 1139
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.toggle-group",
+      "page": "components",
+      "title": "ToggleGroup",
+      "file": "pages/components/toggle-group.tsx",
+      "kind": "code",
+      "state": "toggle-group",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 240
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/toggle-group"
+    },
+    {
+      "id": "components.toggle-group.sheet",
+      "page": "components/toggle-group",
+      "title": "Все варианты",
+      "file": "pages/components/toggle-group/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 2052
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.calendar",
+      "page": "components",
+      "title": "Calendar",
+      "file": "pages/components/calendar.tsx",
+      "kind": "code",
+      "state": "calendar",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 326
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/calendar"
+    },
+    {
+      "id": "components.calendar.sheet",
+      "page": "components/calendar",
+      "title": "Все варианты",
+      "file": "pages/components/calendar/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 3243
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.checkbox",
+      "page": "components",
+      "title": "Checkbox",
+      "file": "pages/components/checkbox.tsx",
+      "kind": "code",
+      "state": "checkbox",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 267
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/checkbox"
+    },
+    {
+      "id": "components.checkbox.sheet",
+      "page": "components/checkbox",
+      "title": "Все варианты",
+      "file": "pages/components/checkbox/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 1222
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.combobox",
+      "page": "components",
+      "title": "Combobox",
+      "file": "pages/components/combobox.tsx",
+      "kind": "code",
+      "state": "combobox",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 240
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/combobox"
+    },
+    {
+      "id": "components.combobox.sheet",
+      "page": "components/combobox",
+      "title": "Все варианты",
+      "file": "pages/components/combobox/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 2948
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.field",
+      "page": "components",
+      "title": "Field",
+      "file": "pages/components/field.tsx",
+      "kind": "code",
+      "state": "field",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 660
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/field"
+    },
+    {
+      "id": "components.field.sheet",
+      "page": "components/field",
+      "title": "Все варианты",
+      "file": "pages/components/field/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 4260
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.input",
+      "page": "components",
+      "title": "Input",
+      "file": "pages/components/input.tsx",
+      "kind": "code",
+      "state": "input",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 240
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/input"
+    },
+    {
+      "id": "components.input.sheet",
+      "page": "components/input",
+      "title": "Все варианты",
+      "file": "pages/components/input/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 2156
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.input-group",
+      "page": "components",
+      "title": "InputGroup",
+      "file": "pages/components/input-group.tsx",
+      "kind": "code",
+      "state": "input-group",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 240
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/input-group"
+    },
+    {
+      "id": "components.input-group.sheet",
+      "page": "components/input-group",
+      "title": "Все варианты",
+      "file": "pages/components/input-group/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 4058
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.input-otp",
+      "page": "components",
+      "title": "InputOTP",
+      "file": "pages/components/input-otp.tsx",
+      "kind": "code",
+      "state": "input-otp",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 240
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/input-otp"
+    },
+    {
+      "id": "components.input-otp.sheet",
+      "page": "components/input-otp",
+      "title": "Все варианты",
+      "file": "pages/components/input-otp/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 1404
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.label",
+      "page": "components",
+      "title": "Label",
+      "file": "pages/components/label.tsx",
+      "kind": "code",
+      "state": "label",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 240
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/label"
+    },
+    {
+      "id": "components.label.sheet",
+      "page": "components/label",
+      "title": "Все варианты",
+      "file": "pages/components/label/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 631
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.native-select",
+      "page": "components",
+      "title": "NativeSelect",
+      "file": "pages/components/native-select.tsx",
+      "kind": "code",
+      "state": "native-select",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 240
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/native-select"
+    },
+    {
+      "id": "components.native-select.sheet",
+      "page": "components/native-select",
+      "title": "Все варианты",
+      "file": "pages/components/native-select/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 808
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.radio-group",
+      "page": "components",
+      "title": "RadioGroup",
+      "file": "pages/components/radio-group.tsx",
+      "kind": "code",
+      "state": "radio-group",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 240
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/radio-group"
+    },
+    {
+      "id": "components.radio-group.sheet",
+      "page": "components/radio-group",
+      "title": "Все варианты",
+      "file": "pages/components/radio-group/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 1126
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.select",
+      "page": "components",
+      "title": "Select",
+      "file": "pages/components/select.tsx",
+      "kind": "code",
+      "state": "select",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 240
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/select"
+    },
+    {
+      "id": "components.select.sheet",
+      "page": "components/select",
+      "title": "Все варианты",
+      "file": "pages/components/select/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 2203
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.slider",
+      "page": "components",
+      "title": "Slider",
+      "file": "pages/components/slider.tsx",
+      "kind": "code",
+      "state": "slider",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 240
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/slider"
+    },
+    {
+      "id": "components.slider.sheet",
+      "page": "components/slider",
+      "title": "Все варианты",
+      "file": "pages/components/slider/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 855
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.switch",
+      "page": "components",
+      "title": "Switch",
+      "file": "pages/components/switch.tsx",
+      "kind": "code",
+      "state": "switch",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 240
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/switch"
+    },
+    {
+      "id": "components.switch.sheet",
+      "page": "components/switch",
+      "title": "Все варианты",
+      "file": "pages/components/switch/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 907
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.textarea",
+      "page": "components",
+      "title": "Textarea",
+      "file": "pages/components/textarea.tsx",
+      "kind": "code",
+      "state": "textarea",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 240
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/textarea"
+    },
+    {
+      "id": "components.textarea.sheet",
+      "page": "components/textarea",
+      "title": "Все варианты",
+      "file": "pages/components/textarea/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 931
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.breadcrumb",
+      "page": "components",
+      "title": "Breadcrumb",
+      "file": "pages/components/breadcrumb.tsx",
+      "kind": "code",
+      "state": "breadcrumb",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 240
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/breadcrumb"
+    },
+    {
+      "id": "components.breadcrumb.sheet",
+      "page": "components/breadcrumb",
+      "title": "Все варианты",
+      "file": "pages/components/breadcrumb/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 539
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.menubar",
+      "page": "components",
+      "title": "Menubar",
+      "file": "pages/components/menubar.tsx",
+      "kind": "code",
+      "state": "menubar",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 240
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/menubar"
+    },
+    {
+      "id": "components.menubar.sheet",
+      "page": "components/menubar",
+      "title": "Все варианты",
+      "file": "pages/components/menubar/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 1575
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.navigation-menu",
+      "page": "components",
+      "title": "NavigationMenu",
+      "file": "pages/components/navigation-menu.tsx",
+      "kind": "code",
+      "state": "navigation-menu",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 240
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/navigation-menu"
+    },
+    {
+      "id": "components.navigation-menu.sheet",
+      "page": "components/navigation-menu",
+      "title": "Все варианты",
+      "file": "pages/components/navigation-menu/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 363
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.pagination",
+      "page": "components",
+      "title": "Pagination",
+      "file": "pages/components/pagination.tsx",
+      "kind": "code",
+      "state": "pagination",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 240
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/pagination"
+    },
+    {
+      "id": "components.pagination.sheet",
+      "page": "components/pagination",
+      "title": "Все варианты",
+      "file": "pages/components/pagination/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 562
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.sidebar",
+      "page": "components",
+      "title": "Sidebar",
+      "file": "pages/components/sidebar.tsx",
+      "kind": "code",
+      "state": "sidebar",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 964
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/sidebar"
+    },
+    {
+      "id": "components.sidebar.sheet",
+      "page": "components/sidebar",
+      "title": "Все варианты",
+      "file": "pages/components/sidebar/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 1047
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.tabs",
+      "page": "components",
+      "title": "Tabs",
+      "file": "pages/components/tabs.tsx",
+      "kind": "code",
+      "state": "tabs",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 240
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/tabs"
+    },
+    {
+      "id": "components.tabs.sheet",
+      "page": "components/tabs",
+      "title": "Все варианты",
+      "file": "pages/components/tabs/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 1717
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.alert-dialog",
+      "page": "components",
+      "title": "AlertDialog",
+      "file": "pages/components/alert-dialog.tsx",
+      "kind": "code",
+      "state": "alert-dialog",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 240
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/alert-dialog"
+    },
+    {
+      "id": "components.alert-dialog.sheet",
+      "page": "components/alert-dialog",
+      "title": "Все варианты",
+      "file": "pages/components/alert-dialog/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 751
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.command",
+      "page": "components",
+      "title": "Command",
+      "file": "pages/components/command.tsx",
+      "kind": "code",
+      "state": "command",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 375
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/command"
+    },
+    {
+      "id": "components.command.sheet",
+      "page": "components/command",
+      "title": "Все варианты",
+      "file": "pages/components/command/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 1028
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.context-menu",
+      "page": "components",
+      "title": "ContextMenu",
+      "file": "pages/components/context-menu.tsx",
+      "kind": "code",
+      "state": "context-menu",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 240
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/context-menu"
+    },
+    {
+      "id": "components.context-menu.sheet",
+      "page": "components/context-menu",
+      "title": "Все варианты",
+      "file": "pages/components/context-menu/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 1715
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.dialog",
+      "page": "components",
+      "title": "Dialog",
+      "file": "pages/components/dialog.tsx",
+      "kind": "code",
+      "state": "dialog",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 240
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/dialog"
+    },
+    {
+      "id": "components.dialog.sheet",
+      "page": "components/dialog",
+      "title": "Все варианты",
+      "file": "pages/components/dialog/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 751
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.drawer",
+      "page": "components",
+      "title": "Drawer",
+      "file": "pages/components/drawer.tsx",
+      "kind": "code",
+      "state": "drawer",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 240
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/drawer"
+    },
+    {
+      "id": "components.drawer.sheet",
+      "page": "components/drawer",
+      "title": "Все варианты",
+      "file": "pages/components/drawer/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 987
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.dropdown-menu",
+      "page": "components",
+      "title": "DropdownMenu",
+      "file": "pages/components/dropdown-menu.tsx",
+      "kind": "code",
+      "state": "dropdown-menu",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 240
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/dropdown-menu"
+    },
+    {
+      "id": "components.dropdown-menu.sheet",
+      "page": "components/dropdown-menu",
+      "title": "Все варианты",
+      "file": "pages/components/dropdown-menu/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 1787
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.hover-card",
+      "page": "components",
+      "title": "HoverCard",
+      "file": "pages/components/hover-card.tsx",
+      "kind": "code",
+      "state": "hover-card",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 240
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/hover-card"
+    },
+    {
+      "id": "components.hover-card.sheet",
+      "page": "components/hover-card",
+      "title": "Все варианты",
+      "file": "pages/components/hover-card/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 595
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.popover",
+      "page": "components",
+      "title": "Popover",
+      "file": "pages/components/popover.tsx",
+      "kind": "code",
+      "state": "popover",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 240
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/popover"
+    },
+    {
+      "id": "components.popover.sheet",
+      "page": "components/popover",
+      "title": "Все варианты",
+      "file": "pages/components/popover/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 791
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.sheet",
+      "page": "components",
+      "title": "Sheet",
+      "file": "pages/components/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 240
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/sheet"
+    },
+    {
+      "id": "components.sheet.sheet",
+      "page": "components/sheet",
+      "title": "Все варианты",
+      "file": "pages/components/sheet/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 555
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.tooltip",
+      "page": "components",
+      "title": "Tooltip",
+      "file": "pages/components/tooltip.tsx",
+      "kind": "code",
+      "state": "tooltip",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 240
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/tooltip"
+    },
+    {
+      "id": "components.tooltip.sheet",
+      "page": "components/tooltip",
+      "title": "Все варианты",
+      "file": "pages/components/tooltip/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 987
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.avatar",
+      "page": "components",
+      "title": "Avatar",
+      "file": "pages/components/avatar.tsx",
+      "kind": "code",
+      "state": "avatar",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 240
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/avatar"
+    },
+    {
+      "id": "components.avatar.sheet",
+      "page": "components/avatar",
+      "title": "Все варианты",
+      "file": "pages/components/avatar/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 1439
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.badge",
+      "page": "components",
+      "title": "Badge",
+      "file": "pages/components/badge.tsx",
+      "kind": "code",
+      "state": "badge",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 240
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/badge"
+    },
+    {
+      "id": "components.badge.sheet",
+      "page": "components/badge",
+      "title": "Все варианты",
+      "file": "pages/components/badge/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 983
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.card",
+      "page": "components",
+      "title": "Card",
+      "file": "pages/components/card.tsx",
+      "kind": "code",
+      "state": "card",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 421
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/card"
+    },
+    {
+      "id": "components.card.sheet",
+      "page": "components/card",
+      "title": "Все варианты",
+      "file": "pages/components/card/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 2830
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.carousel",
+      "page": "components",
+      "title": "Carousel",
+      "file": "pages/components/carousel.tsx",
+      "kind": "code",
+      "state": "carousel",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 416
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/carousel"
+    },
+    {
+      "id": "components.carousel.sheet",
+      "page": "components/carousel",
+      "title": "Все варианты",
+      "file": "pages/components/carousel/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 1122
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.chart",
+      "page": "components",
+      "title": "ChartContainer",
+      "file": "pages/components/chart.tsx",
+      "kind": "code",
+      "state": "chart",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 493
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/chart"
+    },
+    {
+      "id": "components.chart.sheet",
+      "page": "components/chart",
+      "title": "Все варианты",
+      "file": "pages/components/chart/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 1824
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.empty",
+      "page": "components",
+      "title": "Empty",
+      "file": "pages/components/empty.tsx",
+      "kind": "code",
+      "state": "empty",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 326
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/empty"
+    },
+    {
+      "id": "components.empty.sheet",
+      "page": "components/empty",
+      "title": "Все варианты",
+      "file": "pages/components/empty/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 1346
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.item",
+      "page": "components",
+      "title": "Item",
+      "file": "pages/components/item.tsx",
+      "kind": "code",
+      "state": "item",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 240
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/item"
+    },
+    {
+      "id": "components.item.sheet",
+      "page": "components/item",
+      "title": "Все варианты",
+      "file": "pages/components/item/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 8000
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.kbd",
+      "page": "components",
+      "title": "Kbd",
+      "file": "pages/components/kbd.tsx",
+      "kind": "code",
+      "state": "kbd",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 240
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/kbd"
+    },
+    {
+      "id": "components.kbd.sheet",
+      "page": "components/kbd",
+      "title": "Все варианты",
+      "file": "pages/components/kbd/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 1095
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.table",
+      "page": "components",
+      "title": "Table",
+      "file": "pages/components/table.tsx",
+      "kind": "code",
+      "state": "table",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 436
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/table"
+    },
+    {
+      "id": "components.table.sheet",
+      "page": "components/table",
+      "title": "Все варианты",
+      "file": "pages/components/table/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 1578
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.alert",
+      "page": "components",
+      "title": "Alert",
+      "file": "pages/components/alert.tsx",
+      "kind": "code",
+      "state": "alert",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 240
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/alert"
+    },
+    {
+      "id": "components.alert.sheet",
+      "page": "components/alert",
+      "title": "Все варианты",
+      "file": "pages/components/alert/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 1543
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.progress",
+      "page": "components",
+      "title": "Progress",
+      "file": "pages/components/progress.tsx",
+      "kind": "code",
+      "state": "progress",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 240
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/progress"
+    },
+    {
+      "id": "components.progress.sheet",
+      "page": "components/progress",
+      "title": "Все варианты",
+      "file": "pages/components/progress/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 752
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.skeleton",
+      "page": "components",
+      "title": "Skeleton",
+      "file": "pages/components/skeleton.tsx",
+      "kind": "code",
+      "state": "skeleton",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 240
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/skeleton"
+    },
+    {
+      "id": "components.skeleton.sheet",
+      "page": "components/skeleton",
+      "title": "Все варианты",
+      "file": "pages/components/skeleton/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 1311
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.spinner",
+      "page": "components",
+      "title": "Spinner",
+      "file": "pages/components/spinner.tsx",
+      "kind": "code",
+      "state": "spinner",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 240
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/spinner"
+    },
+    {
+      "id": "components.spinner.sheet",
+      "page": "components/spinner",
+      "title": "Все варианты",
+      "file": "pages/components/spinner/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 1095
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.toast",
+      "page": "components",
+      "title": "Toast",
+      "file": "pages/components/toast.tsx",
+      "kind": "code",
+      "state": "toast",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 240
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/toast"
+    },
+    {
+      "id": "components.toast.sheet",
+      "page": "components/toast",
+      "title": "Все варианты",
+      "file": "pages/components/toast/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 555
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.accordion",
+      "page": "components",
+      "title": "Accordion",
+      "file": "pages/components/accordion.tsx",
+      "kind": "code",
+      "state": "accordion",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 240
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/accordion"
+    },
+    {
+      "id": "components.accordion.sheet",
+      "page": "components/accordion",
+      "title": "Все варианты",
+      "file": "pages/components/accordion/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 1572
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.aspect-ratio",
+      "page": "components",
+      "title": "AspectRatio",
+      "file": "pages/components/aspect-ratio.tsx",
+      "kind": "code",
+      "state": "aspect-ratio",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 280
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/aspect-ratio"
+    },
+    {
+      "id": "components.aspect-ratio.sheet",
+      "page": "components/aspect-ratio",
+      "title": "Все варианты",
+      "file": "pages/components/aspect-ratio/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 1222
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.collapsible",
+      "page": "components",
+      "title": "Collapsible",
+      "file": "pages/components/collapsible.tsx",
+      "kind": "code",
+      "state": "collapsible",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 240
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/collapsible"
+    },
+    {
+      "id": "components.collapsible.sheet",
+      "page": "components/collapsible",
+      "title": "Все варианты",
+      "file": "pages/components/collapsible/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 771
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.resizable",
+      "page": "components",
+      "title": "ResizablePanelGroup",
+      "file": "pages/components/resizable.tsx",
+      "kind": "code",
+      "state": "resizable",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 266
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/resizable"
+    },
+    {
+      "id": "components.resizable.sheet",
+      "page": "components/resizable",
+      "title": "Все варианты",
+      "file": "pages/components/resizable/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 1257
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.scroll-area",
+      "page": "components",
+      "title": "ScrollArea",
+      "file": "pages/components/scroll-area.tsx",
+      "kind": "code",
+      "state": "scroll-area",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 352
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/scroll-area"
+    },
+    {
+      "id": "components.scroll-area.sheet",
+      "page": "components/scroll-area",
+      "title": "Все варианты",
+      "file": "pages/components/scroll-area/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 785
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.separator",
+      "page": "components",
+      "title": "Separator",
+      "file": "pages/components/separator.tsx",
+      "kind": "code",
+      "state": "separator",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 240
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/separator"
+    },
+    {
+      "id": "components.separator.sheet",
+      "page": "components/separator",
+      "title": "Все варианты",
+      "file": "pages/components/separator/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 696
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.attachment",
+      "page": "components",
+      "title": "Attachment",
+      "file": "pages/components/attachment.tsx",
+      "kind": "code",
+      "state": "attachment",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 472
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/attachment"
+    },
+    {
+      "id": "components.attachment.sheet",
+      "page": "components/attachment",
+      "title": "Все варианты",
+      "file": "pages/components/attachment/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 2681
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.bubble",
+      "page": "components",
+      "title": "Bubble",
+      "file": "pages/components/bubble.tsx",
+      "kind": "code",
+      "state": "bubble",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 514
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/bubble"
+    },
+    {
+      "id": "components.bubble.sheet",
+      "page": "components/bubble",
+      "title": "Все варианты",
+      "file": "pages/components/bubble/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 3931
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.marker",
+      "page": "components",
+      "title": "Marker",
+      "file": "pages/components/marker.tsx",
+      "kind": "code",
+      "state": "marker",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 336
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/marker"
+    },
+    {
+      "id": "components.marker.sheet",
+      "page": "components/marker",
+      "title": "Все варианты",
+      "file": "pages/components/marker/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 1491
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.message",
+      "page": "components",
+      "title": "Message",
+      "file": "pages/components/message.tsx",
+      "kind": "code",
+      "state": "message",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 514
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/message"
+    },
+    {
+      "id": "components.message.sheet",
+      "page": "components/message",
+      "title": "Все варианты",
+      "file": "pages/components/message/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 597
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.message-scroller",
+      "page": "components",
+      "title": "MessageScroller",
+      "file": "pages/components/message-scroller.tsx",
+      "kind": "code",
+      "state": "message-scroller",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 544
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/message-scroller"
+    },
+    {
+      "id": "components.message-scroller.sheet",
+      "page": "components/message-scroller",
+      "title": "Все варианты",
+      "file": "pages/components/message-scroller/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 627
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.questionnaire",
+      "page": "components",
+      "title": "Questionnaire",
+      "file": "pages/components/questionnaire.tsx",
+      "kind": "code",
+      "state": "questionnaire",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 446
+      },
+      "x": 0,
+      "y": 0,
+      "link": "components/questionnaire"
+    },
+    {
+      "id": "components.questionnaire.sheet",
+      "page": "components/questionnaire",
+      "title": "Все варианты",
+      "file": "pages/components/questionnaire/sheet.tsx",
+      "kind": "code",
+      "state": "sheet",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 2433
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "foundations.colors",
+      "page": "foundations",
+      "title": "Цвета",
+      "file": "pages/foundations/colors.tsx",
+      "kind": "code",
+      "state": "colors",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 1138
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "foundations.fonts",
+      "page": "foundations",
+      "title": "Шрифты",
+      "file": "pages/foundations/fonts.tsx",
+      "kind": "code",
+      "state": "fonts",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 379
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "foundations.radii",
+      "page": "foundations",
+      "title": "Радиусы",
+      "file": "pages/foundations/radii.tsx",
+      "kind": "code",
+      "state": "radii",
+      "status": "draft",
+      "viewport": {
+        "width": 960,
+        "height": 436
+      },
+      "x": 0,
+      "y": 0
+    }
+  ],
+  "annotations": [],
+  "sections": [
+    {
+      "id": "components-cover",
+      "page": "components",
+      "title": "Обложка",
+      "artboards": [
+        "components.showcase"
+      ],
+      "main": [
+        "components.showcase"
+      ]
+    },
+    {
+      "id": "components-actions",
+      "page": "components",
+      "title": "Кнопки и действия",
+      "artboards": [
+        "components.button",
+        "components.button-group",
+        "components.toggle",
+        "components.toggle-group"
+      ],
+      "main": [
+        "components.button",
+        "components.button-group",
+        "components.toggle",
+        "components.toggle-group"
+      ]
+    },
+    {
+      "id": "components-forms",
+      "page": "components",
+      "title": "Поля и формы",
+      "artboards": [
+        "components.calendar",
+        "components.checkbox",
+        "components.combobox",
+        "components.field",
+        "components.input",
+        "components.input-group",
+        "components.input-otp",
+        "components.label",
+        "components.native-select",
+        "components.radio-group",
+        "components.select",
+        "components.slider",
+        "components.switch",
+        "components.textarea"
+      ],
+      "main": [
+        "components.calendar",
+        "components.checkbox",
+        "components.combobox",
+        "components.field",
+        "components.input",
+        "components.input-group",
+        "components.input-otp",
+        "components.label",
+        "components.native-select",
+        "components.radio-group",
+        "components.select",
+        "components.slider",
+        "components.switch",
+        "components.textarea"
+      ]
+    },
+    {
+      "id": "components-navigation",
+      "page": "components",
+      "title": "Навигация",
+      "artboards": [
+        "components.breadcrumb",
+        "components.menubar",
+        "components.navigation-menu",
+        "components.pagination",
+        "components.sidebar",
+        "components.tabs"
+      ],
+      "main": [
+        "components.breadcrumb",
+        "components.menubar",
+        "components.navigation-menu",
+        "components.pagination",
+        "components.sidebar",
+        "components.tabs"
+      ]
+    },
+    {
+      "id": "components-overlays",
+      "page": "components",
+      "title": "Меню и окна",
+      "artboards": [
+        "components.alert-dialog",
+        "components.command",
+        "components.context-menu",
+        "components.dialog",
+        "components.drawer",
+        "components.dropdown-menu",
+        "components.hover-card",
+        "components.popover",
+        "components.sheet",
+        "components.tooltip"
+      ],
+      "main": [
+        "components.alert-dialog",
+        "components.command",
+        "components.context-menu",
+        "components.dialog",
+        "components.drawer",
+        "components.dropdown-menu",
+        "components.hover-card",
+        "components.popover",
+        "components.sheet",
+        "components.tooltip"
+      ]
+    },
+    {
+      "id": "components-data",
+      "page": "components",
+      "title": "Данные",
+      "artboards": [
+        "components.avatar",
+        "components.badge",
+        "components.card",
+        "components.carousel",
+        "components.chart",
+        "components.empty",
+        "components.item",
+        "components.kbd",
+        "components.table"
+      ],
+      "main": [
+        "components.avatar",
+        "components.badge",
+        "components.card",
+        "components.carousel",
+        "components.chart",
+        "components.empty",
+        "components.item",
+        "components.kbd",
+        "components.table"
+      ]
+    },
+    {
+      "id": "components-feedback",
+      "page": "components",
+      "title": "Обратная связь",
+      "artboards": [
+        "components.alert",
+        "components.progress",
+        "components.skeleton",
+        "components.spinner",
+        "components.toast"
+      ],
+      "main": [
+        "components.alert",
+        "components.progress",
+        "components.skeleton",
+        "components.spinner",
+        "components.toast"
+      ]
+    },
+    {
+      "id": "components-layout",
+      "page": "components",
+      "title": "Раскладка",
+      "artboards": [
+        "components.accordion",
+        "components.aspect-ratio",
+        "components.collapsible",
+        "components.resizable",
+        "components.scroll-area",
+        "components.separator"
+      ],
+      "main": [
+        "components.accordion",
+        "components.aspect-ratio",
+        "components.collapsible",
+        "components.resizable",
+        "components.scroll-area",
+        "components.separator"
+      ]
+    },
+    {
+      "id": "components-chat",
+      "page": "components",
+      "title": "Чат и ИИ",
+      "artboards": [
+        "components.attachment",
+        "components.bubble",
+        "components.marker",
+        "components.message",
+        "components.message-scroller",
+        "components.questionnaire"
+      ],
+      "main": [
+        "components.attachment",
+        "components.bubble",
+        "components.marker",
+        "components.message",
+        "components.message-scroller",
+        "components.questionnaire"
+      ]
+    },
+    {
+      "id": "foundations-all",
+      "page": "foundations",
+      "title": "Основы",
+      "artboards": [
+        "foundations.colors",
+        "foundations.fonts",
+        "foundations.radii"
+      ],
+      "main": [
+        "foundations.colors",
+        "foundations.fonts",
+        "foundations.radii"
+      ]
+    }
+  ],
+  "code": {
+    "vite": ".."
+  }
+}
