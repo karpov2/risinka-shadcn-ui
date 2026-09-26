@@ -1,6 +1,6 @@
 "use client"
 
-/** Пример shadcn/ui (MIT): apps/v4/examples/base/drawer-demo.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. */
+/** Пример shadcn/ui (MIT): apps/v4/examples/base/drawer-demo.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. Всплывающее — открытым (defaultOpen): на холсте его не навести и не нажать. */
 import * as React from "react"
 import { toast } from "@/examples/sonner"
 
@@ -61,7 +61,7 @@ const deliveryTimes = [
 ]
 
 export function DrawerDemo() {
-  const [open, setOpen] = React.useState(false)
+  const [open, setOpen] = React.useState(true)
   const [deliveryTime, setDeliveryTime] = React.useState("asap")
   const isMobile = useIsMobile()
 

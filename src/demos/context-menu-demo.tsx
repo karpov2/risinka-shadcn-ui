@@ -1,4 +1,4 @@
-/** Пример shadcn/ui (MIT): apps/v4/examples/base/context-menu-demo.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. */
+/** Пример shadcn/ui (MIT): apps/v4/examples/base/context-menu-demo.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. Всплывающее — открытым (defaultOpen): на холсте его не навести и не нажать. */
 import {
   ContextMenu,
   ContextMenuCheckboxItem,
@@ -18,7 +18,7 @@ import {
 
 export function ContextMenuDemo() {
   return (
-    <ContextMenu>
+    <ContextMenu defaultOpen>
       <ContextMenuTrigger className="flex aspect-video w-full max-w-xs items-center justify-center rounded-xl border border-dashed text-sm">
         <span className="hidden pointer-fine:inline-block">
           Right click here

@@ -1,6 +1,6 @@
 "use client"
 
-/** Пример shadcn/ui (MIT): apps/v4/examples/base/combobox-demo.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. */
+/** Пример shadcn/ui (MIT): apps/v4/examples/base/combobox-demo.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. Всплывающее — открытым (defaultOpen): на холсте его не навести и не нажать. */
 import {
   Combobox,
   ComboboxContent,
@@ -20,7 +20,7 @@ const frameworks = [
 
 export default function ComboboxBasic() {
   return (
-    <Combobox items={frameworks}>
+    <Combobox defaultOpen items={frameworks}>
       <ComboboxInput placeholder="Select a framework" />
       <ComboboxContent>
         <ComboboxEmpty>No items found.</ComboboxEmpty>

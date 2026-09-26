@@ -1,4 +1,4 @@
-/** Пример shadcn/ui (MIT): apps/v4/examples/base/dialog-demo.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. */
+/** Пример shadcn/ui (MIT): apps/v4/examples/base/dialog-demo.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. Всплывающее — открытым (defaultOpen): на холсте его не навести и не нажать. */
 import { Button } from "@/components/ui/button"
 import {
   Dialog,
@@ -16,7 +16,7 @@ import { Label } from "@/components/ui/label"
 
 export function DialogDemo() {
   return (
-    <Dialog>
+    <Dialog defaultOpen>
       <form>
         <DialogTrigger render={<Button variant="outline" />}>
           Open Dialog

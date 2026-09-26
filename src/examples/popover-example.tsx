@@ -1,4 +1,4 @@
-/** Пример shadcn/ui (MIT): apps/v4/registry/bases/base/examples/popover-example.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. */
+/** Пример shadcn/ui (MIT): apps/v4/registry/bases/base/examples/popover-example.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. Всплывающее — открытым (defaultOpen): на холсте его не навести и не нажать. */
 import {
   Example,
   ExampleWrapper,
@@ -38,7 +38,7 @@ export default function PopoverExample() {
 export function PopoverBasic() {
   return (
     <Example title="Basic">
-      <Popover>
+      <Popover defaultOpen>
         <PopoverTrigger render={<Button variant="outline" className="w-fit" />}>
           Open Popover
         </PopoverTrigger>
@@ -60,8 +60,8 @@ export function PopoverSides() {
     <Example title="Sides">
       <div className="flex flex-col gap-2">
         <div className="flex flex-wrap gap-2">
-          {(["inline-start", "left", "top"] as const).map((side) => (
-            <Popover key={side}>
+          {(["inline-start", "left", "top"] as const).map((side, risinkaIndex) => (
+            <Popover defaultOpen={risinkaIndex === 0} key={side}>
               <PopoverTrigger
                 render={
                   <Button variant="outline" className="w-fit capitalize" />
@@ -99,7 +99,7 @@ export function PopoverSides() {
 export function PopoverWithForm() {
   return (
     <Example title="With Form">
-      <Popover>
+      <Popover defaultOpen>
         <PopoverTrigger render={<Button variant="outline" />}>
           Open Popover
         </PopoverTrigger>
@@ -134,7 +134,7 @@ export function PopoverAlignments() {
   return (
     <Example title="Alignments">
       <div className="flex gap-6">
-        <Popover>
+        <Popover defaultOpen>
           <PopoverTrigger render={<Button variant="outline" size="sm" />}>
             Start
           </PopoverTrigger>
@@ -166,7 +166,7 @@ export function PopoverAlignments() {
 export function PopoverInDialog() {
   return (
     <Example title="In Dialog">
-      <Dialog>
+      <Dialog defaultOpen>
         <DialogTrigger render={<Button variant="outline" />}>
           Open Dialog
         </DialogTrigger>
@@ -177,7 +177,7 @@ export function PopoverInDialog() {
               Click the button below to see the popover.
             </DialogDescription>
           </DialogHeader>
-          <Popover>
+          <Popover defaultOpen>
             <PopoverTrigger
               render={<Button variant="outline" className="w-fit" />}
             >

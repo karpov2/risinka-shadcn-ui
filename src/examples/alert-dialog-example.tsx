@@ -1,4 +1,4 @@
-/** Пример shadcn/ui (MIT): apps/v4/registry/bases/base/examples/alert-dialog-example.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. */
+/** Пример shadcn/ui (MIT): apps/v4/registry/bases/base/examples/alert-dialog-example.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. Всплывающее — открытым (defaultOpen): на холсте его не навести и не нажать. */
 import {
   Example,
   ExampleWrapper,
@@ -43,7 +43,7 @@ export default function AlertDialogExample() {
 export function AlertDialogBasic() {
   return (
     <Example title="Basic" className="items-center">
-      <AlertDialog>
+      <AlertDialog defaultOpen>
         <AlertDialogTrigger
           render={<Button variant="outline">Default</Button>}
         />
@@ -68,7 +68,7 @@ export function AlertDialogBasic() {
 export function AlertDialogSmall() {
   return (
     <Example title="Small" className="items-center">
-      <AlertDialog>
+      <AlertDialog defaultOpen>
         <AlertDialogTrigger render={<Button variant="outline">Small</Button>} />
         <AlertDialogContent size="sm">
           <AlertDialogHeader>
@@ -90,7 +90,7 @@ export function AlertDialogSmall() {
 export function AlertDialogWithMedia() {
   return (
     <Example title="With Media" className="items-center">
-      <AlertDialog>
+      <AlertDialog defaultOpen>
         <AlertDialogTrigger
           render={<Button variant="outline">Default (Media)</Button>}
         />
@@ -124,7 +124,7 @@ export function AlertDialogWithMedia() {
 export function AlertDialogSmallWithMedia() {
   return (
     <Example title="Small With Media" className="items-center">
-      <AlertDialog>
+      <AlertDialog defaultOpen>
         <AlertDialogTrigger
           render={<Button variant="outline">Small (Media)</Button>}
         />
@@ -158,7 +158,7 @@ export function AlertDialogSmallWithMedia() {
 export function AlertDialogDestructive() {
   return (
     <Example title="Destructive" className="items-center">
-      <AlertDialog>
+      <AlertDialog defaultOpen>
         <AlertDialogTrigger
           render={<Button variant="destructive">Delete Chat</Button>}
         />
@@ -205,7 +205,7 @@ export function AlertDialogInDialog() {
             </DialogDescription>
           </DialogHeader>
           <DialogFooter>
-            <AlertDialog>
+            <AlertDialog defaultOpen>
               <AlertDialogTrigger render={<Button />}>
                 Open Alert Dialog
               </AlertDialogTrigger>

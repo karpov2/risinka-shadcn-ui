@@ -3,7 +3,7 @@
  * шрифты, размеры текста, радиусы, тени, отступы. Заготовку положило ядро библиотек (`library(pages)`); файл ваш —
  * ядро его не перезапишет. Стили прямо в элементах: лист не зависит от CSS проекта, кроме переменных темы.
  */
-import { useEffect, useState, type ReactNode } from 'react';
+import { useEffect, useRef, useState, type ReactNode, type RefObject } from 'react';
 
 const INK = '#1f1f1f';
 const MUTED = '#6b6b6b';
@@ -11,11 +11,99 @@ const LINE = '#e6e6e6';
 const FONT = "-apple-system, system-ui, 'Segoe UI', sans-serif";
 const MONO = "ui-monospace, 'SF Mono', Menlo, monospace";
 const CAPTION = { fontFamily: MONO, fontSize: 14, color: MUTED } as const;
+/** Поле вокруг открытого окна, когда рамка раздвигается под него. */
+const POPUP_ROOM = 24;
+/** Сколько кадров следить за окном: оно встаёт на место не сразу после первой раскладки. */
+const POPUP_FRAMES = 90;
+/** Шторка во весь рост, растянутая по высоте, — рамка не ниже этого: её раскладка подстроится под любую высоту. */
+const SHEET_HEIGHT = 480;
+
+interface PopupRoom {
+  /** Есть открытое окно поверх страницы. */
+  readonly open: boolean;
+  /** Сколько добавить сверху: окно ушло выше рамки. */
+  readonly top: number;
+  /** Высота, в которую окно помещается целиком; 0 — окна нет. */
+  readonly height: number;
+}
+
+/**
+ * Место открытому окну — подсказке, меню, списку, окну: оно рисуется порталом поверх страницы и в высоту артборда само
+ * не входит (у холста так задумано: место под окно даёт состояние). Рамка раздвигается под него: вниз — до низа окна,
+ * вверх — если окно ушло выше рамки; окно по центру экрана (fixed) — на свою высоту, шторка во весь рост — на высоту
+ * своего содержимого, затемнение фона — не в счёт. Верх только растёт: сдвиг рамки вниз сдвигает и окно, иначе высота
+ * качалась бы. Снова меряет после смены размера окна: холст меряет состояние на экране 900, а открывает — в высоте
+ * артборда, где списку места не было.
+ */
+function usePopupRoom(): { readonly ref: RefObject<HTMLDivElement | null>; readonly room: PopupRoom } {
+  const ref = useRef<HTMLDivElement>(null);
+  const [room, setRoom] = useState<PopupRoom>({ open: false, top: 0, height: 0 });
+  useEffect(() => {
+    let frames = 0;
+    let handle = 0;
+    const measure = (): void => {
+      handle = 0;
+      const frame = ref.current;
+      if (frame !== null) {
+        const box = frame.getBoundingClientRect();
+        const popups = Array.from(document.querySelectorAll<HTMLElement>('[data-open][data-slot]')).filter((popup) => {
+          const rect = popup.getBoundingClientRect();
+          return !frame.contains(popup) && rect.width > 0 && rect.height > 0;
+        });
+        // Окно по центру экрана: меню и список внутри него сдвигаются вместе с центром, и высота по их низу зависела бы
+        // от высоты экрана — меряем от окна: высота H, при которой низ меню (смещение от верха окна) влезает.
+        const modal = popups
+          .filter((popup) => getComputedStyle(popup).position === 'fixed')
+          .map((popup) => popup.getBoundingClientRect())
+          .find((rect) => rect.height < window.innerHeight - 1 && Math.abs(rect.top + rect.height / 2 - window.innerHeight / 2) < 2);
+        let open = false;
+        let top = 0;
+        let height = 0;
+        for (const popup of popups) {
+          const rect = popup.getBoundingClientRect();
+          if (getComputedStyle(popup).position === 'fixed') {
+            // Во весь рост — по содержимому: слой с выезжающей снизу панелью — на высоту панели; шторка, растянутая по
+            // высоте (подвал прижат к низу), — не ниже SHEET_HEIGHT: по ней самой высоту не узнать, она росла бы вместе
+            // с рамкой. Без содержимого — затемнение фона, не окно.
+            const content = Array.from(popup.children).reduce((sum, child) => sum + child.getBoundingClientRect().height, 0);
+            if (content === 0) continue;
+            const full = rect.height >= window.innerHeight - 1;
+            height = Math.max(height, !full ? rect.height + 2 * POPUP_ROOM : content < rect.height * 0.9 ? content + 2 * POPUP_ROOM : SHEET_HEIGHT);
+          } else if (modal !== undefined && rect.top >= modal.top) {
+            height = Math.max(height, 2 * (rect.bottom - modal.top) - modal.height + 2 * POPUP_ROOM);
+          } else {
+            top = Math.max(top, box.top + POPUP_ROOM - rect.top);
+            height = Math.max(height, rect.bottom - box.top + POPUP_ROOM);
+          }
+          open = true;
+        }
+        setRoom((current) => {
+          const next = { open: current.open || open, top: Math.max(current.top, top), height: open ? Math.ceil(height) : current.height };
+          return next.open === current.open && next.top === current.top && next.height === current.height ? current : next;
+        });
+      }
+      frames += 1;
+      if (frames < POPUP_FRAMES) handle = requestAnimationFrame(measure);
+    };
+    const restart = (): void => {
+      frames = 0;
+      if (handle === 0) handle = requestAnimationFrame(measure);
+    };
+    restart();
+    window.addEventListener('resize', restart);
+    return () => {
+      window.removeEventListener('resize', restart);
+      cancelAnimationFrame(handle);
+    };
+  }, []);
+  return { ref, room };
+}
 
 /** Лист компонента или группы основ: имя, файл, описание и содержимое столбиком; высота артборда — по листу (`data-risinka-height`). */
 export function ComponentSheet({ name, file, description, children }: { readonly name: string; readonly file?: string; readonly description?: string; readonly children: ReactNode }) {
+  const { ref, room } = usePopupRoom();
   return (
-    <div data-risinka-height="" style={{ minHeight: 320, boxSizing: 'border-box', padding: 32, background: '#fff', display: 'flex', flexDirection: 'column', gap: 28 }}>
+    <div ref={ref} data-risinka-height="" style={{ minHeight: Math.max(320, room.height), boxSizing: 'border-box', padding: 32, paddingTop: 32 + room.top, background: '#fff', display: 'flex', flexDirection: 'column', gap: 28 }}>
       {/* Шрифт и кегль — только шапке: содержимое рисуется шрифтом страницы (у shadcn/ui — Geist). */}
       <header style={{ color: INK, fontFamily: FONT, fontSize: 14 }}>
         <div style={{ fontSize: 20, fontWeight: 600 }}>{name}</div>
@@ -31,11 +119,13 @@ export function ComponentSheet({ name, file, description, children }: { readonly
 /**
  * Плитка сводки «Компоненты»: один вариант компонента по центру; все варианты — на его странице, куда ведёт подпись
  * плитки. Высота — по содержимому, не ниже 240; компонент во весь экран (боковая панель) остаётся в плитке. «stretch» —
- * на всю ширину: блок без своей ширины (карточка с графиком) по центру сжался бы в полоску.
+ * на всю ширину: блок без своей ширины (карточка с графиком) по центру сжался бы в полоску. Открыто окно (подсказка,
+ * меню) — кнопка встаёт вверх, а плитка раздвигается под окно: по центру она уезжала бы вниз вместе с окном.
  */
 export function ComponentTile({ stretch = false, children }: { readonly stretch?: boolean; readonly children: ReactNode }) {
+  const { ref, room } = usePopupRoom();
   return (
-    <div data-risinka-height="" style={{ minHeight: 240, boxSizing: 'border-box', padding: 32, background: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+    <div ref={ref} data-risinka-height="" style={{ minHeight: Math.max(240, room.height), boxSizing: 'border-box', padding: 32, paddingTop: 32 + room.top, background: '#fff', display: 'flex', alignItems: room.open ? 'flex-start' : 'center', justifyContent: 'center' }}>
       <div style={{ contain: 'layout', width: '100%', ...(stretch ? {} : { display: 'flex', justifyContent: 'center' }) }}>{children}</div>
     </div>
   );
@@ -46,8 +136,10 @@ export function ComponentTile({ stretch = false, children }: { readonly stretch?
  * компонента — карточка страницы. «muted» — серая подложка, как у сводных примеров shadcn/ui.
  */
 export function StateFrame({ muted = false, children }: { readonly muted?: boolean; readonly children: ReactNode }) {
+  const { ref, room } = usePopupRoom();
+  const pad = muted ? 24 : 32;
   return (
-    <div data-risinka-height="" style={{ boxSizing: 'border-box', padding: muted ? 24 : 32, background: muted ? 'var(--color-muted, #f4f4f5)' : '#fff' }}>
+    <div ref={ref} data-risinka-height="" style={{ minHeight: room.height, boxSizing: 'border-box', padding: pad, paddingTop: pad + room.top, background: muted ? 'var(--color-muted, #f4f4f5)' : '#fff' }}>
       <div style={{ contain: 'layout', display: 'flex', flexDirection: 'column', gap: 28 }}>{children}</div>
     </div>
   );

@@ -1,6 +1,6 @@
 "use client"
 
-/** Пример shadcn/ui (MIT): apps/v4/examples/base/dropdown-menu-demo.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. */
+/** Пример shadcn/ui (MIT): apps/v4/examples/base/dropdown-menu-demo.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. Всплывающее — открытым (defaultOpen): на холсте его не навести и не нажать. */
 import { Button } from "@/components/ui/button"
 import {
   DropdownMenu,
@@ -19,7 +19,7 @@ import {
 
 export function DropdownMenuDemo() {
   return (
-    <DropdownMenu>
+    <DropdownMenu defaultOpen>
       <DropdownMenuTrigger render={<Button variant="outline" />}>
         Open
       </DropdownMenuTrigger>

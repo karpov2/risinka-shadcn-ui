@@ -1,4 +1,4 @@
-/** Пример shadcn/ui (MIT): apps/v4/registry/bases/base/examples/sheet-example.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. */
+/** Пример shadcn/ui (MIT): apps/v4/registry/bases/base/examples/sheet-example.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. Всплывающее — открытым (defaultOpen): на холсте его не навести и не нажать. */
 import {
   Example,
   ExampleWrapper,
@@ -30,7 +30,7 @@ export default function SheetExample() {
 export function SheetWithForm() {
   return (
     <Example title="With Form">
-      <Sheet>
+      <Sheet defaultOpen>
         <SheetTrigger render={<Button variant="outline" />}>Open</SheetTrigger>
         <SheetContent>
           <SheetHeader>
@@ -65,7 +65,7 @@ export function SheetWithForm() {
 export function SheetNoCloseButton() {
   return (
     <Example title="No Close Button">
-      <Sheet>
+      <Sheet defaultOpen>
         <SheetTrigger render={<Button variant="outline" />}>
           No Close Button
         </SheetTrigger>
@@ -89,8 +89,8 @@ export function SheetWithSides() {
   return (
     <Example title="Sides">
       <div className="flex flex-wrap gap-2">
-        {SHEET_SIDES.map((side) => (
-          <Sheet key={side}>
+        {SHEET_SIDES.map((side, risinkaIndex) => (
+          <Sheet defaultOpen={risinkaIndex === 0} key={side}>
             <SheetTrigger
               render={<Button variant="outline" className="capitalize" />}
             >

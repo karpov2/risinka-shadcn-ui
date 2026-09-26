@@ -1,4 +1,4 @@
-/** Пример shadcn/ui (MIT): apps/v4/registry/bases/base/examples/hover-card-example.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. */
+/** Пример shadcn/ui (MIT): apps/v4/registry/bases/base/examples/hover-card-example.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. Всплывающее — открытым (defaultOpen): на холсте его не навести и не нажать. */
 import {
   Example,
   ExampleWrapper,
@@ -40,8 +40,8 @@ export function HoverCardSides() {
   return (
     <Example title="Sides" containerClassName="col-span-2">
       <div className="flex flex-wrap items-center justify-center gap-2">
-        {HOVER_CARD_SIDES.map((side) => (
-          <HoverCard key={side}>
+        {HOVER_CARD_SIDES.map((side, risinkaIndex) => (
+          <HoverCard defaultOpen={risinkaIndex === 0} key={side}>
             <HoverCardTrigger
               delay={100}
               closeDelay={100}
@@ -68,7 +68,7 @@ export function HoverCardSides() {
 export function HoverCardInDialog() {
   return (
     <Example title="In Dialog">
-      <Dialog>
+      <Dialog defaultOpen>
         <DialogTrigger render={<Button variant="outline" />}>
           Open Dialog
         </DialogTrigger>
@@ -79,7 +79,7 @@ export function HoverCardInDialog() {
               Hover over the button below to see the hover card.
             </DialogDescription>
           </DialogHeader>
-          <HoverCard>
+          <HoverCard defaultOpen>
             <HoverCardTrigger
               delay={100}
               closeDelay={100}

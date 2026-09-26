@@ -1,6 +1,6 @@
 "use client"
 
-/** Пример shadcn/ui (MIT): apps/v4/registry/bases/base/examples/combobox-example.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. */
+/** Пример shadcn/ui (MIT): apps/v4/registry/bases/base/examples/combobox-example.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. Всплывающее — открытым (defaultOpen): на холсте его не навести и не нажать. */
 import * as React from "react"
 import { toast } from "@/examples/sonner"
 
@@ -551,7 +551,7 @@ const timezones = [
 export function ComboboxBasic() {
   return (
     <Example title="Basic">
-      <Combobox items={frameworks}>
+      <Combobox defaultOpen items={frameworks}>
         <ComboboxInput placeholder="Select a framework" />
         <ComboboxContent>
           <ComboboxEmpty>No items found.</ComboboxEmpty>
@@ -581,8 +581,8 @@ export function ComboboxSides() {
             "right",
             "inline-end",
           ] as const
-        ).map((side) => (
-          <Combobox key={side} items={frameworks}>
+        ).map((side, risinkaIndex) => (
+          <Combobox defaultOpen={risinkaIndex === 0} key={side} items={frameworks}>
             <ComboboxInput
               placeholder={side.replace("-", " ")}
               className="w-32 **:data-[slot=input-group-control]:capitalize"
@@ -607,7 +607,7 @@ export function ComboboxSides() {
 export function ComboboxDisabled() {
   return (
     <Example title="Disabled">
-      <Combobox items={frameworks}>
+      <Combobox defaultOpen items={frameworks}>
         <ComboboxInput placeholder="Select a framework" disabled />
         <ComboboxContent>
           <ComboboxEmpty>No items found.</ComboboxEmpty>
@@ -629,7 +629,7 @@ const disabledFrameworks = ["Nuxt.js", "Remix"]
 export function ComboboxDisabledItems() {
   return (
     <Example title="Disabled Items">
-      <Combobox items={frameworks}>
+      <Combobox defaultOpen items={frameworks}>
         <ComboboxInput placeholder="Select a framework" />
         <ComboboxContent>
           <ComboboxEmpty>No items found.</ComboboxEmpty>
@@ -654,7 +654,7 @@ export function ComboboxInvalid() {
   return (
     <Example title="Invalid">
       <div className="flex flex-col gap-4">
-        <Combobox items={frameworks}>
+        <Combobox defaultOpen items={frameworks}>
           <ComboboxInput placeholder="Select a framework" aria-invalid="true" />
           <ComboboxContent>
             <ComboboxEmpty>No items found.</ComboboxEmpty>
@@ -699,7 +699,7 @@ export function ComboboxInvalid() {
 export function ComboboxWithClear() {
   return (
     <Example title="With Clear Button">
-      <Combobox items={frameworks} defaultValue={frameworks[0]}>
+      <Combobox defaultOpen items={frameworks} defaultValue={frameworks[0]}>
         <ComboboxInput placeholder="Select a framework" showClear />
         <ComboboxContent>
           <ComboboxEmpty>No items found.</ComboboxEmpty>
@@ -719,7 +719,7 @@ export function ComboboxWithClear() {
 export function ComboboxWithGroups() {
   return (
     <Example title="With Groups">
-      <Combobox items={timezones}>
+      <Combobox defaultOpen items={timezones}>
         <ComboboxInput placeholder="Select a timezone" />
         <ComboboxContent>
           <ComboboxEmpty>No timezones found.</ComboboxEmpty>
@@ -746,7 +746,7 @@ export function ComboboxWithGroups() {
 export function ComboboxWithGroupsAndSeparator() {
   return (
     <Example title="With Groups and Separator">
-      <Combobox items={timezones}>
+      <Combobox defaultOpen items={timezones}>
         <ComboboxInput placeholder="Select a timezone" />
         <ComboboxContent>
           <ComboboxEmpty>No timezones found.</ComboboxEmpty>
@@ -791,7 +791,7 @@ export function ComboboxWithForm() {
             <FieldGroup>
               <Field>
                 <FieldLabel htmlFor="framework">Framework</FieldLabel>
-                <Combobox items={frameworks}>
+                <Combobox defaultOpen items={frameworks}>
                   <ComboboxInput
                     id="framework"
                     name="framework"
@@ -828,7 +828,7 @@ const largeListItems = Array.from({ length: 100 }, (_, i) => `Item ${i + 1}`)
 export function ComboboxLargeList() {
   return (
     <Example title="Large List (100 items)">
-      <Combobox items={largeListItems}>
+      <Combobox defaultOpen items={largeListItems}>
         <ComboboxInput placeholder="Search from 100 items" />
         <ComboboxContent>
           <ComboboxEmpty>No items found.</ComboboxEmpty>
@@ -848,7 +848,7 @@ export function ComboboxLargeList() {
 export function ComboboxAutoHighlight() {
   return (
     <Example title="With Auto Highlight">
-      <Combobox items={frameworks} autoHighlight>
+      <Combobox defaultOpen items={frameworks} autoHighlight>
         <ComboboxInput placeholder="Select a framework" />
         <ComboboxContent>
           <ComboboxEmpty>No items found.</ComboboxEmpty>
@@ -868,7 +868,7 @@ export function ComboboxAutoHighlight() {
 export function ComboxboxInputAddon() {
   return (
     <Example title="With Icon Addon">
-      <Combobox items={timezones}>
+      <Combobox defaultOpen items={timezones}>
         <ComboboxInput placeholder="Select a timezone">
           <InputGroupAddon>
             <IconPlaceholder
@@ -905,7 +905,7 @@ export function ComboxboxInputAddon() {
 export function ComboboxInPopup() {
   return (
     <Example title="Combobox in Popup">
-      <Combobox items={countries} defaultValue={countries[0]}>
+      <Combobox defaultOpen items={countries} defaultValue={countries[0]}>
         <ComboboxTrigger
           render={
             <Button
@@ -937,7 +937,7 @@ export function ComboboxMultiple() {
 
   return (
     <Example title="Combobox Multiple">
-      <Combobox
+      <Combobox defaultOpen
         multiple
         autoHighlight
         items={frameworks}
@@ -975,7 +975,7 @@ export function ComboboxMultipleDisabled() {
 
   return (
     <Example title="Combobox Multiple Disabled">
-      <Combobox
+      <Combobox defaultOpen
         multiple
         autoHighlight
         items={frameworks}
@@ -1016,7 +1016,7 @@ export function ComboboxMultipleInvalid() {
   return (
     <Example title="Combobox Multiple Invalid">
       <div className="flex flex-col gap-4">
-        <Combobox
+        <Combobox defaultOpen
           multiple
           autoHighlight
           items={frameworks}
@@ -1096,7 +1096,7 @@ export function ComboboxMultipleNoRemove() {
 
   return (
     <Example title="Combobox Multiple (No Remove)">
-      <Combobox
+      <Combobox defaultOpen
         multiple
         autoHighlight
         items={frameworks}
@@ -1134,7 +1134,7 @@ export function ComboboxMultipleNoRemove() {
 export function ComboboxWithCustomItems() {
   return (
     <Example title="With Custom Item Rendering">
-      <Combobox
+      <Combobox defaultOpen
         items={countries.filter((country) => country.code !== "")}
         itemToStringValue={(country: (typeof countries)[number]) =>
           country.label
@@ -1185,7 +1185,7 @@ export function ComboboxInDialog() {
             <FieldLabel htmlFor="framework-dialog" className="sr-only">
               Framework
             </FieldLabel>
-            <Combobox items={frameworks}>
+            <Combobox defaultOpen items={frameworks}>
               <ComboboxInput
                 id="framework-dialog"
                 placeholder="Select a framework"
@@ -1264,7 +1264,7 @@ const items = [
 export function ComboboxWithOtherInputs() {
   return (
     <Example title="With Other Inputs">
-      <Combobox items={frameworks}>
+      <Combobox defaultOpen items={frameworks}>
         <ComboboxInput placeholder="Select a framework" className="w-52" />
         <ComboboxContent>
           <ComboboxEmpty>No items found.</ComboboxEmpty>

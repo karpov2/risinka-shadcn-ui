@@ -1,4 +1,4 @@
-/** Пример shadcn/ui (MIT): apps/v4/examples/base/alert-dialog-demo.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. */
+/** Пример shadcn/ui (MIT): apps/v4/examples/base/alert-dialog-demo.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. Всплывающее — открытым (defaultOpen): на холсте его не навести и не нажать. */
 import {
   AlertDialog,
   AlertDialogAction,
@@ -14,7 +14,7 @@ import { Button } from "@/components/ui/button"
 
 export default function AlertDialogDemo() {
   return (
-    <AlertDialog>
+    <AlertDialog defaultOpen>
       <AlertDialogTrigger render={<Button variant="outline" />}>
         Show Dialog
       </AlertDialogTrigger>

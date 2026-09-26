@@ -1,6 +1,6 @@
 "use client"
 
-/** Пример shadcn/ui (MIT): apps/v4/registry/bases/base/examples/dropdown-menu-example.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. */
+/** Пример shadcn/ui (MIT): apps/v4/registry/bases/base/examples/dropdown-menu-example.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. Всплывающее — открытым (defaultOpen): на холсте его не навести и не нажать. */
 import * as React from "react"
 
 import {
@@ -64,7 +64,7 @@ export default function DropdownMenuExample() {
 export function DropdownMenuBasic() {
   return (
     <Example title="Basic">
-      <DropdownMenu>
+      <DropdownMenu defaultOpen>
         <DropdownMenuTrigger
           render={<Button variant="outline" className="w-fit" />}
         >
@@ -100,8 +100,8 @@ export function DropdownMenuSides() {
             "right",
             "inline-end",
           ] as const
-        ).map((side) => (
-          <DropdownMenu key={side}>
+        ).map((side, risinkaIndex) => (
+          <DropdownMenu defaultOpen={risinkaIndex === 0} key={side}>
             <DropdownMenuTrigger
               render={<Button variant="outline" className="w-fit capitalize" />}
             >
@@ -124,7 +124,7 @@ export function DropdownMenuSides() {
 export function DropdownMenuWithIcons() {
   return (
     <Example title="With Icons">
-      <DropdownMenu>
+      <DropdownMenu defaultOpen>
         <DropdownMenuTrigger
           render={<Button variant="outline" className="w-fit" />}
         >
@@ -181,7 +181,7 @@ export function DropdownMenuWithIcons() {
 export function DropdownMenuWithShortcuts() {
   return (
     <Example title="With Shortcuts">
-      <DropdownMenu>
+      <DropdownMenu defaultOpen>
         <DropdownMenuTrigger
           render={<Button variant="outline" className="w-fit" />}
         >
@@ -221,7 +221,7 @@ export function DropdownMenuWithShortcuts() {
 export function DropdownMenuWithSubmenu() {
   return (
     <Example title="With Submenu">
-      <DropdownMenu>
+      <DropdownMenu defaultOpen>
         <DropdownMenuTrigger
           render={<Button variant="outline" className="w-fit" />}
         >
@@ -259,7 +259,7 @@ export function DropdownMenuWithCheckboxes() {
 
   return (
     <Example title="With Checkboxes">
-      <DropdownMenu>
+      <DropdownMenu defaultOpen>
         <DropdownMenuTrigger
           render={<Button variant="outline" className="w-fit" />}
         >
@@ -320,7 +320,7 @@ export function DropdownMenuWithRadio() {
 
   return (
     <Example title="With Radio Group">
-      <DropdownMenu>
+      <DropdownMenu defaultOpen>
         <DropdownMenuTrigger
           render={<Button variant="outline" className="w-fit" />}
         >
@@ -380,7 +380,7 @@ export function DropdownMenuWithCheckboxesIcons() {
 
   return (
     <Example title="Checkboxes with Icons">
-      <DropdownMenu>
+      <DropdownMenu defaultOpen>
         <DropdownMenuTrigger
           render={<Button variant="outline" className="w-fit" />}
         >
@@ -446,7 +446,7 @@ export function DropdownMenuWithRadioIcons() {
 
   return (
     <Example title="Radio with Icons">
-      <DropdownMenu>
+      <DropdownMenu defaultOpen>
         <DropdownMenuTrigger
           render={<Button variant="outline" className="w-fit" />}
         >
@@ -500,7 +500,7 @@ export function DropdownMenuWithRadioIcons() {
 export function DropdownMenuWithDestructive() {
   return (
     <Example title="With Destructive Items">
-      <DropdownMenu>
+      <DropdownMenu defaultOpen>
         <DropdownMenuTrigger
           render={<Button variant="outline" className="w-fit" />}
         >
@@ -606,7 +606,7 @@ export function DropdownMenuWithAvatar() {
   return (
     <Example title="With Avatar">
       <div className="flex items-center justify-between gap-4">
-        <DropdownMenu>
+        <DropdownMenu defaultOpen>
           <DropdownMenuTrigger
             render={
               <Button
@@ -661,7 +661,7 @@ export function DropdownMenuWithAvatar() {
 export function DropdownMenuInDialog() {
   return (
     <Example title="In Dialog">
-      <Dialog>
+      <Dialog defaultOpen>
         <DialogTrigger render={<Button variant="outline" />}>
           Open Dialog
         </DialogTrigger>
@@ -672,7 +672,7 @@ export function DropdownMenuInDialog() {
               Click the button below to see the dropdown menu.
             </DialogDescription>
           </DialogHeader>
-          <DropdownMenu>
+          <DropdownMenu defaultOpen>
             <DropdownMenuTrigger
               render={<Button variant="outline" className="w-fit" />}
             >
@@ -748,7 +748,7 @@ export function DropdownMenuWithInset() {
 
   return (
     <Example title="With Inset">
-      <DropdownMenu>
+      <DropdownMenu defaultOpen>
         <DropdownMenuTrigger
           render={<Button variant="outline" className="w-fit" />}
         >
@@ -836,7 +836,7 @@ export function DropdownMenuComplex() {
 
   return (
     <Example title="Complex">
-      <DropdownMenu>
+      <DropdownMenu defaultOpen>
         <DropdownMenuTrigger
           render={<Button variant="outline" className="w-fit" />}
         >

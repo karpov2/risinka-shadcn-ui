@@ -1,6 +1,6 @@
 "use client"
 
-/** Пример shadcn/ui (MIT): apps/v4/registry/bases/base/examples/context-menu-example.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. */
+/** Пример shadcn/ui (MIT): apps/v4/registry/bases/base/examples/context-menu-example.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. Всплывающее — открытым (defaultOpen): на холсте его не навести и не нажать. */
 import * as React from "react"
 
 import {
@@ -55,7 +55,7 @@ export default function ContextMenuExample() {
 export function ContextMenuBasic() {
   return (
     <Example title="Basic">
-      <ContextMenu>
+      <ContextMenu defaultOpen>
         <ContextMenuTrigger className="flex aspect-[2/0.5] w-full items-center justify-center rounded-lg border text-sm">
           Right click here
         </ContextMenuTrigger>
@@ -74,7 +74,7 @@ export function ContextMenuBasic() {
 export function ContextMenuWithIcons() {
   return (
     <Example title="With Icons">
-      <ContextMenu>
+      <ContextMenu defaultOpen>
         <ContextMenuTrigger className="flex aspect-[2/0.5] w-full items-center justify-center rounded-lg border text-sm">
           Right click here
         </ContextMenuTrigger>
@@ -133,7 +133,7 @@ export function ContextMenuWithIcons() {
 export function ContextMenuWithShortcuts() {
   return (
     <Example title="With Shortcuts">
-      <ContextMenu>
+      <ContextMenu defaultOpen>
         <ContextMenuTrigger className="flex aspect-[2/0.5] w-full items-center justify-center rounded-lg border text-sm">
           Right click here
         </ContextMenuTrigger>
@@ -172,7 +172,7 @@ export function ContextMenuWithShortcuts() {
 export function ContextMenuWithSubmenu() {
   return (
     <Example title="With Submenu">
-      <ContextMenu>
+      <ContextMenu defaultOpen>
         <ContextMenuTrigger className="flex aspect-[2/0.5] w-full items-center justify-center rounded-lg border text-sm">
           Right click here
         </ContextMenuTrigger>
@@ -214,7 +214,7 @@ export function ContextMenuWithSubmenu() {
 export function ContextMenuWithGroups() {
   return (
     <Example title="With Groups, Labels & Separators">
-      <ContextMenu>
+      <ContextMenu defaultOpen>
         <ContextMenuTrigger className="flex aspect-[2/0.5] w-full items-center justify-center rounded-lg border text-sm">
           Right click here
         </ContextMenuTrigger>
@@ -277,7 +277,7 @@ export function ContextMenuWithGroups() {
 export function ContextMenuWithCheckboxes() {
   return (
     <Example title="With Checkboxes">
-      <ContextMenu>
+      <ContextMenu defaultOpen>
         <ContextMenuTrigger className="flex aspect-[2/0.5] w-full items-center justify-center rounded-lg border text-sm">
           Right click here
         </ContextMenuTrigger>
@@ -303,7 +303,7 @@ export function ContextMenuWithRadio() {
 
   return (
     <Example title="With Radio Group">
-      <ContextMenu>
+      <ContextMenu defaultOpen>
         <ContextMenuTrigger className="flex aspect-[2/0.5] w-full items-center justify-center rounded-lg border text-sm">
           Right click here
         </ContextMenuTrigger>
@@ -337,7 +337,7 @@ export function ContextMenuWithRadio() {
 export function ContextMenuWithDestructive() {
   return (
     <Example title="With Destructive Items">
-      <ContextMenu>
+      <ContextMenu defaultOpen>
         <ContextMenuTrigger className="flex aspect-[2/0.5] w-full items-center justify-center rounded-lg border text-sm">
           Right click here
         </ContextMenuTrigger>
@@ -406,8 +406,8 @@ export function ContextMenuWithSides() {
             "right",
             "inline-end",
           ] as const
-        ).map((side) => (
-          <ContextMenu key={side}>
+        ).map((side, risinkaIndex) => (
+          <ContextMenu defaultOpen={risinkaIndex === 0} key={side}>
             <ContextMenuTrigger className="flex aspect-[2/0.5] items-center justify-center rounded-lg border p-4 text-sm capitalize">
               {side.replace("-", " ")}
             </ContextMenuTrigger>
@@ -428,7 +428,7 @@ export function ContextMenuWithSides() {
 export function ContextMenuInDialog() {
   return (
     <Example title="In Dialog">
-      <Dialog>
+      <Dialog defaultOpen>
         <DialogTrigger render={<Button variant="outline" />}>
           Open Dialog
         </DialogTrigger>
@@ -439,7 +439,7 @@ export function ContextMenuInDialog() {
               Right click on the area below to see the context menu.
             </DialogDescription>
           </DialogHeader>
-          <ContextMenu>
+          <ContextMenu defaultOpen>
             <ContextMenuTrigger className="flex aspect-[2/0.5] w-full items-center justify-center rounded-lg border text-sm">
               Right click here
             </ContextMenuTrigger>
@@ -519,7 +519,7 @@ export function ContextMenuWithInset() {
 
   return (
     <Example title="With Inset">
-      <ContextMenu>
+      <ContextMenu defaultOpen>
         <ContextMenuTrigger className="flex aspect-[2/0.5] w-full items-center justify-center rounded-lg border text-sm">
           Right click here
         </ContextMenuTrigger>

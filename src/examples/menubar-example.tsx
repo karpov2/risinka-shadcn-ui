@@ -1,6 +1,6 @@
 "use client"
 
-/** Пример shadcn/ui (MIT): apps/v4/registry/bases/base/examples/menubar-example.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. */
+/** Пример shadcn/ui (MIT): apps/v4/registry/bases/base/examples/menubar-example.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. Всплывающее — открытым (defaultOpen): на холсте его не навести и не нажать. */
 import * as React from "react"
 
 import {
@@ -58,7 +58,7 @@ export function MenubarBasic() {
   return (
     <Example title="Basic">
       <Menubar>
-        <MenubarMenu>
+        <MenubarMenu defaultOpen>
           <MenubarTrigger>File</MenubarTrigger>
           <MenubarContent>
             <MenubarItem>
@@ -107,9 +107,9 @@ export function MenubarSides() {
             "right",
             "inline-end",
           ] as const
-        ).map((side) => (
+        ).map((side, risinkaIndex) => (
           <Menubar key={side}>
-            <MenubarMenu>
+            <MenubarMenu defaultOpen={risinkaIndex === 0}>
               <MenubarTrigger className="capitalize">
                 {side.replace("-", " ")}
               </MenubarTrigger>
@@ -132,7 +132,7 @@ export function MenubarWithSubmenu() {
   return (
     <Example title="With Submenu">
       <Menubar>
-        <MenubarMenu>
+        <MenubarMenu defaultOpen>
           <MenubarTrigger>File</MenubarTrigger>
           <MenubarContent>
             <MenubarSub>
@@ -182,7 +182,7 @@ export function MenubarWithCheckboxes() {
   return (
     <Example title="With Checkboxes">
       <Menubar>
-        <MenubarMenu>
+        <MenubarMenu defaultOpen>
           <MenubarTrigger>View</MenubarTrigger>
           <MenubarContent className="w-64">
             <MenubarCheckboxItem>Always Show Bookmarks Bar</MenubarCheckboxItem>
@@ -218,7 +218,7 @@ export function MenubarWithRadio() {
   return (
     <Example title="With Radio">
       <Menubar>
-        <MenubarMenu>
+        <MenubarMenu defaultOpen>
           <MenubarTrigger>Profiles</MenubarTrigger>
           <MenubarContent>
             <MenubarRadioGroup value={user} onValueChange={setUser}>
@@ -250,7 +250,7 @@ export function MenubarWithIcons() {
   return (
     <Example title="With Icons">
       <Menubar>
-        <MenubarMenu>
+        <MenubarMenu defaultOpen>
           <MenubarTrigger>File</MenubarTrigger>
           <MenubarContent>
             <MenubarItem>
@@ -333,7 +333,7 @@ export function MenubarWithShortcuts() {
   return (
     <Example title="With Shortcuts">
       <Menubar>
-        <MenubarMenu>
+        <MenubarMenu defaultOpen>
           <MenubarTrigger>File</MenubarTrigger>
           <MenubarContent>
             <MenubarItem>
@@ -377,7 +377,7 @@ export function MenubarFormat() {
   return (
     <Example title="Format">
       <Menubar>
-        <MenubarMenu>
+        <MenubarMenu defaultOpen>
           <MenubarTrigger>Format</MenubarTrigger>
           <MenubarContent>
             <MenubarItem>
@@ -434,7 +434,7 @@ export function MenubarInsert() {
   return (
     <Example title="Insert">
       <Menubar>
-        <MenubarMenu>
+        <MenubarMenu defaultOpen>
           <MenubarTrigger>Insert</MenubarTrigger>
           <MenubarContent>
             <MenubarSub>
@@ -511,7 +511,7 @@ export function MenubarDestructive() {
   return (
     <Example title="Destructive">
       <Menubar>
-        <MenubarMenu>
+        <MenubarMenu defaultOpen>
           <MenubarTrigger>File</MenubarTrigger>
           <MenubarContent className="w-40">
             <MenubarItem>
@@ -602,7 +602,7 @@ export function MenubarDestructive() {
 export function MenubarInDialog() {
   return (
     <Example title="In Dialog">
-      <Dialog>
+      <Dialog defaultOpen>
         <DialogTrigger render={<Button variant="outline" />}>
           Open Dialog
         </DialogTrigger>
@@ -614,7 +614,7 @@ export function MenubarInDialog() {
             </DialogDescription>
           </DialogHeader>
           <Menubar>
-            <MenubarMenu>
+            <MenubarMenu defaultOpen>
               <MenubarTrigger>File</MenubarTrigger>
               <MenubarContent>
                 <MenubarItem>
@@ -697,7 +697,7 @@ export function MenubarWithInset() {
   return (
     <Example title="With Inset">
       <Menubar>
-        <MenubarMenu>
+        <MenubarMenu defaultOpen>
           <MenubarTrigger>View</MenubarTrigger>
           <MenubarContent className="w-44">
             <MenubarGroup>

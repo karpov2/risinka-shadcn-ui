@@ -1,6 +1,6 @@
 "use client"
 
-/** Пример shadcn/ui (MIT): apps/v4/registry/bases/base/examples/select-example.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. */
+/** Пример shadcn/ui (MIT): apps/v4/registry/bases/base/examples/select-example.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. Всплывающее — открытым (defaultOpen): на холсте его не навести и не нажать. */
 import {
   Example,
   ExampleWrapper,
@@ -76,11 +76,11 @@ export function SelectBasic() {
   ]
   return (
     <Example title="Basic">
-      <Select items={items}>
+      <Select defaultOpen items={items}>
         <SelectTrigger>
           <SelectValue />
         </SelectTrigger>
-        <SelectContent>
+        <SelectContent alignItemWithTrigger={false}>
           <SelectGroup>
             {items.map((item) => (
               <SelectItem key={item.value} value={item.value}>
@@ -113,8 +113,8 @@ export function SelectSides() {
             "right",
             "inline-end",
           ] as const
-        ).map((side) => (
-          <Select key={side} items={items}>
+        ).map((side, risinkaIndex) => (
+          <Select defaultOpen={risinkaIndex === 0} key={side} items={items}>
             <SelectTrigger className="w-28 capitalize">
               <SelectValue placeholder={side.replace("-", " ")} />
             </SelectTrigger>
@@ -200,11 +200,11 @@ export function SelectWithIcons() {
   return (
     <Example title="With Icons">
       <div className="flex flex-col gap-4">
-        <Select items={items}>
+        <Select defaultOpen items={items}>
           <SelectTrigger size="sm">
             <SelectValue />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent alignItemWithTrigger={false}>
             <SelectGroup>
               {items.map((item) => (
                 <SelectItem key={item.value} value={item.value}>
@@ -218,7 +218,7 @@ export function SelectWithIcons() {
           <SelectTrigger size="default">
             <SelectValue />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent alignItemWithTrigger={false}>
             <SelectGroup>
               {items.map((item) => (
                 <SelectItem key={item.value} value={item.value}>
@@ -251,11 +251,11 @@ export function SelectWithGroups() {
   ]
   return (
     <Example title="With Groups & Labels">
-      <Select items={allItems}>
+      <Select defaultOpen items={allItems}>
         <SelectTrigger>
           <SelectValue />
         </SelectTrigger>
-        <SelectContent>
+        <SelectContent alignItemWithTrigger={false}>
           <SelectGroup>
             <SelectLabel>Fruits</SelectLabel>
             {fruits.map((item) => (
@@ -289,11 +289,11 @@ export function SelectLargeList() {
   ]
   return (
     <Example title="Large List">
-      <Select items={items}>
+      <Select defaultOpen items={items}>
         <SelectTrigger>
           <SelectValue />
         </SelectTrigger>
-        <SelectContent>
+        <SelectContent alignItemWithTrigger={false}>
           <SelectGroup>
             {items.map((item) => (
               <SelectItem key={item.value} value={item.value}>
@@ -317,11 +317,11 @@ export function SelectSizes() {
   return (
     <Example title="Sizes">
       <div className="flex flex-col gap-4">
-        <Select items={items}>
+        <Select defaultOpen items={items}>
           <SelectTrigger size="sm">
             <SelectValue />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent alignItemWithTrigger={false}>
             <SelectGroup>
               {items.map((item) => (
                 <SelectItem key={item.value} value={item.value}>
@@ -335,7 +335,7 @@ export function SelectSizes() {
           <SelectTrigger size="default">
             <SelectValue />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent alignItemWithTrigger={false}>
             <SelectGroup>
               {items.map((item) => (
                 <SelectItem key={item.value} value={item.value}>
@@ -361,11 +361,11 @@ export function SelectWithButton() {
     <Example title="With Button">
       <div className="flex flex-col gap-4">
         <div className="flex items-center gap-2">
-          <Select items={items}>
+          <Select defaultOpen items={items}>
             <SelectTrigger size="sm">
               <SelectValue />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent alignItemWithTrigger={false}>
               <SelectGroup>
                 {items.map((item) => (
                   <SelectItem key={item.value} value={item.value}>
@@ -384,7 +384,7 @@ export function SelectWithButton() {
             <SelectTrigger>
               <SelectValue />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent alignItemWithTrigger={false}>
               <SelectGroup>
                 {items.map((item) => (
                   <SelectItem key={item.value} value={item.value}>
@@ -412,7 +412,7 @@ export function SelectItemAligned() {
   ]
   return (
     <Example title="Item Aligned">
-      <Select items={items}>
+      <Select defaultOpen items={items}>
         <SelectTrigger>
           <SelectValue />
         </SelectTrigger>
@@ -447,11 +447,11 @@ export function SelectWithField() {
     <Example title="With Field">
       <Field>
         <FieldLabel htmlFor="select-fruit">Favorite Fruit</FieldLabel>
-        <Select items={items}>
+        <Select defaultOpen items={items}>
           <SelectTrigger id="select-fruit">
             <SelectValue />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent alignItemWithTrigger={false}>
             <SelectGroup>
               {items.map((item) => (
                 <SelectItem key={item.value} value={item.value}>
@@ -481,11 +481,11 @@ export function SelectInvalid() {
   return (
     <Example title="Invalid">
       <div className="flex flex-col gap-4">
-        <Select items={items}>
+        <Select defaultOpen items={items}>
           <SelectTrigger aria-invalid="true">
             <SelectValue />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent alignItemWithTrigger={false}>
             <SelectGroup>
               {items.map((item) => (
                 <SelectItem key={item.value} value={item.value}>
@@ -501,7 +501,7 @@ export function SelectInvalid() {
             <SelectTrigger id="select-fruit-invalid" aria-invalid>
               <SelectValue />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent alignItemWithTrigger={false}>
               <SelectGroup>
                 {items.map((item) => (
                   <SelectItem key={item.value} value={item.value}>
@@ -529,11 +529,11 @@ export function SelectInline() {
     <Example title="Inline with Input & NativeSelect">
       <div className="flex items-center gap-2">
         <Input placeholder="Search..." className="flex-1" />
-        <Select items={items}>
+        <Select defaultOpen items={items}>
           <SelectTrigger className="w-[140px]">
             <SelectValue />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent alignItemWithTrigger={false}>
             <SelectGroup>
               {items.map((item) => (
                 <SelectItem key={item.value} value={item.value}>
@@ -565,11 +565,11 @@ export function SelectDisabled() {
   ]
   return (
     <Example title="Disabled">
-      <Select items={items} disabled>
+      <Select defaultOpen items={items} disabled>
         <SelectTrigger>
           <SelectValue />
         </SelectTrigger>
-        <SelectContent>
+        <SelectContent alignItemWithTrigger={false}>
           <SelectGroup>
             {items.map((item) => (
               <SelectItem
@@ -605,7 +605,7 @@ const plans = [
 export function SelectPlan() {
   return (
     <Example title="Subscription Plan">
-      <Select
+      <Select defaultOpen
         defaultValue={plans[0]}
         itemToStringValue={(plan: (typeof plans)[number]) => plan.name}
       >
@@ -614,7 +614,7 @@ export function SelectPlan() {
             {(value: (typeof plans)[number]) => <SelectPlanItem plan={value} />}
           </SelectValue>
         </SelectTrigger>
-        <SelectContent>
+        <SelectContent alignItemWithTrigger={false}>
           <SelectGroup>
             {plans.map((plan) => (
               <SelectItem key={plan.name} value={plan}>
@@ -653,7 +653,7 @@ export function SelectMultiple() {
   ]
   return (
     <Example title="Multiple Selection">
-      <Select items={items} multiple defaultValue={[]}>
+      <Select defaultOpen items={items} multiple defaultValue={[]}>
         <SelectTrigger className="w-72">
           <SelectValue>
             {(value: string[]) => {
@@ -667,7 +667,7 @@ export function SelectMultiple() {
             }}
           </SelectValue>
         </SelectTrigger>
-        <SelectContent>
+        <SelectContent alignItemWithTrigger={false}>
           <SelectGroup>
             {items.map((item) => (
               <SelectItem key={item.value} value={item.value}>
@@ -692,7 +692,7 @@ export function SelectInDialog() {
   ]
   return (
     <Example title="In Dialog">
-      <Dialog>
+      <Dialog defaultOpen>
         <DialogTrigger render={<Button variant="outline" />}>
           Open Dialog
         </DialogTrigger>
@@ -703,11 +703,11 @@ export function SelectInDialog() {
               Use the select below to choose a fruit.
             </DialogDescription>
           </DialogHeader>
-          <Select items={items}>
+          <Select defaultOpen items={items}>
             <SelectTrigger>
               <SelectValue />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent alignItemWithTrigger={false}>
               <SelectGroup>
                 {items.map((item) => (
                   <SelectItem key={item.value} value={item.value}>

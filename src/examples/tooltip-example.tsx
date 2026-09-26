@@ -1,6 +1,6 @@
 "use client"
 
-/** Пример shadcn/ui (MIT): apps/v4/registry/bases/base/examples/tooltip-example.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. */
+/** Пример shadcn/ui (MIT): apps/v4/registry/bases/base/examples/tooltip-example.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. Всплывающее — открытым (defaultOpen): на холсте его не навести и не нажать. */
 import {
   Example,
   ExampleWrapper,
@@ -32,7 +32,7 @@ export default function TooltipExample() {
 export function TooltipBasic() {
   return (
     <Example title="Basic">
-      <Tooltip>
+      <Tooltip defaultOpen>
         <TooltipTrigger render={<Button variant="outline" className="w-fit" />}>
           Show Tooltip
         </TooltipTrigger>
@@ -58,7 +58,7 @@ export function TooltipSides() {
             "inline-end",
           ] as const
         ).map((side) => (
-          <Tooltip key={side}>
+          <Tooltip defaultOpen key={side}>
             <TooltipTrigger
               render={<Button variant="outline" className="w-fit capitalize" />}
             >
@@ -77,7 +77,7 @@ export function TooltipSides() {
 export function TooltipWithIcon() {
   return (
     <Example title="With Icon">
-      <Tooltip>
+      <Tooltip defaultOpen>
         <TooltipTrigger render={<Button variant="ghost" size="icon" />}>
           <IconPlaceholder
             lucide="InfoIcon"
@@ -99,7 +99,7 @@ export function TooltipWithIcon() {
 export function TooltipLongContent() {
   return (
     <Example title="Long Content">
-      <Tooltip>
+      <Tooltip defaultOpen>
         <TooltipTrigger render={<Button variant="outline" className="w-fit" />}>
           Show Tooltip
         </TooltipTrigger>
@@ -115,7 +115,7 @@ export function TooltipLongContent() {
 export function TooltipDisabled() {
   return (
     <Example title="Disabled">
-      <Tooltip>
+      <Tooltip defaultOpen>
         <TooltipTrigger render={<span className="inline-block w-fit" />}>
           <Button variant="outline" disabled>
             Disabled
@@ -132,7 +132,7 @@ export function TooltipDisabled() {
 export function TooltipWithKeyboard() {
   return (
     <Example title="With Keyboard Shortcut">
-      <Tooltip>
+      <Tooltip defaultOpen>
         <TooltipTrigger render={<Button variant="outline" size="icon-sm" />}>
           <IconPlaceholder
             lucide="SaveIcon"
@@ -153,7 +153,7 @@ export function TooltipWithKeyboard() {
 export function TooltipOnLink() {
   return (
     <Example title="On Link">
-      <Tooltip>
+      <Tooltip defaultOpen>
         <TooltipTrigger
           render={
             <a
@@ -176,7 +176,7 @@ export function TooltipOnLink() {
 export function TooltipFormatted() {
   return (
     <Example title="Formatted Content">
-      <Tooltip>
+      <Tooltip defaultOpen>
         <TooltipTrigger render={<Button variant="outline" className="w-fit" />}>
           Status
         </TooltipTrigger>

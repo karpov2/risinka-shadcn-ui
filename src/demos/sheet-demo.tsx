@@ -1,4 +1,4 @@
-/** Пример shadcn/ui (MIT): apps/v4/examples/base/sheet-demo.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. */
+/** Пример shadcn/ui (MIT): apps/v4/examples/base/sheet-demo.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. Всплывающее — открытым (defaultOpen): на холсте его не навести и не нажать. */
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -15,7 +15,7 @@ import {
 
 export default function SheetDemo() {
   return (
-    <Sheet>
+    <Sheet defaultOpen>
       <SheetTrigger render={<Button variant="outline" />}>Open</SheetTrigger>
       <SheetContent>
         <SheetHeader>

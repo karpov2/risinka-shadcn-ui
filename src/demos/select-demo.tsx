@@ -1,4 +1,4 @@
-/** Пример shadcn/ui (MIT): apps/v4/examples/base/select-demo.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. */
+/** Пример shadcn/ui (MIT): apps/v4/examples/base/select-demo.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. Всплывающее — открытым (defaultOpen): на холсте его не навести и не нажать. */
 import {
   Select,
   SelectContent,
@@ -20,11 +20,11 @@ const items = [
 
 export function SelectDemo() {
   return (
-    <Select items={items}>
+    <Select defaultOpen items={items}>
       <SelectTrigger className="w-full max-w-48">
         <SelectValue />
       </SelectTrigger>
-      <SelectContent>
+      <SelectContent alignItemWithTrigger={false}>
         <SelectGroup>
           <SelectLabel>Fruits</SelectLabel>
           {items.map((item) => (

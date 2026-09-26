@@ -1,4 +1,4 @@
-/** Пример shadcn/ui (MIT): apps/v4/examples/base/hover-card-demo.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. */
+/** Пример shadcn/ui (MIT): apps/v4/examples/base/hover-card-demo.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. Всплывающее — открытым (defaultOpen): на холсте его не навести и не нажать. */
 import {
   Avatar,
   AvatarFallback,
@@ -13,7 +13,7 @@ import {
 
 export default function HoverCardDemo() {
   return (
-    <HoverCard>
+    <HoverCard defaultOpen>
       <HoverCardTrigger
         delay={10}
         closeDelay={100}

@@ -1,6 +1,6 @@
 "use client"
 
-/** Пример shadcn/ui (MIT): apps/v4/registry/bases/base/examples/drawer-example.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. */
+/** Пример shadcn/ui (MIT): apps/v4/registry/bases/base/examples/drawer-example.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. Всплывающее — открытым (defaultOpen): на холсте его не навести и не нажать. */
 import {
   Example,
   ExampleWrapper,
@@ -51,7 +51,7 @@ export function DrawerDemo() {
   return (
     <Example title="Demo">
       <div className="flex flex-wrap gap-2">
-        <Drawer>
+        <Drawer defaultOpen>
           <DrawerTrigger render={<Button variant="outline" />}>
             Open Drawer
           </DrawerTrigger>
@@ -134,8 +134,8 @@ export function DrawerSwipeHandleExample() {
   return (
     <Example title="Swipe Handle">
       <div className="flex flex-wrap gap-2">
-        {DRAWER_SIDES.map((side) => (
-          <Drawer key={side} swipeDirection={side} showSwipeHandle>
+        {DRAWER_SIDES.map((side, risinkaIndex) => (
+          <Drawer defaultOpen={risinkaIndex === 0} key={side} swipeDirection={side} showSwipeHandle>
             <DrawerTrigger
               render={<Button variant="outline" className="capitalize" />}
             >
@@ -163,7 +163,7 @@ export function DrawerCustomWidthAndHeight() {
   return (
     <Example title="Custom Width and Height">
       <div className="flex flex-wrap gap-2">
-        <Drawer swipeDirection="down">
+        <Drawer defaultOpen swipeDirection="down">
           <DrawerTrigger render={<Button variant="outline" />}>
             Down
           </DrawerTrigger>
@@ -282,8 +282,8 @@ export function DrawerPosition() {
   return (
     <Example title="Position">
       <div className="flex flex-wrap gap-2">
-        {DRAWER_SIDES.map((side) => (
-          <Drawer key={side} swipeDirection={side}>
+        {DRAWER_SIDES.map((side, risinkaIndex) => (
+          <Drawer defaultOpen={risinkaIndex === 0} key={side} swipeDirection={side}>
             <DrawerTrigger
               render={<Button variant="outline" className="capitalize" />}
             >
@@ -317,8 +317,8 @@ export function DrawerScrollable() {
   return (
     <Example title="Scrollable Content">
       <div className="flex flex-wrap gap-2">
-        {DRAWER_SIDES.map((side) => (
-          <Drawer key={side} swipeDirection={side}>
+        {DRAWER_SIDES.map((side, risinkaIndex) => (
+          <Drawer defaultOpen={risinkaIndex === 0} key={side} swipeDirection={side}>
             <DrawerTrigger
               render={<Button variant="outline" className="capitalize" />}
             >
@@ -360,7 +360,7 @@ const SNAP_POINTS = ["31rem", 1]
 export function DrawerSnapPoints() {
   return (
     <Example title="Snap Points">
-      <Drawer snapPoints={SNAP_POINTS} showSwipeHandle>
+      <Drawer defaultOpen snapPoints={SNAP_POINTS} showSwipeHandle>
         <DrawerTrigger render={<Button variant="outline" />}>
           Open Snap Drawer
         </DrawerTrigger>
@@ -387,8 +387,8 @@ export function DrawerNested() {
   return (
     <Example title="Nested">
       <div className="flex flex-wrap gap-2">
-        {DRAWER_SIDES.map((side) => (
-          <Drawer key={side} swipeDirection={side} showSwipeHandle>
+        {DRAWER_SIDES.map((side, risinkaIndex) => (
+          <Drawer defaultOpen={risinkaIndex === 0} key={side} swipeDirection={side} showSwipeHandle>
             <DrawerTrigger
               render={<Button variant="outline" className="capitalize" />}
             >
@@ -462,7 +462,7 @@ export function DrawerNested() {
 export function DrawerNonModal() {
   return (
     <Example title="Non Modal">
-      <Drawer modal={false} disablePointerDismissal swipeDirection="right">
+      <Drawer defaultOpen modal={false} disablePointerDismissal swipeDirection="right">
         <DrawerTrigger render={<Button variant="outline" />}>
           Non Modal
         </DrawerTrigger>

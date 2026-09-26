@@ -1,6 +1,6 @@
 "use client"
 
-/** Пример shadcn/ui (MIT): apps/v4/registry/bases/base/examples/dialog-example.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. */
+/** Пример shadcn/ui (MIT): apps/v4/registry/bases/base/examples/dialog-example.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. Всплывающее — открытым (defaultOpen): на холсте его не навести и не нажать. */
 import * as React from "react"
 
 import {
@@ -80,7 +80,7 @@ export default function DialogExample() {
 export function DialogWithForm() {
   return (
     <Example title="With Form" className="items-center justify-center">
-      <Dialog>
+      <Dialog defaultOpen>
         <form>
           <DialogTrigger render={<Button variant="outline" />}>
             Edit Profile
@@ -123,7 +123,7 @@ export function DialogWithForm() {
 export function DialogScrollableContent() {
   return (
     <Example title="Scrollable Content" className="items-center justify-center">
-      <Dialog>
+      <Dialog defaultOpen>
         <DialogTrigger render={<Button variant="outline" />}>
           Scrollable Content
         </DialogTrigger>
@@ -159,7 +159,7 @@ export function DialogScrollableContent() {
 export function DialogWithStickyFooter() {
   return (
     <Example title="With Sticky Footer" className="items-center justify-center">
-      <Dialog>
+      <Dialog defaultOpen>
         <DialogTrigger render={<Button variant="outline" />}>
           Sticky Footer
         </DialogTrigger>
@@ -200,7 +200,7 @@ export function DialogWithStickyFooter() {
 export function DialogNoCloseButton() {
   return (
     <Example title="No Close Button" className="items-center justify-center">
-      <Dialog>
+      <Dialog defaultOpen>
         <DialogTrigger render={<Button variant="outline" />}>
           No Close Button
         </DialogTrigger>
@@ -279,7 +279,7 @@ export function DialogChatSettings() {
 
   return (
     <Example title="Chat Settings" className="items-center justify-center">
-      <Dialog>
+      <Dialog defaultOpen>
         <DialogTrigger render={<Button variant="outline" />}>
           Chat Settings
         </DialogTrigger>
