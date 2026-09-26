@@ -17,6 +17,35 @@ const POPUP_ROOM = 24;
 const POPUP_FRAMES = 90;
 /** Шторка во весь рост, растянутая по высоте, — рамка не ниже этого: её раскладка подстроится под любую высоту. */
 const SHEET_HEIGHT = 480;
+/** Панель у края — рамка не выше обычного экрана: длинное содержимое прокручивается, как на нём (пример «прокрутка»). */
+const PANEL_MAX = 900;
+
+/** Дети в потоке: без абсолютных и fixed (крестик в углу, выезжающая панель в своём слое) и без пустых. */
+function inFlow(element: Element): HTMLElement[] {
+  return (Array.from(element.children) as HTMLElement[]).filter((child) => {
+    const position = getComputedStyle(child).position;
+    return position !== 'absolute' && position !== 'fixed' && child.getBoundingClientRect().height > 0;
+  });
+}
+
+/**
+ * Высота содержимого без растяжки — у шторки во весь рост: прокручиваемое — вся прокрутка (список в Drawer), растянутое
+ * (flex-1, обёртка во весь рост) — по своему содержимому, остальное — своей высотой; столбик — сумма, строка — самый
+ * высокий. По самой шторке высоту не узнать: она растёт вместе с экраном.
+ */
+function naturalHeight(element: HTMLElement): number {
+  const style = getComputedStyle(element);
+  const box = element.getBoundingClientRect();
+  // Прокрутка и обрезка (overflow hidden у содержимого шторки, зажатой потолком высоты) — вся высота содержимого.
+  if (style.overflowY !== 'visible' && element.scrollHeight > element.clientHeight + 1) return element.scrollHeight + (box.height - element.clientHeight);
+  const flow = inFlow(element);
+  if (flow.length === 0) return box.height;
+  const pad = parseFloat(style.paddingTop) + parseFloat(style.paddingBottom) + parseFloat(style.borderTopWidth) + parseFloat(style.borderBottomWidth);
+  const row = (style.display === 'flex' || style.display === 'inline-flex') && !style.flexDirection.startsWith('column');
+  const heights = flow.map((child) => (flow.length === 1 || parseFloat(getComputedStyle(child).flexGrow) > 0 || child.scrollHeight > child.clientHeight + 1 ? naturalHeight(child) : child.getBoundingClientRect().height));
+  const gap = (parseFloat(style.rowGap) || 0) * (flow.length - 1);
+  return pad + (row ? Math.max(...heights) : heights.reduce((sum, height) => sum + height, 0) + gap);
+}
 
 interface PopupRoom {
   /** Есть открытое окно поверх страницы. */
@@ -62,13 +91,22 @@ function usePopupRoom(): { readonly ref: RefObject<HTMLDivElement | null>; reado
         for (const popup of popups) {
           const rect = popup.getBoundingClientRect();
           if (getComputedStyle(popup).position === 'fixed') {
-            // Во весь рост — по содержимому: слой с выезжающей снизу панелью — на высоту панели; шторка, растянутая по
-            // высоте (подвал прижат к низу), — не ниже SHEET_HEIGHT: по ней самой высоту не узнать, она росла бы вместе
-            // с рамкой. Без содержимого — затемнение фона, не окно.
-            const content = Array.from(popup.children).reduce((sum, child) => sum + child.getBoundingClientRect().height, 0);
-            if (content === 0) continue;
-            const full = rect.height >= window.innerHeight - 1;
-            height = Math.max(height, !full ? rect.height + 2 * POPUP_ROOM : content < rect.height * 0.9 ? content + 2 * POPUP_ROOM : SHEET_HEIGHT);
+            // Без детей в потоке — затемнение фона или слой, в котором выезжает панель: сама панель меряется отдельно.
+            if (inFlow(popup).length === 0) continue;
+            const full = rect.top <= POPUP_ROOM && rect.bottom >= window.innerHeight - POPUP_ROOM;
+            const centered = Math.abs(rect.top + rect.height / 2 - window.innerHeight / 2) < 2;
+            if (centered && !full) {
+              // Окно по центру экрана — своей высотой.
+              height = Math.max(height, rect.height + 2 * POPUP_ROOM);
+            } else {
+              // Панель у края (Drawer, Sheet) — по содержимому без растяжки, с прокруткой и обрезкой целиком, плюс запас,
+              // который у неё отнимает потолок высоты (у Drawer сверху и снизу — экран минус 6rem): иначе на высоте
+              // артборда нижние кнопки обрезало бы. Растянутую во весь рост не узнать и так — не ниже SHEET_HEIGHT.
+              const natural = naturalHeight(popup);
+              const cap = parseFloat(getComputedStyle(popup).maxHeight);
+              const reserve = Math.max(2 * POPUP_ROOM, Number.isFinite(cap) && cap < window.innerHeight ? window.innerHeight - cap : 0);
+              height = Math.max(height, full && natural >= rect.height * 0.9 ? SHEET_HEIGHT : Math.min(PANEL_MAX, natural + reserve));
+            }
           } else if (modal !== undefined && rect.top >= modal.top) {
             height = Math.max(height, 2 * (rect.bottom - modal.top) - modal.height + 2 * POPUP_ROOM);
           } else {
