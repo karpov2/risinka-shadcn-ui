@@ -1,5 +1,5 @@
 /** Пример shadcn/ui (MIT): apps/v4/examples/base/breadcrumb-demo.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. */
-import Link from "@/examples/next-link"
+import "@/examples/next-link"
 
 import {
   Breadcrumb,

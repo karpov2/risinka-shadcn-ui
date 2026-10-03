@@ -1,5 +1,5 @@
 /** Пример shadcn/ui (MIT): apps/v4/examples/base/carousel-demo.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. */
-import * as React from "react"
+import "react"
 
 import { Card, CardContent } from "@/components/ui/card"
 import {

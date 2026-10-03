@@ -8,7 +8,7 @@ import { ComponentSheet, FontSamples } from '../../library/kit';
 export default function FontsSheet() {
   return (
     <ComponentSheet name="Шрифты">
-      <FontSamples families={['Geist Variable']} variables={['--font-heading', '--font-sans']} />
+      <FontSamples families={['Geist Variable']} variables={['--font-heading', '--font-sans']} expressions={{"--font-heading":"'Geist Variable', sans-serif","--font-sans":"'Geist Variable', sans-serif"}} />
     </ComponentSheet>
   );
 }

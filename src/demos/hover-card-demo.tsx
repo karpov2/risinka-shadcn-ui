@@ -1,9 +1,5 @@
 /** Пример shadcn/ui (MIT): apps/v4/examples/base/hover-card-demo.tsx, тег shadcn@4.21.0; импорты — на компоненты этой библиотеки. Всплывающее — открытым (defaultOpen): на холсте его не навести и не нажать. */
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/components/ui/avatar"
+import "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import {
   HoverCard,

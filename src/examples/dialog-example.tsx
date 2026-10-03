@@ -41,15 +41,7 @@ import {
   NativeSelect,
   NativeSelectOption,
 } from "@/components/ui/native-select"
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectSeparator,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
+import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Switch } from "@/components/ui/switch"
 import {
   Tabs,

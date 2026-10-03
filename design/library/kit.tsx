@@ -224,33 +224,35 @@ export function Variants({ title, columns, rows }: { readonly title?: string; re
   );
 }
 
-/** Значение переменной темы, как его видит страница. */
-function useVariable(name: string): string {
-  const [value, setValue] = useState('');
-  useEffect(() => setValue(getComputedStyle(document.documentElement).getPropertyValue(name).trim()), [name]);
-  return value;
-}
+/** У выражений @theme inline может не быть переменной страницы. */
+type Expressions = Readonly<Record<string, string>>;
+const expressionFor = (name: string, expressions: Expressions): string => expressions[name] ?? 'var(' + name + ')';
 
-function Token({ name, children }: { readonly name: string; readonly children: ReactNode }) {
-  const value = useVariable(name);
+/** Значение именно образца: браузер уже разрешил var/calc, включая @theme inline. */
+function Token({ name, property, expression, children }: { readonly name: string; readonly property: string; readonly expression: string; readonly children: (ref: RefObject<HTMLDivElement | null>) => ReactNode }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [value, setValue] = useState('');
+  useEffect(() => {
+    if (ref.current !== null) setValue(getComputedStyle(ref.current).getPropertyValue(property).trim());
+  }, [property, expression]);
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 6, minWidth: 0 }}>
-      {children}
+      {children(ref)}
       <div style={{ ...CAPTION, color: INK }}>{name}</div>
-      <div style={CAPTION}>{value}</div>
+      <div data-token-value={name} style={CAPTION}>{value}</div>
     </div>
   );
 }
 
 const GRID = { display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: 20 } as const;
 
-/** Цвета: образец, имя переменной и значение. */
-export function Swatches({ names }: { readonly names: readonly string[] }) {
+/** Цвета: образец, имя переменной и вычисленное значение. */
+export function Swatches({ names, expressions = {} }: { readonly names: readonly string[]; readonly expressions?: Expressions }) {
   return (
     <div style={GRID}>
       {names.map((name) => (
-        <Token key={name} name={name}>
-          <div style={{ height: 56, borderRadius: 6, border: '1px solid ' + LINE, background: 'var(' + name + ')' }} />
+        <Token key={name} name={name} property="background-color" expression={expressionFor(name, expressions)}>
+          {(ref) => <div ref={ref} data-token-sample={name} style={{ height: 56, borderRadius: 6, border: '1px solid ' + LINE, background: expressionFor(name, expressions) }} />}
         </Token>
       ))}
     </div>
@@ -258,13 +260,13 @@ export function Swatches({ names }: { readonly names: readonly string[] }) {
 }
 
 /** Шрифты: семейства из CSS и переменные шрифтов — строкой образца. */
-export function FontSamples({ families = [], variables = [] }: { readonly families?: readonly string[]; readonly variables?: readonly string[] }) {
+export function FontSamples({ families = [], variables = [], expressions = {} }: { readonly families?: readonly string[]; readonly variables?: readonly string[]; readonly expressions?: Expressions }) {
   const sample = 'Съешь же ещё этих мягких французских булок — 0123456789';
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
       {variables.map((name) => (
-        <Token key={name} name={name}>
-          <div style={{ fontFamily: 'var(' + name + ')', fontSize: 20 }}>{sample}</div>
+        <Token key={name} name={name} property="font-family" expression={expressionFor(name, expressions)}>
+          {(ref) => <div ref={ref} data-token-sample={name} style={{ fontFamily: expressionFor(name, expressions), fontSize: 20 }}>{sample}</div>}
         </Token>
       ))}
       {families.map((family) => (
@@ -278,12 +280,12 @@ export function FontSamples({ families = [], variables = [] }: { readonly famili
 }
 
 /** Размеры текста: строка образца этим размером. */
-export function TextSizes({ names }: { readonly names: readonly string[] }) {
+export function TextSizes({ names, expressions = {} }: { readonly names: readonly string[]; readonly expressions?: Expressions }) {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
       {names.map((name) => (
-        <Token key={name} name={name}>
-          <div style={{ fontSize: 'var(' + name + ')' }}>Съешь же ещё этих мягких французских булок</div>
+        <Token key={name} name={name} property="font-size" expression={expressionFor(name, expressions)}>
+          {(ref) => <div ref={ref} data-token-sample={name} style={{ fontSize: expressionFor(name, expressions) }}>Съешь же ещё этих мягких французских булок</div>}
         </Token>
       ))}
     </div>
@@ -291,12 +293,12 @@ export function TextSizes({ names }: { readonly names: readonly string[] }) {
 }
 
 /** Радиусы: квадрат с этим скруглением. */
-export function Radii({ names }: { readonly names: readonly string[] }) {
+export function Radii({ names, expressions = {} }: { readonly names: readonly string[]; readonly expressions?: Expressions }) {
   return (
     <div style={GRID}>
       {names.map((name) => (
-        <Token key={name} name={name}>
-          <div style={{ height: 72, width: 72, border: '1px solid ' + INK, background: '#f5f5f5', borderRadius: 'var(' + name + ')' }} />
+        <Token key={name} name={name} property="border-top-left-radius" expression={expressionFor(name, expressions)}>
+          {(ref) => <div ref={ref} data-token-sample={name} style={{ height: 72, width: 72, border: '1px solid ' + INK, background: '#f5f5f5', borderRadius: expressionFor(name, expressions) }} />}
         </Token>
       ))}
     </div>
@@ -304,34 +306,31 @@ export function Radii({ names }: { readonly names: readonly string[] }) {
 }
 
 /** Тени: белая карточка с этой тенью. */
-export function Shadows({ names }: { readonly names: readonly string[] }) {
+export function Shadows({ names, expressions = {} }: { readonly names: readonly string[]; readonly expressions?: Expressions }) {
   return (
     <div style={{ ...GRID, gap: 28, padding: 8 }}>
       {names.map((name) => (
-        <Token key={name} name={name}>
-          <div style={{ height: 72, borderRadius: 8, background: '#fff', boxShadow: 'var(' + name + ')' }} />
+        <Token key={name} name={name} property="box-shadow" expression={expressionFor(name, expressions)}>
+          {(ref) => <div ref={ref} data-token-sample={name} style={{ height: 72, borderRadius: 8, background: '#fff', boxShadow: expressionFor(name, expressions) }} />}
         </Token>
       ))}
     </div>
   );
 }
 
-/** Отступы: полосы шагов шкалы (`--spacing` × шаг) или именованные переменные. */
-export function Spacing({ base, steps = [1, 2, 3, 4, 6, 8, 12, 16], names = [] }: { readonly base?: string; readonly steps?: readonly number[]; readonly names?: readonly string[] }) {
-  const bar = (width: string) => <div style={{ height: 12, width, background: '#2563eb', borderRadius: 2 }} />;
+/** Отступы: полосы шагов шкалы и именованные переменные. */
+export function Spacing({ base, steps = [1, 2, 3, 4, 6, 8, 12, 16], names = [], expressions = {} }: { readonly base?: string; readonly steps?: readonly number[]; readonly names?: readonly string[]; readonly expressions?: Expressions }) {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-      {base === undefined
-        ? null
-        : steps.map((step) => (
-            <div key={step} style={{ display: 'grid', gridTemplateColumns: '64px 1fr', alignItems: 'center', gap: 12 }}>
-              <span style={CAPTION}>{String(step)}</span>
-              {bar('calc(var(' + base + ') * ' + String(step) + ')')}
-            </div>
-          ))}
+      {base === undefined ? null : steps.map((step) => (
+        <div key={step} style={{ display: 'grid', gridTemplateColumns: '64px 1fr', alignItems: 'center', gap: 12 }}>
+          <span style={CAPTION}>{String(step)}</span>
+          <div style={{ height: 12, width: 'calc(' + expressionFor(base, expressions) + ' * ' + String(step) + ')', background: '#2563eb', borderRadius: 2 }} />
+        </div>
+      ))}
       {names.map((name) => (
-        <Token key={name} name={name}>
-          {bar('var(' + name + ')')}
+        <Token key={name} name={name} property="width" expression={expressionFor(name, expressions)}>
+          {(ref) => <div ref={ref} data-token-sample={name} style={{ height: 12, width: expressionFor(name, expressions), background: '#2563eb', borderRadius: 2 }} />}
         </Token>
       ))}
     </div>
