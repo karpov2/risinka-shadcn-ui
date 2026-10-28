@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "ai-suggestions",
+  "type": "registry:ui",
+  "title": "AiSuggestions",
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/ai-suggestions.tsx",
+      "type": "registry:ui"
+    }
+  ]
+}

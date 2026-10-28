@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "ai-confirmation",
+  "type": "registry:ui",
+  "title": "AiConfirmation",
+  "registryDependencies": [
+    "item",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/ai-confirmation.tsx",
+      "type": "registry:ui"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "ai-model-selector",
+  "type": "registry:ui",
+  "title": "AiModelSelector",
+  "registryDependencies": [
+    "button",
+    "popover",
+    "slider",
+    "radio-group"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/ai-model-selector.tsx",
+      "type": "registry:ui"
+    }
+  ]
+}

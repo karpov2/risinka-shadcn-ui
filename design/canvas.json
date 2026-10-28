@@ -337,6 +337,48 @@
       "group": "Раскладка"
     },
     {
+      "id": "components/ai-confirmation",
+      "title": "AiConfirmation",
+      "group": "Чат и ИИ",
+      "layout": "free"
+    },
+    {
+      "id": "components/ai-message",
+      "title": "AiMessage",
+      "group": "Чат и ИИ",
+      "layout": "free"
+    },
+    {
+      "id": "components/ai-model-selector",
+      "title": "AiModelSelector",
+      "group": "Чат и ИИ",
+      "layout": "free"
+    },
+    {
+      "id": "components/ai-prompt-input",
+      "title": "AiPromptInput",
+      "group": "Чат и ИИ",
+      "layout": "free"
+    },
+    {
+      "id": "components/ai-questionnaire",
+      "title": "AiQuestionnaire",
+      "group": "Чат и ИИ",
+      "layout": "free"
+    },
+    {
+      "id": "components/ai-suggestions",
+      "title": "AiSuggestions",
+      "group": "Чат и ИИ",
+      "layout": "free"
+    },
+    {
+      "id": "components/ai-trace",
+      "title": "AiTrace",
+      "group": "Чат и ИИ",
+      "layout": "free"
+    },
+    {
       "id": "components/attachment",
       "title": "Attachment",
       "layout": "free",
@@ -371,6 +413,12 @@
       "title": "Questionnaire",
       "layout": "free",
       "group": "Чат и ИИ"
+    },
+    {
+      "id": "components/trace",
+      "title": "Trace",
+      "group": "Чат и ИИ",
+      "layout": "free"
     },
     {
       "id": "foundations",
@@ -7698,6 +7746,614 @@
       },
       "x": 0,
       "y": 0
+    },
+    {
+      "id": "components.ai-confirmation",
+      "page": "components",
+      "title": "AiConfirmation",
+      "file": "pages/components/ai-confirmation.tsx",
+      "kind": "code",
+      "state": "ai-confirmation",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 900
+      },
+      "x": 96960,
+      "y": 0,
+      "link": "components/ai-confirmation"
+    },
+    {
+      "id": "components.ai-confirmation.data",
+      "page": "components/ai-confirmation",
+      "title": "Данные",
+      "file": "pages/components/ai-confirmation/data.tsx",
+      "kind": "code",
+      "state": "data",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 900
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.ai-confirmation.empty",
+      "page": "components/ai-confirmation",
+      "title": "Пусто",
+      "file": "pages/components/ai-confirmation/empty.tsx",
+      "kind": "code",
+      "state": "empty",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 900
+      },
+      "x": 1600,
+      "y": 0
+    },
+    {
+      "id": "components.ai-confirmation.error",
+      "page": "components/ai-confirmation",
+      "title": "Ошибка",
+      "file": "pages/components/ai-confirmation/error.tsx",
+      "kind": "code",
+      "state": "error",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 900
+      },
+      "x": 3200,
+      "y": 0
+    },
+    {
+      "id": "components.ai-confirmation.working",
+      "page": "components/ai-confirmation",
+      "title": "Работа",
+      "file": "pages/components/ai-confirmation/working.tsx",
+      "kind": "code",
+      "state": "working",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 900
+      },
+      "x": 4800,
+      "y": 0
+    },
+    {
+      "id": "components.ai-message",
+      "page": "components",
+      "title": "AiMessage",
+      "file": "pages/components/ai-message.tsx",
+      "kind": "code",
+      "state": "ai-message",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 900
+      },
+      "x": 98560,
+      "y": 0,
+      "link": "components/ai-message"
+    },
+    {
+      "id": "components.ai-message.data",
+      "page": "components/ai-message",
+      "title": "Данные",
+      "file": "pages/components/ai-message/data.tsx",
+      "kind": "code",
+      "state": "data",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 900
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.ai-message.empty",
+      "page": "components/ai-message",
+      "title": "Пусто",
+      "file": "pages/components/ai-message/empty.tsx",
+      "kind": "code",
+      "state": "empty",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 900
+      },
+      "x": 1600,
+      "y": 0
+    },
+    {
+      "id": "components.ai-message.error",
+      "page": "components/ai-message",
+      "title": "Ошибка",
+      "file": "pages/components/ai-message/error.tsx",
+      "kind": "code",
+      "state": "error",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 900
+      },
+      "x": 3200,
+      "y": 0
+    },
+    {
+      "id": "components.ai-message.working",
+      "page": "components/ai-message",
+      "title": "Работа",
+      "file": "pages/components/ai-message/working.tsx",
+      "kind": "code",
+      "state": "working",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 900
+      },
+      "x": 4800,
+      "y": 0
+    },
+    {
+      "id": "components.ai-model-selector",
+      "page": "components",
+      "title": "AiModelSelector",
+      "file": "pages/components/ai-model-selector.tsx",
+      "kind": "code",
+      "state": "ai-model-selector",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 900
+      },
+      "x": 100160,
+      "y": 0,
+      "link": "components/ai-model-selector"
+    },
+    {
+      "id": "components.ai-model-selector.data",
+      "page": "components/ai-model-selector",
+      "title": "Данные",
+      "file": "pages/components/ai-model-selector/data.tsx",
+      "kind": "code",
+      "state": "data",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 900
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.ai-model-selector.empty",
+      "page": "components/ai-model-selector",
+      "title": "Пусто",
+      "file": "pages/components/ai-model-selector/empty.tsx",
+      "kind": "code",
+      "state": "empty",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 900
+      },
+      "x": 1600,
+      "y": 0
+    },
+    {
+      "id": "components.ai-model-selector.error",
+      "page": "components/ai-model-selector",
+      "title": "Ошибка",
+      "file": "pages/components/ai-model-selector/error.tsx",
+      "kind": "code",
+      "state": "error",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 900
+      },
+      "x": 3200,
+      "y": 0
+    },
+    {
+      "id": "components.ai-model-selector.working",
+      "page": "components/ai-model-selector",
+      "title": "Работа",
+      "file": "pages/components/ai-model-selector/working.tsx",
+      "kind": "code",
+      "state": "working",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 900
+      },
+      "x": 4800,
+      "y": 0
+    },
+    {
+      "id": "components.ai-prompt-input",
+      "page": "components",
+      "title": "AiPromptInput",
+      "file": "pages/components/ai-prompt-input.tsx",
+      "kind": "code",
+      "state": "ai-prompt-input",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 900
+      },
+      "x": 101760,
+      "y": 0,
+      "link": "components/ai-prompt-input"
+    },
+    {
+      "id": "components.ai-prompt-input.data",
+      "page": "components/ai-prompt-input",
+      "title": "Данные",
+      "file": "pages/components/ai-prompt-input/data.tsx",
+      "kind": "code",
+      "state": "data",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 900
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.ai-prompt-input.empty",
+      "page": "components/ai-prompt-input",
+      "title": "Пусто",
+      "file": "pages/components/ai-prompt-input/empty.tsx",
+      "kind": "code",
+      "state": "empty",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 900
+      },
+      "x": 1600,
+      "y": 0
+    },
+    {
+      "id": "components.ai-prompt-input.error",
+      "page": "components/ai-prompt-input",
+      "title": "Ошибка",
+      "file": "pages/components/ai-prompt-input/error.tsx",
+      "kind": "code",
+      "state": "error",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 900
+      },
+      "x": 3200,
+      "y": 0
+    },
+    {
+      "id": "components.ai-prompt-input.working",
+      "page": "components/ai-prompt-input",
+      "title": "Работа",
+      "file": "pages/components/ai-prompt-input/working.tsx",
+      "kind": "code",
+      "state": "working",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 900
+      },
+      "x": 4800,
+      "y": 0
+    },
+    {
+      "id": "components.ai-questionnaire",
+      "page": "components",
+      "title": "AiQuestionnaire",
+      "file": "pages/components/ai-questionnaire.tsx",
+      "kind": "code",
+      "state": "ai-questionnaire",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 900
+      },
+      "x": 103360,
+      "y": 0,
+      "link": "components/ai-questionnaire"
+    },
+    {
+      "id": "components.ai-questionnaire.data",
+      "page": "components/ai-questionnaire",
+      "title": "Данные",
+      "file": "pages/components/ai-questionnaire/data.tsx",
+      "kind": "code",
+      "state": "data",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 900
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.ai-questionnaire.empty",
+      "page": "components/ai-questionnaire",
+      "title": "Пусто",
+      "file": "pages/components/ai-questionnaire/empty.tsx",
+      "kind": "code",
+      "state": "empty",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 900
+      },
+      "x": 1600,
+      "y": 0
+    },
+    {
+      "id": "components.ai-questionnaire.error",
+      "page": "components/ai-questionnaire",
+      "title": "Ошибка",
+      "file": "pages/components/ai-questionnaire/error.tsx",
+      "kind": "code",
+      "state": "error",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 900
+      },
+      "x": 3200,
+      "y": 0
+    },
+    {
+      "id": "components.ai-questionnaire.working",
+      "page": "components/ai-questionnaire",
+      "title": "Работа",
+      "file": "pages/components/ai-questionnaire/working.tsx",
+      "kind": "code",
+      "state": "working",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 900
+      },
+      "x": 4800,
+      "y": 0
+    },
+    {
+      "id": "components.ai-suggestions",
+      "page": "components",
+      "title": "AiSuggestions",
+      "file": "pages/components/ai-suggestions.tsx",
+      "kind": "code",
+      "state": "ai-suggestions",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 900
+      },
+      "x": 104960,
+      "y": 0,
+      "link": "components/ai-suggestions"
+    },
+    {
+      "id": "components.ai-suggestions.data",
+      "page": "components/ai-suggestions",
+      "title": "Данные",
+      "file": "pages/components/ai-suggestions/data.tsx",
+      "kind": "code",
+      "state": "data",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 900
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.ai-suggestions.empty",
+      "page": "components/ai-suggestions",
+      "title": "Пусто",
+      "file": "pages/components/ai-suggestions/empty.tsx",
+      "kind": "code",
+      "state": "empty",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 900
+      },
+      "x": 1600,
+      "y": 0
+    },
+    {
+      "id": "components.ai-suggestions.error",
+      "page": "components/ai-suggestions",
+      "title": "Ошибка",
+      "file": "pages/components/ai-suggestions/error.tsx",
+      "kind": "code",
+      "state": "error",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 900
+      },
+      "x": 3200,
+      "y": 0
+    },
+    {
+      "id": "components.ai-suggestions.working",
+      "page": "components/ai-suggestions",
+      "title": "Работа",
+      "file": "pages/components/ai-suggestions/working.tsx",
+      "kind": "code",
+      "state": "working",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 900
+      },
+      "x": 4800,
+      "y": 0
+    },
+    {
+      "id": "components.ai-trace",
+      "page": "components",
+      "title": "AiTrace",
+      "file": "pages/components/ai-trace.tsx",
+      "kind": "code",
+      "state": "ai-trace",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 900
+      },
+      "x": 106560,
+      "y": 0,
+      "link": "components/ai-trace"
+    },
+    {
+      "id": "components.ai-trace.data",
+      "page": "components/ai-trace",
+      "title": "Данные",
+      "file": "pages/components/ai-trace/data.tsx",
+      "kind": "code",
+      "state": "data",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 900
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.ai-trace.empty",
+      "page": "components/ai-trace",
+      "title": "Пусто",
+      "file": "pages/components/ai-trace/empty.tsx",
+      "kind": "code",
+      "state": "empty",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 900
+      },
+      "x": 1600,
+      "y": 0
+    },
+    {
+      "id": "components.ai-trace.error",
+      "page": "components/ai-trace",
+      "title": "Ошибка",
+      "file": "pages/components/ai-trace/error.tsx",
+      "kind": "code",
+      "state": "error",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 900
+      },
+      "x": 3200,
+      "y": 0
+    },
+    {
+      "id": "components.ai-trace.working",
+      "page": "components/ai-trace",
+      "title": "Работа",
+      "file": "pages/components/ai-trace/working.tsx",
+      "kind": "code",
+      "state": "working",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 900
+      },
+      "x": 4800,
+      "y": 0
+    },
+    {
+      "id": "components.trace",
+      "page": "components",
+      "title": "Trace",
+      "file": "pages/components/trace.tsx",
+      "kind": "code",
+      "state": "trace",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 900
+      },
+      "x": 108160,
+      "y": 0,
+      "link": "components/trace"
+    },
+    {
+      "id": "components.trace.data",
+      "page": "components/trace",
+      "title": "Данные",
+      "file": "pages/components/trace/data.tsx",
+      "kind": "code",
+      "state": "data",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 900
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "components.trace.empty",
+      "page": "components/trace",
+      "title": "Пусто",
+      "file": "pages/components/trace/empty.tsx",
+      "kind": "code",
+      "state": "empty",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 900
+      },
+      "x": 1600,
+      "y": 0
+    },
+    {
+      "id": "components.trace.error",
+      "page": "components/trace",
+      "title": "Ошибка",
+      "file": "pages/components/trace/error.tsx",
+      "kind": "code",
+      "state": "error",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 900
+      },
+      "x": 3200,
+      "y": 0
+    },
+    {
+      "id": "components.trace.working",
+      "page": "components/trace",
+      "title": "Работа",
+      "file": "pages/components/trace/working.tsx",
+      "kind": "code",
+      "state": "working",
+      "status": "draft",
+      "viewport": {
+        "width": 800,
+        "height": 900
+      },
+      "x": 4800,
+      "y": 0
     }
   ],
   "annotations": [],
@@ -9269,20 +9925,36 @@
       "page": "components",
       "title": "Чат и ИИ",
       "artboards": [
+        "components.ai-confirmation",
+        "components.ai-message",
+        "components.ai-model-selector",
+        "components.ai-prompt-input",
+        "components.ai-questionnaire",
+        "components.ai-suggestions",
+        "components.ai-trace",
         "components.attachment",
         "components.bubble",
         "components.marker",
         "components.message",
         "components.message-scroller",
-        "components.questionnaire"
+        "components.questionnaire",
+        "components.trace"
       ],
       "main": [
+        "components.ai-confirmation",
+        "components.ai-message",
+        "components.ai-model-selector",
+        "components.ai-prompt-input",
+        "components.ai-questionnaire",
+        "components.ai-suggestions",
+        "components.ai-trace",
         "components.attachment",
         "components.bubble",
         "components.marker",
         "components.message",
         "components.message-scroller",
-        "components.questionnaire"
+        "components.questionnaire",
+        "components.trace"
       ]
     },
     {
@@ -9298,6 +9970,142 @@
         "foundations.colors",
         "foundations.fonts",
         "foundations.radii"
+      ]
+    },
+    {
+      "id": "component-ai-trace",
+      "page": "components/ai-trace",
+      "title": "AiTrace",
+      "artboards": [
+        "components.ai-trace.empty",
+        "components.ai-trace.working",
+        "components.ai-trace.error",
+        "components.ai-trace.data"
+      ],
+      "main": [
+        "components.ai-trace.empty",
+        "components.ai-trace.working",
+        "components.ai-trace.error",
+        "components.ai-trace.data"
+      ]
+    },
+    {
+      "id": "component-ai-prompt-input",
+      "page": "components/ai-prompt-input",
+      "title": "AiPromptInput",
+      "artboards": [
+        "components.ai-prompt-input.empty",
+        "components.ai-prompt-input.working",
+        "components.ai-prompt-input.error",
+        "components.ai-prompt-input.data"
+      ],
+      "main": [
+        "components.ai-prompt-input.empty",
+        "components.ai-prompt-input.working",
+        "components.ai-prompt-input.error",
+        "components.ai-prompt-input.data"
+      ]
+    },
+    {
+      "id": "component-ai-model-selector",
+      "page": "components/ai-model-selector",
+      "title": "AiModelSelector",
+      "artboards": [
+        "components.ai-model-selector.empty",
+        "components.ai-model-selector.working",
+        "components.ai-model-selector.error",
+        "components.ai-model-selector.data"
+      ],
+      "main": [
+        "components.ai-model-selector.empty",
+        "components.ai-model-selector.working",
+        "components.ai-model-selector.error",
+        "components.ai-model-selector.data"
+      ]
+    },
+    {
+      "id": "component-ai-suggestions",
+      "page": "components/ai-suggestions",
+      "title": "AiSuggestions",
+      "artboards": [
+        "components.ai-suggestions.empty",
+        "components.ai-suggestions.working",
+        "components.ai-suggestions.error",
+        "components.ai-suggestions.data"
+      ],
+      "main": [
+        "components.ai-suggestions.empty",
+        "components.ai-suggestions.working",
+        "components.ai-suggestions.error",
+        "components.ai-suggestions.data"
+      ]
+    },
+    {
+      "id": "component-ai-message",
+      "page": "components/ai-message",
+      "title": "AiMessage",
+      "artboards": [
+        "components.ai-message.empty",
+        "components.ai-message.working",
+        "components.ai-message.error",
+        "components.ai-message.data"
+      ],
+      "main": [
+        "components.ai-message.empty",
+        "components.ai-message.working",
+        "components.ai-message.error",
+        "components.ai-message.data"
+      ]
+    },
+    {
+      "id": "component-ai-confirmation",
+      "page": "components/ai-confirmation",
+      "title": "AiConfirmation",
+      "artboards": [
+        "components.ai-confirmation.empty",
+        "components.ai-confirmation.working",
+        "components.ai-confirmation.error",
+        "components.ai-confirmation.data"
+      ],
+      "main": [
+        "components.ai-confirmation.empty",
+        "components.ai-confirmation.working",
+        "components.ai-confirmation.error",
+        "components.ai-confirmation.data"
+      ]
+    },
+    {
+      "id": "component-ai-questionnaire",
+      "page": "components/ai-questionnaire",
+      "title": "AiQuestionnaire",
+      "artboards": [
+        "components.ai-questionnaire.empty",
+        "components.ai-questionnaire.working",
+        "components.ai-questionnaire.error",
+        "components.ai-questionnaire.data"
+      ],
+      "main": [
+        "components.ai-questionnaire.empty",
+        "components.ai-questionnaire.working",
+        "components.ai-questionnaire.error",
+        "components.ai-questionnaire.data"
+      ]
+    },
+    {
+      "id": "component-trace",
+      "page": "components/trace",
+      "title": "Trace",
+      "artboards": [
+        "components.trace.empty",
+        "components.trace.working",
+        "components.trace.error",
+        "components.trace.data"
+      ],
+      "main": [
+        "components.trace.empty",
+        "components.trace.working",
+        "components.trace.error",
+        "components.trace.data"
       ]
     }
   ],

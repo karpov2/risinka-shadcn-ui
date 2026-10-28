@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "ai-trace",
+  "type": "registry:ui",
+  "title": "AiTrace",
+  "registryDependencies": [
+    "trace"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/ai-trace.tsx",
+      "type": "registry:ui"
+    }
+  ]
+}

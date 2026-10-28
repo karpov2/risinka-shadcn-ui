@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "ai-message",
+  "type": "registry:ui",
+  "title": "AiMessage",
+  "registryDependencies": [
+    "message",
+    "bubble",
+    "attachment",
+    "marker",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/ai-message.tsx",
+      "type": "registry:ui"
+    }
+  ]
+}
